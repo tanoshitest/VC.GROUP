@@ -283,19 +283,17 @@
     .page-wrapper {
       display: flex;
       flex-direction: column;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
     }
 
     .banner {
-      flex: 1;
+      height: calc(100vh - 185px);
       background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 40%, #111 100%);
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      min-height: 0;
     }
 
     /* Diagonal gold stripes decoration */
@@ -351,6 +349,1859 @@
       height: clamp(80px, 15vh, 160px);
       width: auto;
       filter: brightness(0) saturate(100%) invert(75%) sepia(60%) saturate(500%) hue-rotate(5deg) brightness(110%);
+    }
+
+
+    /* ===== GREEN STRIP ===== */
+    .green-strip {
+      background-color: #27a03a;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 8px,
+        rgba(0,0,0,0.07) 8px,
+        rgba(0,0,0,0.07) 16px
+      );
+      padding: 18px 60px 16px;
+      text-align: center;
+      position: relative;
+    }
+
+    .green-strip-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .green-strip-dots span {
+      width: 5px;
+      height: 5px;
+      background: #FFD700;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .green-strip-main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      line-height: 1.25;
+    }
+
+    .green-strip-side {
+      color: rgba(255,255,255,0.75);
+      font-size: 20px;
+      font-weight: 900;
+      margin: 0 18px;
+      flex-shrink: 0;
+      letter-spacing: 2px;
+    }
+
+    .green-strip-text-wrap {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .gs-yellow {
+      color: #FFD700;
+      font-size: 30px;
+      font-weight: 900;
+      display: inline;
+      letter-spacing: -0.3px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
+
+    .gs-white {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+      display: inline;
+    }
+
+    .green-strip-sub {
+      color: #fff;
+      font-size: 12px;
+      margin-top: 7px;
+      opacity: 0.88;
+      font-weight: 500;
+    }
+
+    /* ===== CAMPAIGN + PAYMENT WRAPPER ===== */
+    .cp-wrapper {
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+
+    /* ===== CAMPAIGN SECTION ===== */
+    .campaign-section {
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .campaign-box {
+      display: flex;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    }
+
+    /* Photo columns */
+    .campaign-photos {
+      display: flex;
+      flex-direction: column;
+      width: 160px;
+      flex-shrink: 0;
+    }
+
+    .cp-photo {
+      flex: 1;
+      background: #ccc;
+      background-size: cover;
+      background-position: center;
+      min-height: 80px;
+    }
+
+    .campaign-photos.left .cp-photo-top {
+      background-color: #b0c4b0;
+      background-image: linear-gradient(135deg, #8fae8f 0%, #c8dcc8 100%);
+    }
+    .campaign-photos.left .cp-photo-bottom {
+      background-color: #c8b89a;
+      background-image: linear-gradient(135deg, #b8a88a 0%, #ddd0ba 100%);
+    }
+    .campaign-photos.right .cp-photo-top {
+      background-color: #9ab0c0;
+      background-image: linear-gradient(135deg, #7a9aaa 0%, #baced8 100%);
+    }
+    .campaign-photos.right .cp-photo-bottom {
+      background-color: #a8c0a8;
+      background-image: linear-gradient(135deg, #88a088 0%, #c0d8c0 100%);
+    }
+
+    /* Center green panel */
+    .campaign-center {
+      flex: 1;
+      background: #2b9e3a;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .campaign-title-bar {
+      background: #1e7a2c;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 900;
+      text-align: center;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .title-arrow {
+      color: #FFD700;
+      font-size: 14px;
+    }
+
+    .campaign-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 16px;
+      gap: 8px;
+    }
+
+    .campaign-label {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(0,0,0,0.15);
+      padding: 2px 12px;
+      border-radius: 20px;
+    }
+
+    .campaign-offer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .offer-percent {
+      color: #FFD700;
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      letter-spacing: -2px;
+    }
+
+    .offer-pct-sign {
+      font-size: 32px;
+    }
+
+    .offer-text {
+      color: #FFD700;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.3;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .campaign-note {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(0,0,0,0.2);
+      padding: 4px 14px;
+      border-radius: 3px;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    /* Disclaimer */
+    .campaign-disclaimer {
+      margin-top: 8px;
+      padding: 0 4px;
+    }
+
+    .campaign-disclaimer p {
+      font-size: 11px;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* ===== PAYMENT SECTION ===== */
+    .payment-section {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .payment-header {
+      background: #2b9e3a;
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 12px 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .payment-body {
+      display: flex;
+      align-items: center;
+      padding: 20px 30px;
+      gap: 30px;
+    }
+
+    /* Feature badges */
+    .payment-features {
+      display: flex;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .feature-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      border: 2px solid #2b9e3a;
+      border-radius: 6px;
+      padding: 10px 12px;
+      width: 90px;
+    }
+
+    .feature-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-icon.pink {
+      background: #fff0f0;
+      border: 2px solid #e8829a;
+      color: #e8829a;
+    }
+
+    .feature-icon.green {
+      background: #f0f8f0;
+      border: 2px solid #2b9e3a;
+      color: #2b9e3a;
+    }
+
+    .feature-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .feature-text {
+      font-size: 11px;
+      font-weight: 700;
+      color: #333;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Payment logos */
+    .payment-logos {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .logos-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-card.visa svg { width: 56px; height: 20px; }
+    .logo-card.jcb svg  { width: 44px; height: 30px; }
+    .logo-card.mastercard svg { width: 44px; height: 28px; }
+    .logo-card.amex svg { width: 60px; height: 22px; }
+    .logo-card.paypay svg { width: 80px; height: 28px; }
+
+    .paypay-row {
+      align-items: center;
+    }
+
+    .paypay-note {
+      font-size: 12px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    /* ===== INTRO SECTION ===== */
+    .intro-section {
+      position: relative;
+      background: #fffde8;
+      padding: 50px 40px;
+      overflow: hidden;
+    }
+
+    .intro-sunburst {
+      position: absolute;
+      top: 50%;
+      left: 38%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      background: repeating-conic-gradient(
+        rgba(255,220,50,0.18) 0deg 10deg,
+        transparent 10deg 20deg
+      );
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .intro-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 36px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    /* --- LEFT --- */
+    .intro-left {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .intro-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .intro-badge {
+      border: 1.5px solid #2b9e3a;
+      color: #2b9e3a;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 3px;
+      background: rgba(43,158,58,0.05);
+    }
+
+    .intro-badge small {
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .intro-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: #1a1a1a;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .intro-subtitle {
+      font-size: 24px;
+      display: block;
+    }
+
+    .highlight-mark {
+      background: linear-gradient(transparent 55%, #FFE033 55%);
+      color: #1a1a1a;
+      padding: 0 2px;
+      font-style: normal;
+    }
+
+    .intro-desc {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .intro-box {
+      background: #f4f4f4;
+      border-left: 4px solid #2b9e3a;
+      border-radius: 4px;
+      padding: 14px 18px;
+    }
+
+    .intro-box-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 900;
+      color: #2b9e3a;
+      margin-bottom: 8px;
+    }
+
+    .intro-box-title svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .intro-box-desc {
+      font-size: 12px;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    /* --- RIGHT --- */
+    .intro-right {
+      width: 340px;
+      flex-shrink: 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+    }
+
+    .deco-circle {
+      position: absolute;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .circle-stripe {
+      width: 70px;
+      height: 70px;
+      top: -10px;
+      right: 30px;
+      background: repeating-linear-gradient(
+        45deg,
+        #6ab4e8 0px, #6ab4e8 4px,
+        transparent 4px, transparent 10px
+      );
+      opacity: 0.7;
+    }
+
+    .circle-solid {
+      width: 40px;
+      height: 40px;
+      top: 10px;
+      right: 10px;
+      background: #9ecfee;
+      opacity: 0.6;
+    }
+
+    .intro-img {
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-img-large {
+      width: 100%;
+      flex: 2;
+      margin-bottom: 10px;
+      background: #dde8dd;
+      min-height: 0;
+    }
+
+    .intro-imgs-row {
+      display: flex;
+      gap: 10px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .intro-img-small {
+      flex: 1;
+      min-height: 0;
+      background: #dde8dd;
+    }
+
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0e8e0;
+    }
+
+    .img-placeholder svg {
+      width: 60%;
+      height: 60%;
+      opacity: 0.5;
+    }
+
+    /* ===== WORRIES SECTION ===== */
+    .worries-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .worries-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #e8f0e0 0%, #f0f8e8 40%, #e0ecf8 100%);
+      z-index: 0;
+    }
+
+    /* Simulated building silhouette */
+    .worries-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+        repeating-linear-gradient(90deg, #c8d8c0 0px, #c8d8c0 60px, #d8e8d0 60px, #d8e8d0 80px);
+      z-index: 1;
+    }
+
+    .worries-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 40px 40px;
+      text-align: center;
+    }
+
+    .worries-sub {
+      font-size: 15px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .wsub-deco {
+      color: #2b9e3a;
+      font-size: 14px;
+    }
+
+    .worries-title {
+      font-size: 34px;
+      font-weight: 900;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .worries-desc {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.9;
+      text-align: left;
+      margin-bottom: 36px;
+    }
+
+    /* 3-col grid */
+    .worries-grid {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .worries-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .worries-box {
+      background: rgba(255,255,255,0.92);
+      border: 1.5px solid #2b9e3a;
+      border-radius: 6px;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      color: #333;
+      line-height: 1.6;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .wbox-red   { color: #e63b2e; }
+    .wbox-green { color: #2b9e3a; }
+
+    /* Center image */
+    .worries-center-img {
+      width: 260px;
+      flex-shrink: 0;
+    }
+
+    .worries-img-placeholder {
+      background: rgba(255,255,255,0.7);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .worries-img-placeholder svg {
+      width: 100%;
+      max-width: 220px;
+    }
+
+    /* Button */
+    .worries-btn-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    .worries-btn {
+      background: #3ab5c8;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 14px 48px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 14px rgba(58,181,200,0.35);
+      transition: opacity 0.2s;
+    }
+
+    .worries-btn:hover { opacity: 0.88; }
+
+    .worries-btn span {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    /* Bottom strip */
+    .worries-bottom-strip {
+      position: relative;
+      z-index: 2;
+      background: #2b9e3a;
+      padding: 16px 20px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .wbs-yellow { color: #FFD700; }
+    .wbs-white  { color: #fff; }
+
+    /* ===== 7 REASONS SECTION ===== */
+    .reasons-section {
+      background: #edf7ed;
+      padding-bottom: 50px;
+    }
+
+    /* Header */
+    .reasons-header {
+      background: linear-gradient(180deg, #d8f0d8 0%, #edf7ed 100%);
+      padding: 30px 20px 0;
+      text-align: center;
+    }
+
+    .reasons-header-inner { max-width: 700px; margin: 0 auto; }
+
+    .reasons-header-people {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .rh-person svg { width: 60px; height: 100px; }
+
+    .rh-title-block { text-align: center; flex: 1; padding-bottom: 10px; }
+
+    .rh-sub {
+      font-size: 14px; font-weight: 700; color: #333;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-bottom: 4px;
+    }
+    .rh-deco { color: #2b9e3a; }
+
+    .rh-main {
+      font-size: 30px; font-weight: 900; color: #1a1a1a; line-height: 1.2;
+    }
+    .rh-num {
+      color: #e63b2e; font-size: 46px; font-weight: 900;
+      vertical-align: middle; letter-spacing: -2px;
+    }
+
+    /* Grid */
+    .reasons-inner {
+      max-width: 980px; margin: 0 auto; padding: 30px 20px 0;
+    }
+
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .reason-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    .reason-num {
+      position: absolute; top: 8px; left: 8px;
+      background: #2b9e3a; color: #fff;
+      font-size: 13px; font-weight: 900;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1;
+    }
+
+    .reason-photo {
+      width: 100%; height: 110px;
+      background: linear-gradient(135deg, #c8ddc8 0%, #a8c8a8 100%);
+    }
+
+    .reason-body { padding: 12px; }
+
+    .reason-title {
+      font-size: 14px; font-weight: 900; color: #1a1a1a;
+      line-height: 1.5; margin-bottom: 8px;
+    }
+    .rt-red { color: #e63b2e; }
+    .r100 { font-size: 42px; line-height: 1; display: block; }
+
+    .reason-desc {
+      font-size: 11px; color: #555; line-height: 1.7;
+    }
+
+    /* Card 7 wide */
+    .reason-card-wide {
+      display: flex; gap: 0; overflow: hidden;
+    }
+
+    .reason-wide-left {
+      flex: 1; padding: 20px 24px;
+    }
+
+    .reason-wide-left .reason-title {
+      font-size: 18px; margin-bottom: 10px;
+    }
+
+    .reason-staff-btn {
+      display: inline-block; margin-top: 12px;
+      border: 1.5px solid #555; color: #333;
+      font-size: 13px; font-weight: 700;
+      padding: 7px 24px; border-radius: 20px;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .reason-staff-btn:hover { background: #555; color: #fff; }
+
+    .reason-wide-photo {
+      width: 260px; flex-shrink: 0;
+      background: linear-gradient(135deg, #a8c8a8 0%, #88a888 100%);
+    }
+
+    /* Compare table */
+    .compare-wrap {
+      margin-top: 30px;
+      border: 1.5px solid #2b9e3a;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .compare-header {
+      background: #2b9e3a; color: #fff;
+      font-size: 15px; font-weight: 900;
+      padding: 12px 20px; text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .compare-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .compare-table th, .compare-table td {
+      padding: 11px 14px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .th-us {
+      background: #e8f8e8; color: #2b9e3a;
+      font-weight: 900; font-size: 14px;
+      width: 28%;
+    }
+    .th-other {
+      background: #f8f8f8; color: #888;
+      font-weight: 700; width: 22%;
+    }
+
+    .td-label {
+      text-align: left; font-weight: 700;
+      color: #444; background: #fafafa; width: 18%;
+    }
+
+    .td-us { background: #f4fbf4; font-weight: 700; }
+    .tr-alt td { background: #fafff8; }
+    .tr-alt .td-us { background: #edf8ed; }
+    .tr-alt .td-label { background: #f5f5f5; }
+
+    .ct-green { color: #2b9e3a; font-weight: 900; }
+    .ct-red   { color: #e63b2e; font-weight: 900; }
+
+    /* Bottom button */
+    .reasons-btn-wrap {
+      display: flex; justify-content: center;
+      margin-top: 30px;
+    }
+
+    .reasons-btn {
+      background: #3ab5c8; color: #fff;
+      font-size: 16px; font-weight: 900;
+      padding: 14px 52px; border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 12px;
+      box-shadow: 0 4px 14px rgba(58,181,200,0.35);
+      transition: opacity 0.2s;
+    }
+    .reasons-btn:hover { opacity: 0.88; }
+    .reasons-btn span { font-size: 20px; }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-section { font-family: inherit; }
+
+    /* Header bar */
+    .contact-header-bar {
+      background: #1a6b28;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 40px;
+    }
+    .chb-badge {
+      border: 1.5px solid #fff;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .chb-title {
+      color: #FFD700;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+    }
+
+    /* BG */
+    .contact-bg {
+      background-color: #27a03a;
+      background-image: repeating-linear-gradient(
+        -45deg, transparent, transparent 8px,
+        rgba(0,0,0,0.07) 8px, rgba(0,0,0,0.07) 16px
+      );
+      padding: 30px 20px;
+      overflow-x: auto;
+    }
+
+    /* Card */
+    .contact-card {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: visible;
+      display: flex;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      min-width: 0;
+    }
+
+    /* LEFT */
+    .contact-left { width: 220px; flex-shrink: 0; }
+    .contact-city-bg {
+      width: 100%; height: 100%;
+      background: linear-gradient(180deg, #a8c8e8 0%, #c8dce8 40%, #a8b8a0 100%);
+      position: relative;
+      min-height: 200px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .contact-staff svg {
+      width: 100px; height: 140px;
+      position: relative; z-index: 2;
+      margin-bottom: -4px;
+    }
+    .contact-badge-yellow {
+      position: absolute; top: 10px; left: 10px;
+      background: #FFD700;
+      border-radius: 50%;
+      width: 68px; height: 68px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      font-size: 11px; font-weight: 900; color: #333;
+      line-height: 1.4;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 3;
+    }
+    .contact-badge-google {
+      position: absolute; bottom: 10px; left: 10px;
+      background: #fff;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 11px; color: #333;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      z-index: 3;
+    }
+    .cbg-title { font-weight: 700; font-size: 11px; }
+    .cbg-stars { color: #e63b2e; font-weight: 900; font-size: 13px; }
+    .cbg-star-row { color: #f5a623; font-size: 13px; letter-spacing: 1px; }
+
+    /* MIDDLE */
+    .contact-middle {
+      flex: 1; padding: 20px 22px;
+      border-left: 1px solid #f0f0f0;
+      border-right: 1px solid #f0f0f0;
+    }
+    .contact-campaign-bar {
+      background: #4ec8d8;
+      color: #fff;
+      font-size: 14px; font-weight: 900;
+      padding: 7px 14px;
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .contact-offer-text {
+      font-size: 14px; color: #333; font-weight: 700;
+      margin-bottom: 14px; line-height: 1.5;
+    }
+    .co-big {
+      color: #e63b2e; font-size: 22px; font-weight: 900;
+    }
+    .contact-phone-row {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .contact-free-badge {
+      background: #e63b2e;
+      color: #fff;
+      border-radius: 50%;
+      width: 68px; height: 68px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      font-size: 10px; font-weight: 900;
+      line-height: 1.5;
+      flex-shrink: 0;
+    }
+    .contact-phone-block { flex: 1; }
+    .contact-phone-num {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 24px; font-weight: 900; color: #1a1a1a;
+      letter-spacing: -0.5px; line-height: 1;
+      margin-bottom: 6px;
+      white-space: nowrap;
+    }
+    .contact-phone-sub {
+      font-size: 12px; color: #444; font-weight: 700;
+      display: flex; align-items: center; gap: 4px; flex-wrap: wrap;
+    }
+    .cpb-tag {
+      border: 1px solid #888;
+      border-radius: 3px;
+      padding: 1px 6px;
+      font-size: 11px; color: #555;
+    }
+
+    /* RIGHT */
+    .contact-right {
+      width: 210px; flex-shrink: 0;
+      display: flex; flex-direction: column;
+      padding: 20px 16px; gap: 12px;
+      justify-content: center;
+    }
+    .contact-btn-mail, .contact-btn-line {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 4px;
+      border-radius: 8px;
+      padding: 12px 10px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .contact-btn-mail:hover, .contact-btn-line:hover { opacity: 0.88; }
+    .contact-btn-mail { background: #f5a623; }
+    .contact-btn-line { background: #06c755; }
+    .cbtn-sub {
+      font-size: 10px; color: rgba(255,255,255,0.9);
+      font-weight: 600; white-space: nowrap;
+    }
+    .cbtn-main {
+      display: flex; align-items: center; gap: 6px;
+      color: #fff; font-size: 14px; font-weight: 900;
+    }
+
+    /* ===== CUSTOMER VOICE SECTION ===== */
+    .voice-section {
+      background: #fff;
+      padding: 50px 40px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Title */
+    .voice-title-area { text-align: center; margin-bottom: 30px; }
+    .voice-sub {
+      font-size: 13px; font-weight: 700; color: #555;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-bottom: 6px;
+    }
+    .v-deco { color: #2b9e3a; }
+    .voice-title {
+      font-size: 32px; font-weight: 900; color: #1a1a1a;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .voice-icon svg { width: 30px; height: 30px; }
+
+    /* Intro */
+    .voice-green-bar {
+      background: #2b9e3a; color: #fff;
+      font-size: 14px; font-weight: 900;
+      padding: 10px 20px; margin-bottom: 0;
+    }
+    .voice-intro-body {
+      display: flex; gap: 24px;
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .voice-intro-photo {
+      width: 200px; flex-shrink: 0; min-height: 160px;
+      background: linear-gradient(135deg, #a8c8a8, #88a888);
+      border-radius: 6px;
+    }
+    .voice-intro-text { flex: 1; }
+    .voice-intro-heading {
+      color: #e63b2e; font-size: 16px; font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .voice-intro-text p { font-size: 12px; color: #444; line-height: 1.9; }
+
+    /* Reviews */
+    .voice-reviews-wrap { margin-bottom: 30px; }
+    .voice-reviews-header {
+      background: #4ec8d8; color: #fff;
+      font-size: 15px; font-weight: 900;
+      text-align: center; padding: 11px 20px;
+      border-radius: 4px 4px 0 0;
+      margin-bottom: 0;
+    }
+
+    .voice-review-card {
+      border: 1px solid #d0e8d0;
+      border-top: none;
+      padding: 16px 20px;
+      background: #fff;
+    }
+    .voice-review-card + .voice-review-card {
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .vrc-tag-row {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 12px;
+    }
+    .vrc-tag {
+      background: #2b9e3a; color: #fff;
+      font-size: 11px; font-weight: 700;
+      padding: 2px 10px; border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .vrc-title { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+
+    .vrc-ba-row {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 12px;
+    }
+    .vrc-photo {
+      flex: 1; height: 130px; border-radius: 4px;
+      position: relative; overflow: hidden;
+    }
+    .vrc-before { background: linear-gradient(135deg, #b8a898, #d0c0b0); }
+    .vrc-after  { background: linear-gradient(135deg, #c8d8c0, #a8c0a0); }
+
+    .ba-label {
+      position: absolute; top: 6px; left: 6px;
+      font-size: 11px; font-weight: 900;
+      padding: 2px 8px; border-radius: 2px; color: #fff;
+    }
+    .ba-label.before { background: #e63b2e; }
+    .ba-label.after  { background: #2b9e3a; }
+
+    .vrc-arrow {
+      font-size: 22px; color: #888; font-weight: 900; flex-shrink: 0;
+    }
+    .vrc-text { font-size: 12px; color: #444; line-height: 1.9; }
+    .vrc-red  { color: #e63b2e; font-weight: 700; }
+
+    /* Staff box */
+    .voice-staff-box {
+      background: #2b9e3a;
+      border-radius: 8px; overflow: hidden;
+      display: flex; margin-bottom: 30px;
+    }
+    .vsb-left {
+      flex: 1; padding: 24px 28px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .vsb-badge {
+      display: inline-block;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      color: #fff; font-size: 11px; font-weight: 700;
+      padding: 3px 12px; border-radius: 3px;
+      width: fit-content;
+    }
+    .vsb-title {
+      color: #fff; font-size: 22px; font-weight: 900; line-height: 1.4;
+    }
+    .vsb-yellow { color: #FFD700; }
+    .vsb-desc { color: rgba(255,255,255,0.9); font-size: 12px; line-height: 1.8; }
+
+    .vsb-right { width: 260px; flex-shrink: 0; padding: 16px; }
+    .vsb-photos {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 6px;
+      height: 100%;
+    }
+    .vsb-photo {
+      background: rgba(255,255,255,0.25);
+      border-radius: 4px; min-height: 60px;
+    }
+    .vsb-photo:nth-child(odd)  { background: rgba(255,255,255,0.3); }
+    .vsb-photo:nth-child(even) { background: rgba(0,0,0,0.1); }
+
+    /* Button */
+    .voice-btn-wrap { display: flex; justify-content: center; }
+    .voice-btn {
+      background: #3ab5c8; color: #fff;
+      font-size: 16px; font-weight: 900;
+      padding: 14px 52px; border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 12px;
+      box-shadow: 0 4px 14px rgba(58,181,200,0.35);
+      transition: opacity 0.2s;
+    }
+    .voice-btn:hover { opacity: 0.88; }
+    .voice-btn span { font-size: 20px; }
+
+    /* ===== SERVICE SECTION ===== */
+    .service-section { background: #edf7ed; }
+
+    /* Header */
+    .svc-header { background: #edf7ed; padding: 30px 20px 0; text-align: center; }
+    .svc-header-decos {
+      display: flex; align-items: flex-end; justify-content: center; gap: 20px;
+      max-width: 600px; margin: 0 auto;
+    }
+    .svc-deco-img svg { width: 70px; height: 60px; opacity: 0.85; }
+    .svc-title-block { flex: 1; padding-bottom: 10px; }
+    .svc-title-sub { font-size: 13px; font-weight: 700; color: #555; margin-bottom: 4px; }
+    .svc-title-main {
+      font-size: 32px; font-weight: 900; color: #1a1a1a;
+      letter-spacing: 1px;
+    }
+    .svc-header-glow {
+      height: 8px; margin-top: 16px;
+      background: linear-gradient(90deg, transparent, #2b9e3a44, #2b9e3a88, #2b9e3a44, transparent);
+    }
+
+    /* Inner */
+    .svc-inner { max-width: 960px; margin: 0 auto; padding: 24px 20px 40px; }
+
+    /* Block headers */
+    .svc-block-header {
+      background: #2b9e3a; color: #fff;
+      font-size: 15px; font-weight: 900;
+      padding: 10px 20px; border-radius: 4px;
+      margin-bottom: 14px;
+    }
+
+    /* Main grid 3-col */
+    .main-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+      margin-bottom: 0;
+    }
+
+    .svc-card {
+      background: #fff; border-radius: 6px;
+      overflow: hidden; position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .svc-card-empty { background: transparent; box-shadow: none; }
+
+    .svc-photo {
+      width: 100%; height: 110px;
+      background: linear-gradient(135deg, #b8d0b8, #90b890);
+    }
+    .svc-card-body { padding: 12px; }
+    .svc-icon {
+      display: flex; justify-content: center; margin-bottom: 6px;
+    }
+    .svc-icon svg { width: 28px; height: 28px; }
+    .svc-name {
+      color: #2b9e3a; font-size: 14px; font-weight: 900;
+      text-align: center; margin-bottom: 8px;
+    }
+    .svc-desc { font-size: 11px; color: #555; line-height: 1.7; }
+
+    /* Other grid 2-col */
+    .other-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+    }
+
+    .svc-row-card {
+      background: #fff; border-radius: 6px;
+      overflow: hidden; position: relative;
+      display: flex; align-items: stretch;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .svc-row-photo {
+      width: 100px; flex-shrink: 0;
+      background: linear-gradient(135deg, #b8d0b8, #90b890);
+    }
+    .svc-row-body { flex: 1; padding: 12px 14px; }
+    .svc-row-name {
+      color: #2b9e3a; font-size: 13px; font-weight: 900;
+      display: flex; align-items: center; gap: 6px;
+      margin-bottom: 6px;
+    }
+    .svc-row-desc { font-size: 11px; color: #555; line-height: 1.7; }
+
+    /* Corner triangle decoration */
+    .svc-corner {
+      position: absolute; bottom: 0; right: 0;
+      width: 0; height: 0;
+      border-style: solid;
+      border-width: 0 0 18px 18px;
+      border-color: transparent transparent #2b9e3a transparent;
+    }
+
+    /* Button */
+    .svc-btn-wrap { display: flex; justify-content: center; margin-top: 30px; }
+    .svc-btn {
+      background: #3ab5c8; color: #fff;
+      font-size: 16px; font-weight: 900;
+      padding: 14px 56px; border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 12px;
+      box-shadow: 0 4px 14px rgba(58,181,200,0.35);
+      transition: opacity 0.2s;
+    }
+    .svc-btn:hover { opacity: 0.88; }
+    .svc-btn span { font-size: 20px; }
+
+    /* ===== SDGs SECTION ===== */
+    .sdgs-section {
+      background: #fff;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sdgs-card {
+      width: 100%;
+      max-width: 780px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    /* Header */
+    .sdgs-header {
+      background: #2b9e3a;
+      padding: 14px 24px;
+      text-align: center;
+    }
+    .sdgs-h-sub { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+    .sdgs-h-main { color: #FFD700; font-size: 22px; font-weight: 900; }
+
+    /* Body */
+    .sdgs-body { padding: 24px; }
+
+    /* Logo */
+    .sdgs-logo { text-align: center; margin-bottom: 16px; }
+    .sdgs-logo-top {
+      font-size: 11px; font-weight: 700; color: #444;
+      line-height: 1.3; margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
+    .sdgs-logo-goals {
+      font-size: 48px; font-weight: 900;
+      line-height: 1; letter-spacing: 2px;
+      font-style: italic;
+    }
+
+    /* 17 goals grid */
+    .sdgs-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+    .sdg-goal {
+      border-radius: 4px;
+      padding: 6px 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      min-height: 64px;
+      justify-content: flex-start;
+    }
+    .sdg-num {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .sdg-text {
+      color: #fff;
+      font-size: 8px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* Partner text */
+    .sdgs-partner-text {
+      border-left: 4px solid #2b9e3a;
+      padding-left: 12px;
+      font-size: 13px;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* Cert row */
+    .sdgs-cert-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .sdgs-cert-photos {
+      flex-shrink: 0;
+      position: relative;
+      width: 180px;
+    }
+    .sdgs-cert-img {
+      width: 130px; height: 95px;
+      background: linear-gradient(135deg, #e8e0d0, #d0c8b8);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .sdgs-cert-img2 {
+      position: absolute;
+      top: 12px; left: 40px;
+      background: linear-gradient(135deg, #d8e8d0, #c0d8b8);
+      z-index: 1;
+    }
+    .sdgs-cert-caption {
+      font-size: 11px; color: #666;
+      margin-top: 8px; text-align: center;
+    }
+
+    /* Links */
+    .sdgs-links { flex: 1; }
+    .sdgs-link-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .sdgs-link-row:last-child { border-bottom: none; }
+    .sdgs-link-info { flex: 1; }
+    .sdgs-link-name {
+      font-size: 13px; font-weight: 700;
+      color: #2b9e3a; margin-bottom: 3px;
+    }
+    .sdgs-link-url { font-size: 11px; color: #888; }
+    .sdgs-link-btn {
+      background: #4ec8d8; color: #fff;
+      font-size: 10px; font-weight: 700;
+      padding: 6px 10px; border-radius: 4px;
+      text-decoration: none; text-align: center;
+      flex-shrink: 0; line-height: 1.4;
+      transition: opacity 0.2s;
+    }
+    .sdgs-link-btn:hover { opacity: 0.85; }
+
+    /* Button */
+    .sdgs-btn-wrap {
+      display: flex; justify-content: center;
+      margin-top: 24px;
+    }
+    .sdgs-btn {
+      background: #3ab5c8; color: #fff;
+      font-size: 16px; font-weight: 900;
+      padding: 14px 52px; border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 12px;
+      box-shadow: 0 4px 14px rgba(58,181,200,0.35);
+      transition: opacity 0.2s;
+    }
+    .sdgs-btn:hover { opacity: 0.88; }
+    .sdgs-btn span { font-size: 20px; }
+
+    /* ===== PRICING SECTION ===== */
+    .pricing-section {
+      background: #edf7ed;
+      padding: 50px 20px;
+    }
+
+    .pricing-title-area { text-align: center; margin-bottom: 30px; }
+    .pricing-sub {
+      font-size: 13px; font-weight: 700; color: #555;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-bottom: 6px;
+    }
+    .p-deco { color: #2b9e3a; }
+    .pricing-title {
+      font-size: 34px; font-weight: 900; color: #1a1a1a;
+    }
+
+    .pricing-inner {
+      max-width: 780px; margin: 0 auto;
+    }
+
+    /* Intro */
+    .pricing-intro {
+      display: flex; gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+    .pricing-intro-text { flex: 1; }
+    .pricing-intro-heading {
+      color: #e63b2e; font-size: 17px; font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .pricing-intro-text p {
+      font-size: 12px; color: #444; line-height: 1.9;
+    }
+    .pricing-intro-photo {
+      width: 200px; flex-shrink: 0; height: 170px;
+      background: linear-gradient(135deg, #a8c0d8, #88a0c0);
+      border-radius: 6px;
+    }
+
+    /* Campaign reuse */
+    .pricing-campaign {
+      margin-bottom: 28px;
+    }
+
+    /* Price table header */
+    .price-table-header {
+      background: #2b9e3a; color: #fff;
+      font-size: 15px; font-weight: 900;
+      padding: 11px 20px;
+      border-radius: 4px;
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    /* Category */
+    .price-category { margin-bottom: 20px; }
+
+    .pcat-label {
+      font-size: 14px; font-weight: 900; color: #1a1a1a;
+      border-left: 4px solid #2b9e3a;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .pcat-body {
+      display: flex; gap: 16px;
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    }
+
+    .pcat-photo {
+      width: 150px; flex-shrink: 0;
+    }
+    .pcat-furniture  { background: linear-gradient(135deg, #c8d8c8, #a0c0a8); }
+    .pcat-electronics { background: linear-gradient(135deg, #b8c8d8, #90a8c0); }
+    .pcat-goods      { background: linear-gradient(135deg, #d8c8b8, #c0a890); }
+
+    .pcat-items {
+      flex: 1; padding: 14px 16px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+
+    .pcat-row {
+      display: flex; flex-wrap: wrap;
+      align-items: baseline; gap: 6px;
+      padding-bottom: 8px;
+      border-bottom: 1px dotted #e0e0e0;
+      font-size: 12px;
+    }
+    .pcat-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .pcat-name {
+      font-weight: 900; color: #1a1a1a;
+      white-space: nowrap;
+    }
+    .pcat-price {
+      color: #e63b2e; font-weight: 900;
+      white-space: nowrap;
+    }
+    .pcat-items-list {
+      color: #666; font-size: 11px; line-height: 1.6;
+      flex-basis: 100%;
+    }
+
+    .pricing-notice {
+      display: flex; gap: 12px; align-items: flex-start;
+      background: #fff8f8;
+      border: 1.5px solid #f5c0c0;
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .pnotice-icon {
+      color: #e63b2e; font-size: 18px; font-weight: 900;
+      flex-shrink: 0; line-height: 1.4;
+    }
+    .pnotice-text p {
+      font-size: 12px; color: #444; line-height: 1.8;
+    }
+
+    .pcat-vehicle {
+      background: linear-gradient(135deg, #b8b8c8, #989890);
+    }
+
+    .pricing-list-btn-wrap {
+      display: flex; justify-content: center; margin-top: 24px;
+    }
+    .pricing-list-btn {
+      background: #2b9e3a; color: #fff;
+      font-size: 15px; font-weight: 900;
+      padding: 13px 48px; border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px;
+      box-shadow: 0 4px 12px rgba(43,158,58,0.3);
+      transition: opacity 0.2s;
+    }
+    .pricing-list-btn:hover { opacity: 0.88; }
+    .pricing-list-btn span { font-size: 18px; }
+
+    /* ===== PACK PRICING SECTION ===== */
+    .pack-section { background: #edf7ed; padding: 50px 20px; }
+
+    .pack-title-area { text-align: center; margin-bottom: 24px; }
+    .pack-title {
+      font-size: 30px; font-weight: 900; color: #1a1a1a;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+
+    .pack-inner { max-width: 780px; margin: 0 auto; }
+
+    /* Info banner */
+    .pack-info-banner {
+      display: flex; align-items: center; gap: 20px;
+      background: #fff;
+      border: 1.5px solid #b8e0c8;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .pack-info-text { flex: 1; font-size: 13px; color: #333; line-height: 1.9; }
+    .pib-yellow { color: #e8a020; font-weight: 900; font-size: 15px; }
+    .pib-green  { color: #2b9e3a; font-weight: 700; text-decoration: underline; }
+    .pack-info-truck { flex-shrink: 0; width: 120px; }
+    .pack-info-truck svg { width: 100%; }
+
+    /* Cards grid */
+    .pack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 0;
+    }
+
+    .pack-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .pack-card-header {
+      background: linear-gradient(90deg, #4db86a, #2b9e3a);
+      color: #fff;
+      font-size: 13px; font-weight: 900;
+      text-align: center;
+      padding: 9px 8px;
+    }
+    .pack-size { font-size: 12px; }
+
+    .pack-photo {
+      width: 100%; height: 110px;
+      background: linear-gradient(135deg, #c8dcc8, #a8c8a8);
+    }
+    .pack-photo-other {
+      background: linear-gradient(135deg, #c0b8a8, #a8a098);
+    }
+
+    .pack-card-body { padding: 10px 12px; }
+
+    .pack-desc {
+      font-size: 11px; color: #444;
+      text-align: center; line-height: 1.6;
+      margin-bottom: 10px; min-height: 32px;
+    }
+
+    .pack-badge-row {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 5px;
+    }
+    .pb-green {
+      background: #2b9e3a; color: #fff;
+      font-size: 10px; font-weight: 700;
+      padding: 2px 8px; border-radius: 3px;
+      flex-shrink: 0; white-space: nowrap;
+    }
+    .pb-red {
+      background: #e63b2e; color: #fff;
+      font-size: 10px; font-weight: 700;
+      padding: 2px 8px; border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .pb-val {
+      font-size: 11px; color: #444; font-weight: 600;
+    }
+    .pb-price {
+      font-size: 13px; color: #e63b2e; font-weight: 900;
+    }
+
+    /* ===== PRICING FEATURES SECTION ===== */
+    .pf-section {
+      background: #fff;
+      padding: 50px 20px 40px;
+    }
+
+    .pf-title-area { text-align: center; margin-bottom: 36px; }
+    .pf-sub {
+      font-size: 13px; font-weight: 700; color: #2b9e3a;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-bottom: 6px;
+    }
+    .pf-deco { color: #2b9e3a; }
+    .pf-title { font-size: 28px; font-weight: 900; color: #1a1a1a; }
+
+    .pf-inner {
+      max-width: 780px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 40px;
+    }
+
+    /* Row */
+    .pf-row {
+      display: flex; gap: 30px; align-items: center;
+    }
+    .pf-row-reverse { flex-direction: row-reverse; }
+
+    /* Photo */
+    .pf-photo {
+      width: 300px; height: 200px; flex-shrink: 0;
+      border-radius: 8px; overflow: hidden;
+    }
+    .pf-photo-truck {
+      background: linear-gradient(135deg, #d8e8f0, #b8d0e8);
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pf-photo-truck::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, #e8f4f8 0%, #c0d8ec 50%, #90b8d8 100%);
+    }
+    .pf-photo-calc {
+      background: linear-gradient(135deg, #e8f0e8, #c8dcc8);
+    }
+
+    /* Content */
+    .pf-content { flex: 1; }
+
+    .pf-badge {
+      width: 42px; height: 42px;
+      background: #2b9e3a; color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 900;
+      margin-bottom: 12px;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: -0.5px;
+    }
+
+    .pf-heading {
+      font-size: 14px; color: #333; font-weight: 700;
+      line-height: 1.5; margin-bottom: 12px;
+    }
+    .pf-heading-main {
+      font-size: 22px; font-weight: 900; color: #1a1a1a;
+      display: block;
+    }
+
+    .pf-desc {
+      font-size: 12px; color: #555; line-height: 1.9;
+    }
+    .pf-desc strong { color: #1a1a1a; font-weight: 900; }
+
+    /* Button */
+    .pf-btn-wrap {
+      display: flex; justify-content: center; margin-top: 36px;
+    }
+    .pf-btn {
+      background: #3ab5c8; color: #fff;
+      font-size: 16px; font-weight: 900;
+      padding: 14px 56px; border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 12px;
+      box-shadow: 0 4px 14px rgba(58,181,200,0.35);
+      transition: opacity 0.2s;
+    }
+    .pf-btn:hover { opacity: 0.88; }
+    .pf-btn span { font-size: 20px; }
+
+    /* ===== NO.1 STRIP ===== */
+    .no1-strip {
+      background-color: #27a03a;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 8px,
+        rgba(0,0,0,0.07) 8px,
+        rgba(0,0,0,0.07) 16px
+      );
+      padding: 14px 40px;
+    }
+
+    .no1-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .no1-crown {
+      width: 36px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+
+    .no1-laurel {
+      width: 22px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+
+    .no1-laurel.flip {
+      transform: scaleX(-1);
+    }
+
+    .no1-text-white {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .no1-text-white strong {
+      font-weight: 900;
+    }
+
+    .no1-big {
+      color: #FFD700;
+      font-size: 36px;
+      font-weight: 900;
+      font-style: italic;
+      line-height: 1;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      letter-spacing: -1px;
     }
 
   </style>
@@ -467,6 +2318,1440 @@
             <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             <span>@vcgroup.jp</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GREEN STRIP -->
+  <div class=green-strip>
+    <div class=green-strip-main>
+      <div class=green-strip-side>─</div>
+      <div class=green-strip-text-wrap>
+        <span class=gs-yellow>
+          <span class=dots-row>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </span>
+          No extra charges
+        </span>
+        <span class=gs-white>&nbsp;, no worries!&nbsp;</span>
+        <span class=gs-yellow>
+          <span class=dots-row>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </span>
+          Google reviews: 4.8 stars!
+        </span>
+      </div>
+      <div class=green-strip-side>─</div>
+    </div>
+  </div>
+
+
+  <!-- ===== CAMPAIGN + PAYMENT SECTION ===== -->
+  <div class="cp-wrapper">
+
+    <!-- CAMPAIGN BOX -->
+    <div class="campaign-section">
+      <div class="campaign-box">
+
+        <!-- Photos Left -->
+        <div class="campaign-photos left">
+          <div class="cp-photo cp-photo-top"></div>
+          <div class="cp-photo cp-photo-bottom"></div>
+        </div>
+
+        <!-- Center Green -->
+        <div class="campaign-center">
+          <div class="campaign-title-bar">
+            <span class="title-arrow">╲</span>
+            <span>WEB限定&nbsp; 割引キャンペーン</span>
+            <span class="title-arrow">╱</span>
+          </div>
+          <div class="campaign-body">
+            <div class="campaign-label">見積もり価格から</div>
+            <div class="campaign-offer">
+              <span class="offer-percent">20<span class="offer-pct-sign">%</span>OFF</span>
+              <span class="offer-text">キャンペーン<br>実施中！</span>
+            </div>
+            <div class="campaign-note">ホームページからお問い合わせいただいたお客様限定</div>
+          </div>
+        </div>
+
+        <!-- Photos Right -->
+        <div class="campaign-photos right">
+          <div class="cp-photo cp-photo-top"></div>
+          <div class="cp-photo cp-photo-bottom"></div>
+        </div>
+
+      </div>
+      <!-- Disclaimer -->
+      <div class="campaign-disclaimer">
+        <p>※割引額は最大100,000円となります。</p>
+        <p>※上記キャンペーンは、予告なく変更・終了する場合がございます。予めご了承ください。</p>
+      </div>
+    </div>
+
+    <!-- PAYMENT SECTION -->
+    <div class="payment-section">
+      <div class="payment-header">各種クレジットカードがご利用いただけます</div>
+      <div class="payment-body">
+
+        <!-- Feature badges -->
+        <div class="payment-features">
+          <!-- Badge 1: Trophy → 業界最安値に挑戦！ -->
+          <div class="feature-badge">
+            <div class="feature-icon pink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4a2 2 0 0 1-2-2V5h4"/>
+                <path d="M18 9h2a2 2 0 0 0 2-2V5h-4"/>
+                <path d="M4 5h16v5a8 8 0 0 1-16 0V5z"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+              </svg>
+            </div>
+            <div class="feature-text">業界最安値<br>に挑戦！</div>
+          </div>
+          <!-- Badge 2: Calculator → 安心の明朗会計 -->
+          <div class="feature-badge">
+            <div class="feature-icon green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <rect x="7" y="5" width="10" height="4" rx="1"/>
+                <circle cx="8"  cy="13" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="12" cy="13" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="16" cy="13" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="8"  cy="17" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="16" cy="17" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <div class="feature-text">安心の<br>明朗会計</div>
+          </div>
+          <!-- Badge 3: No-fee → 追加料金は一切なし -->
+          <div class="feature-badge">
+            <div class="feature-icon green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+                <text x="8.5" y="15" font-family="Arial" font-weight="900" font-size="9" fill="currentColor" stroke="none">¥</text>
+              </svg>
+            </div>
+            <div class="feature-text">追加料金は<br>一切なし</div>
+          </div>
+        </div>
+
+        <!-- Payment logos -->
+        <div class="payment-logos">
+          <div class="logos-row">
+            <!-- VISA -->
+            <div class="logo-card visa">
+              <svg viewBox="0 0 80 26" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="22" font-family="Arial" font-weight="900" font-size="26" font-style="italic" fill="#1A1F71" letter-spacing="-1">VISA</text>
+              </svg>
+            </div>
+            <!-- JCB -->
+            <div class="logo-card jcb">
+              <svg viewBox="0 0 54 36" xmlns="http://www.w3.org/2000/svg">
+                <rect width="54" height="36" rx="5" fill="white"/>
+                <rect x="2" y="2" width="15" height="32" rx="4" fill="#0E4C96"/>
+                <rect x="19" y="2" width="15" height="32" rx="4" fill="#E31837"/>
+                <rect x="36" y="2" width="15" height="32" rx="4" fill="#007B40"/>
+                <text x="4.5" y="23" font-family="Arial" font-weight="900" font-size="13" fill="white">J</text>
+                <text x="21.5" y="23" font-family="Arial" font-weight="900" font-size="13" fill="white">C</text>
+                <text x="38.5" y="23" font-family="Arial" font-weight="900" font-size="13" fill="white">B</text>
+              </svg>
+            </div>
+            <!-- Mastercard -->
+            <div class="logo-card mastercard">
+              <svg viewBox="0 0 54 34" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="17" r="15" fill="#EB001B"/>
+                <circle cx="34" cy="17" r="15" fill="#F79E1B"/>
+                <path d="M27 6.8a15 15 0 0 1 0 20.4A15 15 0 0 1 27 6.8z" fill="#FF5F00"/>
+              </svg>
+            </div>
+            <!-- AMEX -->
+            <div class="logo-card amex">
+              <svg viewBox="0 0 72 26" xmlns="http://www.w3.org/2000/svg">
+                <rect width="72" height="26" rx="4" fill="#2E77BC"/>
+                <text x="5" y="19" font-family="Arial" font-weight="900" font-size="12" fill="white" letter-spacing="0.5">AMERICAN</text>
+                <text x="8" y="31" font-family="Arial" font-weight="700" font-size="10" fill="white">EXPRESS</text>
+              </svg>
+            </div>
+          </div>
+          <div class="logos-row paypay-row">
+            <!-- PayPay -->
+            <div class="logo-card paypay">
+              <svg viewBox="0 0 90 30" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="3" width="24" height="24" rx="5" fill="#FF0033"/>
+                <text x="3" y="21" font-family="Arial" font-weight="900" font-size="18" fill="white">P</text>
+                <text x="28" y="21" font-family="Arial" font-weight="900" font-size="18" fill="#FF0033">Pay</text>
+                <text x="56" y="21" font-family="Arial" font-weight="900" font-size="18" fill="#1A1A1A">Pay</text>
+              </svg>
+            </div>
+            <span class="paypay-note">スマホ決済はじめました！</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NO.1 STRIP -->
+  <div class="no1-strip">
+    <div class="no1-inner">
+      <!-- Crown icon -->
+      <svg class="no1-crown" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 22 L8 8 L16 16 L20 4 L24 16 L32 8 L38 22 Z" fill="#FFD700" stroke="#FFD700" stroke-linejoin="round"/>
+        <rect x="2" y="22" width="36" height="5" rx="2" fill="#FFD700"/>
+        <circle cx="20" cy="4"  r="2.5" fill="#FFD700"/>
+        <circle cx="8"  cy="8"  r="2"   fill="#FFD700"/>
+        <circle cx="32" cy="8"  r="2"   fill="#FFD700"/>
+      </svg>
+
+      <span class="no1-text-white">埼玉の<strong>対応実績</strong></span>
+
+      <!-- Laurel left -->
+      <svg class="no1-laurel" viewBox="0 0 28 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 38 Q14 30 16 20 Q12 28 8 24 Q12 18 10 12 Q14 18 16 14 Q16 22 20 18 Q18 26 22 22 Q20 30 24 28 Q22 34 22 38Z" fill="#FFD700" opacity="0.85"/>
+        <line x1="22" y1="38" x2="16" y2="10" stroke="#FFD700" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+
+      <span class="no1-big">No.1</span>
+
+      <!-- Laurel right -->
+      <svg class="no1-laurel flip" viewBox="0 0 28 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 38 Q14 30 16 20 Q12 28 8 24 Q12 18 10 12 Q14 18 16 14 Q16 22 20 18 Q18 26 22 22 Q20 30 24 28 Q22 34 22 38Z" fill="#FFD700" opacity="0.85"/>
+        <line x1="22" y1="38" x2="16" y2="10" stroke="#FFD700" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+
+      <span class="no1-text-white">に挑戦中</span>
+    </div>
+  </div>
+
+  <!-- ===== INTRO SECTION ===== -->
+  <div class="intro-section">
+
+    <!-- Sunburst background -->
+    <div class="intro-sunburst"></div>
+
+    <div class="intro-inner">
+
+      <!-- LEFT: Text -->
+      <div class="intro-left">
+
+        <!-- Badges -->
+        <div class="intro-badges">
+          <span class="intro-badge">創業10年以上</span>
+          <span class="intro-badge">年間問い合わせ実績10万件以上<small>（グループ全体）</small></span>
+        </div>
+
+        <!-- Title -->
+        <h2 class="intro-title">
+          不用品回収ならクオーレ埼玉！<br>
+          <span class="intro-subtitle">何点からでも<mark class="highlight-mark">最短即日対応！</mark></span>
+        </h2>
+
+        <!-- Description -->
+        <p class="intro-desc">
+          「大量の不用品の引き取り」「期限が迫る中での粗大ゴミ処分」「自治体では回収されない廃品の処分」など、埼玉の粗大ゴミ・不用品に関するお悩みなら不用品回収クオーレ埼玉にお任せください。日用品、家具、家電はもちろん、埼玉県の自治体では回収不可の家電4品目や消火器なども引き取ります。埼玉県内なら最短即日中の対応も可能です。分別や搬出など、必要な作業はすべてクオーレ埼玉スタッフが行いますので、まずはお気軽にご相談ください。
+        </p>
+
+        <!-- Highlight box -->
+        <div class="intro-box">
+          <div class="intro-box-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4l3 5v3h-7V8z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+            倉庫や事務所などの粗大ゴミにも対応
+          </div>
+          <p class="intro-box-desc">敷くず、業務用品、工業機械などの事業系廃棄物や粗大ゴミの処分も不用品回収クオーレ埼玉にお任せを。回収後は適切にリサイクル・廃棄処分しますのでご安心ください。</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Images -->
+      <div class="intro-right">
+
+        <!-- Decorative circles -->
+        <div class="deco-circle circle-stripe"></div>
+        <div class="deco-circle circle-solid"></div>
+
+        <!-- Large image -->
+        <div class="intro-img intro-img-large">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="14" width="55" height="30" rx="3" fill="#ccc"/>
+              <rect x="57" y="22" width="20" height="22" rx="2" fill="#bbb"/>
+              <circle cx="18" cy="44" r="5" fill="#999"/>
+              <circle cx="62" cy="44" r="5" fill="#999"/>
+              <rect x="6" y="8" width="30" height="10" rx="2" fill="#bbb"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Two small images -->
+        <div class="intro-imgs-row">
+          <div class="intro-img intro-img-small">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="46" height="36" rx="3" fill="#c8d8c8"/>
+                <rect x="8" y="8" width="15" height="20" rx="2" fill="#a0b8a0"/>
+                <rect x="27" y="12" width="15" height="16" rx="2" fill="#a0b8a0"/>
+              </svg>
+            </div>
+          </div>
+          <div class="intro-img intro-img-small">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="46" height="36" rx="3" fill="#b8c8d8"/>
+                <path d="M10 30 L20 10 L35 25 L40 18 L48 30Z" fill="#8aaccc"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WORRIES SECTION ===== -->
+  <div class="worries-section">
+    <!-- BG image overlay -->
+    <div class="worries-bg"></div>
+
+    <div class="worries-inner">
+
+      <!-- Sub-title -->
+      <div class="worries-sub">
+        <span class="wsub-deco">╲</span>
+        不用品回収・粗大ゴミ処分で
+        <span class="wsub-deco">╱</span>
+      </div>
+
+      <!-- Main title -->
+      <h2 class="worries-title">こんなお悩みありませんか？</h2>
+
+      <!-- Description -->
+      <p class="worries-desc">「粗大ゴミ・家電4品目のリサイクル方法がわからない」「廃品の量が多く、埼玉の自治体回収の個数上限を超えている」など、埼玉県内で不用品・粗大ゴミ処分に関してお困りではありませんか？不用品回収クオーレ埼玉はこれらのお困り事を一手に引き受けます。回収品目は幅広く設定し、回収量に制限なし、日時はお客様のご都合にあわせて調整しますので、面倒な分別や搬出作業からお任せください。同時に必要になることが多い引越し、遺品整理、リフォームなどもご依頼いただけますので、作業完了まですがスムーズです。</p>
+
+      <!-- 3-col: boxes + center image + boxes -->
+      <div class="worries-grid">
+
+        <!-- Left boxes -->
+        <div class="worries-col">
+          <div class="worries-box">
+            <p>不用な家具や家電など<br><strong class="wbox-red">粗大ゴミを処分したい</strong></p>
+          </div>
+          <div class="worries-box">
+            <p>粗大ゴミ・廃品を<br><strong class="wbox-green">家まで引き取り</strong>に来てほしい</p>
+          </div>
+        </div>
+
+        <!-- Center image -->
+        <div class="worries-center-img">
+          <div class="worries-img-placeholder">
+            <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="60" cy="95" rx="50" ry="8" fill="#ddd" opacity="0.5"/>
+              <!-- Person left -->
+              <circle cx="42" cy="28" r="12" fill="#c8a882"/>
+              <rect x="28" y="42" width="28" height="38" rx="6" fill="#5b8ed6"/>
+              <rect x="30" y="62" width="10" height="22" rx="4" fill="#4a7ac4"/>
+              <rect x="46" y="62" width="10" height="22" rx="4" fill="#4a7ac4"/>
+              <!-- Person right -->
+              <circle cx="78" cy="30" r="11" fill="#b8956e"/>
+              <rect x="65" y="43" width="26" height="36" rx="6" fill="#e8a0a0"/>
+              <rect x="67" y="62" width="9" height="20" rx="4" fill="#d88888"/>
+              <rect x="81" y="62" width="9" height="20" rx="4" fill="#d88888"/>
+              <!-- Laptop -->
+              <rect x="38" y="68" width="44" height="28" rx="3" fill="#ddd"/>
+              <rect x="40" y="70" width="40" height="22" rx="2" fill="#aac8e8"/>
+              <rect x="32" y="96" width="56" height="3" rx="2" fill="#ccc"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right boxes -->
+        <div class="worries-col">
+          <div class="worries-box">
+            <p>不用品引き取りと一緒に<br><strong class="wbox-red">引越し作業も任せたい</strong></p>
+          </div>
+          <div class="worries-box">
+            <p>不用品の査定・買取をしてほしい</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Button -->
+      <div class="worries-btn-wrap">
+        <a href="#" class="worries-btn">初めての方へ <span>›</span></a>
+      </div>
+
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="worries-bottom-strip">
+      <span class="wbs-yellow">不用品回収クオーレ埼玉</span>
+      <span class="wbs-white">にお任せください！</span>
+    </div>
+  </div>
+
+  <!-- ===== 7 REASONS SECTION ===== -->
+  <div class="reasons-section">
+
+    <!-- HEADER -->
+    <div class="reasons-header">
+      <div class="reasons-header-inner">
+        <div class="reasons-header-people">
+          <!-- Person left -->
+          <div class="rh-person rh-left">
+            <svg viewBox="0 0 60 100" fill="none"><circle cx="30" cy="18" r="14" fill="#c8a070"/><rect x="8" y="34" width="44" height="50" rx="8" fill="#3a9fd8"/><rect x="12" y="66" width="14" height="28" rx="5" fill="#2a8fc8"/><rect x="34" y="66" width="14" height="28" rx="5" fill="#2a8fc8"/></svg>
+          </div>
+          <!-- Center text -->
+          <div class="rh-title-block">
+            <div class="rh-sub"><span class="rh-deco">╲</span> クオーレ埼玉が <span class="rh-deco">╱</span></div>
+            <div class="rh-main">選ばれる<span class="rh-num">7つ</span>の理由</div>
+          </div>
+          <!-- Person right -->
+          <div class="rh-person rh-right">
+            <svg viewBox="0 0 60 100" fill="none"><circle cx="30" cy="18" r="14" fill="#b89060"/><rect x="8" y="34" width="44" height="50" rx="8" fill="#3a9fd8"/><rect x="12" y="66" width="14" height="28" rx="5" fill="#2a8fc8"/><rect x="34" y="66" width="14" height="28" rx="5" fill="#2a8fc8"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRID 6 cards (3×2) -->
+    <div class="reasons-inner">
+      <div class="reasons-grid">
+
+        <!-- Card 1 -->
+        <div class="reason-card">
+          <div class="reason-num">1</div>
+          <div class="reason-photo"></div>
+          <div class="reason-body">
+            <div class="reason-title">回収料金が<br><span class="rt-red">リーズナブル</span></div>
+            <p class="reason-desc">追加料金の不明確な業者やサービスで心配な方々へ。追加料金をご家庭でも事前確認頂けない場合はスタッフにお申し出ください。</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="reason-card">
+          <div class="reason-num">2</div>
+          <div class="reason-photo"></div>
+          <div class="reason-body">
+            <div class="reason-title">迅速・丁寧な<br><span class="rt-red">高水準の作業対応</span></div>
+            <p class="reason-desc">ご家庭にとって大切なお品もいつん、丁寧な搬出。家具の傷防止や、水濡の作業前確認まで丁寧です。</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="reason-card">
+          <div class="reason-num">3</div>
+          <div class="reason-photo"></div>
+          <div class="reason-body">
+            <div class="reason-title">無料にて<br><span class="rt-red">訪問見積もり実施</span></div>
+            <p class="reason-desc">何もお代いただくご無料対象。見積もりを取るだけでなく、訪問見積もり後に断っても追加料金は一切頂きません。</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="reason-card">
+          <div class="reason-num">4</div>
+          <div class="reason-photo"></div>
+          <div class="reason-body">
+            <div class="reason-title">不用品の高価買取で<br><span class="rt-red">回収費がお得に</span></div>
+            <p class="reason-desc">クオーレ埼玉は自社買取で業界で随一等価事業者です。買えるごどれだけ手元に残るかのおよその金額をご案内します。</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="reason-card">
+          <div class="reason-num">5</div>
+          <div class="reason-photo"></div>
+          <div class="reason-body">
+            <div class="reason-title">1点のみから<br><span class="rt-red">家まるごとまでOK</span></div>
+            <p class="reason-desc">頼むべき大きさや量はございません。1点でも家1件分でも、遠慮なくご相談ください。業型からも、家一軒分まで対応にお答えします。</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="reason-card">
+          <div class="reason-num">6</div>
+          <div class="reason-photo"></div>
+          <div class="reason-body">
+            <div class="reason-title">見積もり後の<br><span class="rt-red">追加料金なし</span></div>
+            <p class="reason-desc">必ず有料であることは一切ありません。見積金や別で追加費がかかることは当社は追加料金は一切ありませんのでご安心。</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Card 7 — wide -->
+      <div class="reason-card reason-card-wide">
+        <div class="reason-num">7</div>
+        <div class="reason-wide-left">
+          <div class="reason-title"><span class="rt-red r100">100%</span><br>自社スタッフ</div>
+          <p class="reason-desc">クオーレ埼玉では近隣在住の社員専属スタッフです。その他作業全てを自社スタッフが行いますので、敬語等も配慮し一定でお届けするスタッフが在籍しております。</p>
+          <a href="#" class="reason-staff-btn">スタッフ紹介 ›</a>
+        </div>
+        <div class="reason-wide-photo"></div>
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <div class="compare-wrap">
+        <div class="compare-header">
+          <span>🏷</span> クオーレ埼玉は他社とここがちがう
+        </div>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="th-us">✓ クオーレ埼玉</th>
+              <th class="th-other">他社①</th>
+              <th class="th-other">他社②</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-label">対応時間</td>
+              <td class="td-us"><span class="ct-green">24時間受付</span></td>
+              <td>平日9:00〜19:00</td>
+              <td>月曜休業</td>
+            </tr>
+            <tr class="tr-alt">
+              <td class="td-label">料金</td>
+              <td class="td-us"><span class="ct-red">330円〜</span></td>
+              <td>明示なし</td>
+              <td>粗大ゴミ処理券を購入</td>
+            </tr>
+            <tr>
+              <td class="td-label">追加金</td>
+              <td class="td-us">なし</td>
+              <td>作業毎に追加</td>
+              <td>なし</td>
+            </tr>
+            <tr class="tr-alt">
+              <td class="td-label">対応スピード</td>
+              <td class="td-us"><span class="ct-red">最短即日</span></td>
+              <td>要日程調整</td>
+              <td>要日程調整</td>
+            </tr>
+            <tr>
+              <td class="td-label">対面設定</td>
+              <td class="td-us">可</td>
+              <td>不可</td>
+              <td>不可</td>
+            </tr>
+            <tr class="tr-alt">
+              <td class="td-label">スタッフ</td>
+              <td class="td-us"><span class="ct-green">専門スタッフ</span></td>
+              <td>派遣スタッフ</td>
+              <td>自分で持ち込み</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Bottom button -->
+      <div class="reasons-btn-wrap">
+        <a href="#" class="reasons-btn">首都の悩み <span>›</span></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <div class="contact-section">
+
+    <!-- Header bar -->
+    <div class="contact-header-bar">
+      <span class="chb-badge">ご相談・お見積もり無料</span>
+      <span class="chb-title">お気軽にお問い合わせを！</span>
+    </div>
+
+    <!-- BG + Card -->
+    <div class="contact-bg">
+      <div class="contact-card">
+
+        <!-- LEFT: Staff photo area -->
+        <div class="contact-left">
+          <div class="contact-city-bg">
+            <!-- Staff figure -->
+            <div class="contact-staff">
+              <svg viewBox="0 0 80 140" fill="none">
+                <circle cx="40" cy="22" r="18" fill="#c8a070"/>
+                <rect x="12" y="42" width="56" height="70" rx="10" fill="#3a9fd8"/>
+                <rect x="14" y="80" width="20" height="42" rx="7" fill="#2a8fc8"/>
+                <rect x="46" y="80" width="20" height="42" rx="7" fill="#2a8fc8"/>
+                <rect x="4"  y="55" width="16" height="36" rx="7" fill="#3a9fd8"/>
+                <rect x="60" y="55" width="16" height="36" rx="7" fill="#3a9fd8"/>
+                <text x="20" y="68" font-family="Arial" font-weight="900" font-size="10" fill="white">QUORE</text>
+              </svg>
+            </div>
+            <!-- Badge: 最短即日 -->
+            <div class="contact-badge-yellow">
+              <span>最短即日で<br>駆けつけ！</span>
+            </div>
+            <!-- Badge: Google -->
+            <div class="contact-badge-google">
+              <div class="cbg-title">Google口コミ</div>
+              <div class="cbg-stars">★4.8獲得</div>
+              <div class="cbg-star-row">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MIDDLE: Campaign + Phone -->
+        <div class="contact-middle">
+          <div class="contact-campaign-bar">
+            <span>🎉</span>
+            WEB限定&nbsp; 割引キャンペーン
+            <span>🧮</span>
+          </div>
+          <div class="contact-offer-text">
+            見積もり価格から<span class="co-big">20%OFF割引</span>を実施中！
+          </div>
+          <div class="contact-phone-row">
+            <div class="contact-free-badge">
+              <span>ご相談<br>お見積もり<br>無料</span>
+            </div>
+            <div class="contact-phone-block">
+              <div class="contact-phone-num">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                </svg>
+                0120-996-638
+              </div>
+              <div class="contact-phone-sub">
+                ✓ 24時間受付対応&nbsp;
+                <span class="cpb-tag">土日祝OK</span>
+                <span class="cpb-tag">通話無料</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Buttons -->
+        <div class="contact-right">
+          <a href="#" class="contact-btn-mail">
+            <div class="cbtn-sub">── お見積もり無料受付 ──</div>
+            <div class="cbtn-main">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+              メールでお問い合わせ
+            </div>
+          </a>
+          <a href="#" class="contact-btn-line">
+            <div class="cbtn-sub">── 24時間・365日受付 ──</div>
+            <div class="cbtn-main">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M12 2C6.48 2 2 6.03 2 11c0 2.7 1.3 5.12 3.35 6.82L4.5 22l4.37-2.27A10.8 10.8 0 0 0 12 20c5.52 0 10-4.03 10-9S17.52 2 12 2zm1 13H7v-2h6v2zm2-4H7V9h8v2z"/>
+              </svg>
+              LINEでお問い合わせ
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOMER VOICE SECTION ===== -->
+  <div class="voice-section">
+
+    <!-- Title -->
+    <div class="voice-title-area">
+      <div class="voice-sub"><span class="v-deco">╲</span> 不用品回収クオーレ埼玉をご利用いただいた <span class="v-deco">╱</span></div>
+      <h2 class="voice-title">
+        <span class="voice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e63b2e" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        お客様の声
+      </h2>
+    </div>
+
+    <!-- Intro bar + content -->
+    <div class="voice-intro-wrap">
+      <div class="voice-green-bar">すべてはお客様にご満足いただくために</div>
+      <div class="voice-intro-body">
+        <div class="voice-intro-photo"></div>
+        <div class="voice-intro-text">
+          <div class="voice-intro-heading">ご要望に応えるよう丁寧に対応します</div>
+          <p>不用品回収クオーレ埼玉は、お客様に安心してご利用いただけるよう当社独自の不用品・粗大ゴミ対応サービスで丁寧を徹底しています。「だけない」「捨てることができない」「運び方が分からない」など、不用品・粗大ゴミに関して抱えるあらゆるお悩みを解いて一歩、お客様目線を持ち丁寧に対応します。地域密着の自社スタッフと厳選されたパートナー企業の連携体制で信頼のある作業を実現。お引っ越しはもちろん、回収はもちろん、日時依頼のることなどご不安なことは全てご相談いただけます。遺品整理、リフォームなどについてご依頼いただけます。悩まれたりちかkまでもお気軽にご相談ください。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews list -->
+    <div class="voice-reviews-wrap">
+      <div class="voice-reviews-header">お客様の声 一覧</div>
+
+      <!-- Review 1 -->
+      <div class="voice-review-card">
+        <div class="vrc-tag-row">
+          <span class="vrc-tag">埼玉</span>
+          <span class="vrc-title">こちらのスケジュールに合わせて対応してくれました</span>
+        </div>
+        <div class="vrc-ba-row">
+          <div class="vrc-photo vrc-before">
+            <span class="ba-label before">BEFORE</span>
+          </div>
+          <div class="vrc-arrow">→</div>
+          <div class="vrc-photo vrc-after">
+            <span class="ba-label after">AFTER</span>
+          </div>
+        </div>
+        <p class="vrc-text">引越しのため不用品になった家電・家具を処分してもらいクオーレ埼玉さんに依頼しました。<span class="vrc-red">期限的に少し作業が急な状況にも</span>、スケジュールを全てこちらに合わせてくれました。都合もよく料金もとても安いのでぼんやりした、クオーレ埼玉の皆様ありがとうございました。</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="voice-review-card">
+        <div class="vrc-tag-row">
+          <span class="vrc-tag">埼玉</span>
+          <span class="vrc-title">回収作業は丁寧なのにあっという間に終わって驚きました</span>
+        </div>
+        <div class="vrc-ba-row">
+          <div class="vrc-photo vrc-before">
+            <span class="ba-label before">BEFORE</span>
+          </div>
+          <div class="vrc-arrow">→</div>
+          <div class="vrc-photo vrc-after">
+            <span class="ba-label after">AFTER</span>
+          </div>
+        </div>
+        <p class="vrc-text">家の片付けに伴い、置き具合お品々のほかに不用品を処分してもらいクオーレ埼玉さんに依頼しました。<span class="vrc-red">浮庫や洗濯機の搬出やエアコンの取り外し</span>してくれて、古い家と隣接作業を仕上げてくれました。いくつかの不用品は当社店舗でいい価格で引き取りとしていただけたので必要な費用も随分と抑えました。また機会がありましたらクオーレ埼玉さんにお願いします。</p>
+      </div>
+    </div>
+
+    <!-- Staff intro box -->
+    <div class="voice-staff-box">
+      <div class="vsb-left">
+        <div class="vsb-badge">感謝のお言葉を一挙ご紹介</div>
+        <div class="vsb-title">沢山の<span class="vsb-yellow">"ありがとう"</span>に支えられて</div>
+        <p class="vsb-desc">不用品回収クオーレ埼玉にはたくさんのお客様からの心温まる感謝のお言葉が、日々スタッフの励みになっています！</p>
+      </div>
+      <div class="vsb-right">
+        <div class="vsb-photos">
+          <div class="vsb-photo"></div>
+          <div class="vsb-photo"></div>
+          <div class="vsb-photo"></div>
+          <div class="vsb-photo"></div>
+          <div class="vsb-photo"></div>
+          <div class="vsb-photo"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom button -->
+    <div class="voice-btn-wrap">
+      <a href="#" class="voice-btn">お客様の声 一覧 <span>›</span></a>
+    </div>
+
+  </div>
+
+  <!-- ===== SERVICE SECTION ===== -->
+  <div class="service-section">
+
+    <!-- Header -->
+    <div class="svc-header">
+      <div class="svc-header-decos">
+        <div class="svc-deco-img svc-deco-left">
+          <svg viewBox="0 0 80 60" fill="none"><rect x="5" y="20" width="55" height="35" rx="6" fill="#7bbfdd"/><rect x="8" y="25" width="20" height="22" rx="3" fill="#4a9cc0"/><rect x="30" y="28" width="25" height="19" rx="3" fill="#4a9cc0"/><rect x="12" y="10" width="30" height="14" rx="4" fill="#f5a623"/><rect x="15" y="13" width="24" height="8" rx="2" fill="#e8941a"/></svg>
+        </div>
+        <div class="svc-title-block">
+          <div class="svc-title-sub">不用品回収クオーレ埼玉の</div>
+          <div class="svc-title-main">サービス紹介</div>
+        </div>
+        <div class="svc-deco-img svc-deco-right">
+          <svg viewBox="0 0 70 80" fill="none"><rect x="10" y="5" width="50" height="70" rx="6" fill="#ccc"/><rect x="14" y="9" width="42" height="30" rx="3" fill="#aaa"/><rect x="18" y="42" width="34" height="6" rx="2" fill="#bbb"/><rect x="18" y="52" width="34" height="6" rx="2" fill="#bbb"/><circle cx="35" cy="68" r="4" fill="#999"/></svg>
+        </div>
+      </div>
+      <div class="svc-header-glow"></div>
+    </div>
+
+    <div class="svc-inner">
+
+      <!-- BLOCK 1: 主なサービス -->
+      <div class="svc-block-header">主なサービス</div>
+      <div class="svc-grid main-grid">
+
+        <!-- Row 1 -->
+        <div class="svc-card">
+          <div class="svc-photo"></div>
+          <div class="svc-card-body">
+            <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div class="svc-name">不用品回収</div>
+            <p class="svc-desc">大量の不用品、家引き越しが原因からずお任せください。お見積もりを含めてお荷物、迅速に機動に臨みいつでこご確認ください。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-photo"></div>
+          <div class="svc-card-body">
+            <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg></div>
+            <div class="svc-name">粗大ゴミ処分</div>
+            <p class="svc-desc">品目によって分け方が異なる粗大ゴミ処分もクオーレ埼玉にお任せください。お気軽に要望にお答えし、「捨て方」の法的に規則に対応します。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-photo"></div>
+          <div class="svc-card-body">
+            <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round"><path d="M20 9V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2"/><path d="M2 9h20"/><rect x="4" y="9" width="16" height="12" rx="2"/><line x1="8" y1="15" x2="16" y2="15"/></svg></div>
+            <div class="svc-name">家具回収</div>
+            <p class="svc-desc">家具回収専門スタッフが対応してご安心いただく、ふんだんの専門の搬出します。どんな家具からのお問い合わせもおいただけます。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="svc-card">
+          <div class="svc-photo"></div>
+          <div class="svc-card-body">
+            <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="svc-name">家電回収</div>
+            <p class="svc-desc">引き取れないの消費者回収306品の家電4品目はじめ、小型・大型問わず引取から運搬まで丁寧に。家庭にも適切にリサイクル、廃棄します。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-photo"></div>
+          <div class="svc-card-body">
+            <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.5"/></svg></div>
+            <div class="svc-name">廃品回収</div>
+            <p class="svc-desc">鉄類、ガラス類、布類、ビン・缶などを適切にまとめて丁寧な廃品回収。不用品もまとめてクオーレ埼玉に、リサイクルします。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-photo"></div>
+          <div class="svc-card-body">
+            <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+            <div class="svc-name">不用品買取</div>
+            <p class="svc-desc">豊富かあります自社の買取で無料設定で丁寧、豊富な実績の中、お問い合わせ地域に見合いながら、値引き処分が可能です。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+
+        <!-- Row 3: 2 cards -->
+        <div class="svc-card">
+          <div class="svc-photo"></div>
+          <div class="svc-card-body">
+            <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <div class="svc-name">引越しサポート</div>
+            <p class="svc-desc">引越しに伴いいらない家具・不用品の回収、部分ごとの搬出、組直りの運搬もおまかせください。小型・1地域内の独自の専門のパートナーと大型にご提供します。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-photo"></div>
+          <div class="svc-card-body">
+            <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/><line x1="12" y1="2" x2="12" y2="9"/></svg></div>
+            <div class="svc-name">ゴミ屋敷片付け</div>
+            <p class="svc-desc">ゴミ屋敷・大量の家具と大量の廃棄物品を安心してまとめしてくれる、回収の中で一気に対応します。お困りで困られて、回答後お部屋片付けします。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+        <div class="svc-card svc-card-empty"></div>
+
+      </div>
+
+      <!-- BLOCK 2: その他のサービス -->
+      <div class="svc-block-header" style="margin-top:30px;">その他のサービス</div>
+      <div class="svc-grid other-grid">
+
+        <div class="svc-row-card">
+          <div class="svc-row-photo"></div>
+          <div class="svc-row-body">
+            <div class="svc-row-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              遺品整理
+            </div>
+            <p class="svc-row-desc">クオーレ埼玉の遺品整理専門スタッフが故人のお品を大切に整理します。遺族のご要望に寄り添い対応させていただきます。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+
+        <div class="svc-row-card">
+          <div class="svc-row-photo"></div>
+          <div class="svc-row-body">
+            <div class="svc-row-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              リフォーム・ハウスクリーニング
+            </div>
+            <p class="svc-row-desc">暮らしの改善をサポートするリフォーム・ハウスクリーニングも対応します。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+
+        <div class="svc-row-card">
+          <div class="svc-row-photo"></div>
+          <div class="svc-row-body">
+            <div class="svc-row-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><line x1="12" y1="22" x2="12" y2="17"/></svg>
+              不動産売買
+            </div>
+            <p class="svc-row-desc">不動産の窓口もクオーレ・1階空き部屋スタッフに相談ください、道適宜・関係関連情報を通じて、迅速文で対応しサポートします。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+
+        <div class="svc-row-card">
+          <div class="svc-row-photo"></div>
+          <div class="svc-row-body">
+            <div class="svc-row-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              解体工事
+            </div>
+            <p class="svc-row-desc">旧宅、自社倉庫など空き物件の解体など。費用と手間をかけず丁寧な解体工事をご確認いただきます。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+
+        <div class="svc-row-card" style="grid-column: span 2;">
+          <div class="svc-row-photo"></div>
+          <div class="svc-row-body">
+            <div class="svc-row-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+              法人のお客様向け
+            </div>
+            <p class="svc-row-desc">法律で定められた不用品・廃品・搬入工事、その他、年末清掃業務なども承ります。</p>
+          </div>
+          <div class="svc-corner"></div>
+        </div>
+
+      </div>
+
+      <!-- Bottom button -->
+      <div class="svc-btn-wrap">
+        <a href="#" class="svc-btn">サービス一覧 <span>›</span></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== SDGs SECTION ===== -->
+  <div class="sdgs-section">
+    <div class="sdgs-card">
+
+      <!-- Header bar -->
+      <div class="sdgs-header">
+        <div class="sdgs-h-sub">当社は、行政のパートナー制度に登録して、</div>
+        <div class="sdgs-h-main">SDGsに取り組んでいます！</div>
+      </div>
+
+      <div class="sdgs-body">
+
+        <!-- SDGs logo -->
+        <div class="sdgs-logo">
+          <div class="sdgs-logo-top">SUSTAINABLE<br>DEVELOPMENT</div>
+          <div class="sdgs-logo-goals">
+            <span style="color:#E5243B">G</span><span style="color:#26BDE2">O</span><span style="color:#4C9F38">A</span><span style="color:#FD6925">L</span><span style="color:#E5243B">S</span>
+          </div>
+        </div>
+
+        <!-- 17 Goals grid -->
+        <div class="sdgs-grid">
+          <div class="sdg-goal" style="background:#E5243B"><span class="sdg-num">1</span><span class="sdg-text">貧困を<br>なくそう</span></div>
+          <div class="sdg-goal" style="background:#DDA63A"><span class="sdg-num">2</span><span class="sdg-text">飢餓を<br>ゼロに</span></div>
+          <div class="sdg-goal" style="background:#4C9F38"><span class="sdg-num">3</span><span class="sdg-text">すべての人に<br>健康と福祉を</span></div>
+          <div class="sdg-goal" style="background:#C5192D"><span class="sdg-num">4</span><span class="sdg-text">質の高い<br>教育をみんなに</span></div>
+          <div class="sdg-goal" style="background:#FF3A21"><span class="sdg-num">5</span><span class="sdg-text">ジェンダー<br>平等を実現しよう</span></div>
+          <div class="sdg-goal" style="background:#26BDE2"><span class="sdg-num">6</span><span class="sdg-text">安全な水と<br>トイレを世界中に</span></div>
+          <div class="sdg-goal" style="background:#FCC30B"><span class="sdg-num">7</span><span class="sdg-text">エネルギーを<br>みんなにそして<br>クリーンに</span></div>
+          <div class="sdg-goal" style="background:#A21942"><span class="sdg-num">8</span><span class="sdg-text">働きがいも<br>経済成長も</span></div>
+          <div class="sdg-goal" style="background:#FD6925"><span class="sdg-num">9</span><span class="sdg-text">産業と技術革新の<br>基盤をつくろう</span></div>
+          <div class="sdg-goal" style="background:#DD1367"><span class="sdg-num">10</span><span class="sdg-text">人や国の<br>不平等をなくそう</span></div>
+          <div class="sdg-goal" style="background:#FD9D24"><span class="sdg-num">11</span><span class="sdg-text">住み続けられる<br>まちづくりを</span></div>
+          <div class="sdg-goal" style="background:#BF8B2E"><span class="sdg-num">12</span><span class="sdg-text">つくる責任<br>つかう責任</span></div>
+          <div class="sdg-goal" style="background:#3F7E44"><span class="sdg-num">13</span><span class="sdg-text">気候変動に<br>具体的な対策を</span></div>
+          <div class="sdg-goal" style="background:#0A97D9"><span class="sdg-num">14</span><span class="sdg-text">海の豊かさを<br>守ろう</span></div>
+          <div class="sdg-goal" style="background:#56C02B"><span class="sdg-num">15</span><span class="sdg-text">陸の豊かさも<br>守ろう</span></div>
+          <div class="sdg-goal" style="background:#00689D"><span class="sdg-num">16</span><span class="sdg-text">平和と公正を<br>すべての人に</span></div>
+          <div class="sdg-goal" style="background:#19486A"><span class="sdg-num">17</span><span class="sdg-text">パートナーシップで<br>目標を達成しよう</span></div>
+        </div>
+
+        <!-- Partner text -->
+        <div class="sdgs-partner-text">
+          ｜ SDGsパートナーに参画しており、環境に優しい不用品回収業者です
+        </div>
+
+        <!-- Certificates + Links -->
+        <div class="sdgs-cert-row">
+          <!-- Left: certificate photos -->
+          <div class="sdgs-cert-photos">
+            <div class="sdgs-cert-img"></div>
+            <div class="sdgs-cert-img sdgs-cert-img2"></div>
+            <div class="sdgs-cert-caption">【SDGsパートナーズ登録証】</div>
+          </div>
+
+          <!-- Right: link list -->
+          <div class="sdgs-links">
+            <div class="sdgs-link-row">
+              <div class="sdgs-link-info">
+                <div class="sdgs-link-name">かすかべSDGsパートナーズ</div>
+                <div class="sdgs-link-url">https://www.city.kasukabe.lg.jp/</div>
+              </div>
+              <a href="#" class="sdgs-link-btn">外部<br>サイト</a>
+            </div>
+            <div class="sdgs-link-row">
+              <div class="sdgs-link-info">
+                <div class="sdgs-link-name">さいたまCS・SDGsパートナーズ</div>
+                <div class="sdgs-link-url">https://www.city.saitama.jp/</div>
+              </div>
+              <a href="#" class="sdgs-link-btn">外部<br>サイト</a>
+            </div>
+            <div class="sdgs-link-row">
+              <div class="sdgs-link-info">
+                <div class="sdgs-link-name">JAPAN SDGs Action Platform｜外務省</div>
+                <div class="sdgs-link-url">https://www.mofa.go.jp/</div>
+              </div>
+              <a href="#" class="sdgs-link-btn">外部<br>サイト</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom button -->
+    <div class="sdgs-btn-wrap">
+      <a href="#" class="sdgs-btn">彩鉄鋼の環境 <span>›</span></a>
+    </div>
+  </div>
+
+  <!-- ===== PRICING SECTION ===== -->
+  <div class="pricing-section">
+
+    <!-- Title -->
+    <div class="pricing-title-area">
+      <div class="pricing-sub"><span class="p-deco">╲</span> 回収可能な不用品と <span class="p-deco">╱</span></div>
+      <h2 class="pricing-title">料金について</h2>
+    </div>
+
+    <div class="pricing-inner">
+
+      <!-- Intro -->
+      <div class="pricing-intro">
+        <div class="pricing-intro-text">
+          <div class="pricing-intro-heading">明朗会計をお約束します！</div>
+          <p>不用品回収クオーレ埼玉は、お客様に安心してご利用いただけるよう当社独自の不用品・粗大ゴミ対応サービスで丁寧を徹底しています。追加料金はお見積り前にお客様にご提案し、しっかりとご承認してから作業を行います。予想外の費用発生は一切ありませんので、ご相談いただいた内容に沿って作業を進めます。見積り後に費用が変わることはございません。今後の対応次第でご不安な点はいつでもご相談ください。また、「見積りをとりたい」「金額だけ確認したい」など、ご要望に合わせて柔軟に対応します。安心安全にご依頼いただくための明朗会計に努めています。</p>
+        </div>
+        <div class="pricing-intro-photo"></div>
+      </div>
+
+      <!-- Campaign banner (reuse style) -->
+      <div class="pricing-campaign">
+        <div class="campaign-box">
+          <div class="campaign-photos left">
+            <div class="cp-photo cp-photo-top"></div>
+            <div class="cp-photo cp-photo-bottom"></div>
+          </div>
+          <div class="campaign-center">
+            <div class="campaign-title-bar">
+              <span class="title-arrow">╲</span>
+              <span>WEB限定&nbsp; 割引キャンペーン</span>
+              <span class="title-arrow">╱</span>
+            </div>
+            <div class="campaign-body">
+              <div class="campaign-label">見積もり価格から</div>
+              <div class="campaign-offer">
+                <span class="offer-percent">20<span class="offer-pct-sign">%</span>OFF</span>
+                <span class="offer-text">キャンペーン<br>実施中！</span>
+              </div>
+              <div class="campaign-note">ホームページからお問い合わせいただいたお客様限定</div>
+            </div>
+          </div>
+          <div class="campaign-photos right">
+            <div class="cp-photo cp-photo-top"></div>
+            <div class="cp-photo cp-photo-bottom"></div>
+          </div>
+        </div>
+        <div class="campaign-disclaimer">
+          <p>※割引額は最大100,000円となります。</p>
+          <p>※上記キャンペーンは、予告なく変更・終了する場合がございます。予めご了承ください。</p>
+        </div>
+      </div>
+
+      <!-- Price table header -->
+      <div class="price-table-header">
+        <span>📋</span> 回収可能な品目と料金例
+      </div>
+
+      <!-- Category 1: 家具 -->
+      <div class="price-category">
+        <div class="pcat-label">｜ 家具・インテリアなど</div>
+        <div class="pcat-body">
+          <div class="pcat-photo pcat-furniture"></div>
+          <div class="pcat-items">
+            <div class="pcat-row">
+              <span class="pcat-name">■ 大型家具</span>
+              <span class="pcat-price">2,200円（税込）〜</span>
+              <span class="pcat-items-list">ベッド／ソファ／テーブル／タンス／本棚／仏壇</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ 中型家具</span>
+              <span class="pcat-price">1,100円（税込）〜</span>
+              <span class="pcat-items-list">チェスト／ローテーブル／学習机／パソコンデスク／テレビ台／一人掛けソファ／脇台／サイドボード</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ 小型家具</span>
+              <span class="pcat-price">550円（税込）〜</span>
+              <span class="pcat-items-list">ちゃぶ台／椅子／鏡台／衣装ケース／カラーボックス／毛布／マットレス／クッション／植物／他</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: 電化製品 -->
+      <div class="price-category">
+        <div class="pcat-label">｜ 電化製品など</div>
+        <div class="pcat-body">
+          <div class="pcat-photo pcat-electronics"></div>
+          <div class="pcat-items">
+            <div class="pcat-row">
+              <span class="pcat-name">■ 大型家電</span>
+              <span class="pcat-price">2,200円（税込）〜</span>
+              <span class="pcat-items-list">テレビ／冷蔵庫／洗濯機／エアコン</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ 調理家電</span>
+              <span class="pcat-price">550円（税込）〜</span>
+              <span class="pcat-items-list">電子レンジ／オーブントースター／ホットプレート／炊飯器／食洗機／コーヒーメール／クッキングヒーター／ルームヘアー</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ 生活家電</span>
+              <span class="pcat-price">330円（税込）〜</span>
+              <span class="pcat-items-list">掃除機／扇風機／アイロン／ドライヤー／ミシン／空気清浄機／ストーブ／ファンヒーター／除湿機器／乾燥機器／扇風機類／カメラ</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ OA機器</span>
+              <span class="pcat-price">550円（税込）〜</span>
+              <span class="pcat-items-list">デスクトップパソコン／ノートパソコン／モニター／複合機器／プリンター／コピー機／シュレッダー／プロジェクター</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ オーディオ機器</span>
+              <span class="pcat-price">550円（税込）〜</span>
+              <span class="pcat-items-list">DVDプレーヤー／CDプレーヤー／ブルーレイプレーヤー／ビデオデッキ／レコーダー／ラジカセ／コンポ／スピーカー／アンプ／テレビ台／ヘッドホン／ムルチアダーシステム</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ 照明器具</span>
+              <span class="pcat-price">550円（税込）〜</span>
+              <span class="pcat-items-list">電球スタンド／シャンデリア／シーリングライト／常夜灯／蛍光灯</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: 生活用品 -->
+      <div class="price-category">
+        <div class="pcat-label">｜ 生活用品など</div>
+        <div class="pcat-body">
+          <div class="pcat-photo pcat-goods"></div>
+          <div class="pcat-items">
+            <div class="pcat-row">
+              <span class="pcat-name">■ 生活用品</span>
+              <span class="pcat-price">550円（税込）〜</span>
+              <span class="pcat-items-list">ふとん／ペット用品／ゲーム用品／育児用品／傘立て／日用品／チャイルドシート／ベビーカー／他</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ お亦</span>
+              <span class="pcat-price">330円（税込）〜</span>
+              <span class="pcat-items-list">おもちゃ／ゲーム本体／ゲームソフト／スキー板／スノーボード／サーフボード／ゴルフセット／バット／ラケット／野球用品／他</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ 楽器類</span>
+              <span class="pcat-price">550円（税込）〜</span>
+              <span class="pcat-items-list">ピアノ／エレクトーン／バルボン／バイオリン／ギター／ベース／ドラム／キーボード</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name">■ 雑物品</span>
+              <span class="pcat-price">550円（税込）〜</span>
+              <span class="pcat-items-list">絵画／工芸品／陶芸品／骨董品／ぬいぐるみ／フィギュア／模型／他</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notice box -->
+      <div class="pricing-notice">
+        <span class="pnotice-icon">ℹ</span>
+        <div class="pnotice-text">
+          <p>※上記は目安の料金となり、リサイクル品の可否、回収品の距離・量・サイズ、各産業内容などによって変更をお受取もみられることがあります。</p>
+          <p>詳細なお見積もりは、お気軽にメールにてお問い合わせください。</p>
+        </div>
+      </div>
+
+      <!-- その他の回収可能品目 -->
+      <div class="price-table-header" style="margin-top:20px;">
+        その他の回収可能品目
+      </div>
+
+      <!-- 車両・農機具 -->
+      <div class="price-category">
+        <div class="pcat-body">
+          <div class="pcat-photo pcat-vehicle"></div>
+          <div class="pcat-items">
+            <div class="pcat-row">
+              <span class="pcat-name">■ 車両・農機具</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name" style="color:#2b9e3a">バイク・タイヤ関連</span>
+              <span class="pcat-items-list">バイク／タイヤ／自動車バッテリー／カーステレオ／カーナビ／タイヤチェーン／エアロパーツ／マフラー／キックボード／スクーター／他</span>
+            </div>
+            <div class="pcat-row">
+              <span class="pcat-name" style="color:#2b9e3a">農機具</span>
+              <span class="pcat-items-list">トラクター／空気清浄／分解機／排気機／草刈り機／収穫器／防衛機／救急機／ビニールハウス／洗浄機／チェーンソー／農業工具／リヤカー</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="pricing-list-btn-wrap">
+        <a href="#" class="pricing-list-btn">回収対象品目一覧 <span>›</span></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== PACK PRICING SECTION ===== -->
+  <div class="pack-section">
+
+    <!-- Title -->
+    <div class="pack-title-area">
+      <h2 class="pack-title">
+        <span class="pack-title-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2b9e3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+        </span>
+        パック料金一覧
+      </h2>
+    </div>
+
+    <div class="pack-inner">
+
+      <!-- Info banner -->
+      <div class="pack-info-banner">
+        <div class="pack-info-text">
+          <p>よりお得にご利用いただけるよう<strong class="pib-yellow">パック料金</strong>をご用意しました！</p>
+          <p>希望や予算に合わせて選択でき、<span class="pib-green">品目よりもお値打ち価格</span>でお片付けです！</p>
+        </div>
+        <div class="pack-info-truck">
+          <svg viewBox="0 0 120 70" fill="none">
+            <rect x="2" y="20" width="75" height="42" rx="4" fill="#f0f0f0" stroke="#ccc"/>
+            <rect x="77" y="30" width="38" height="32" rx="3" fill="#e0e0e0" stroke="#ccc"/>
+            <rect x="80" y="33" width="32" height="18" rx="2" fill="#b8d8f0"/>
+            <circle cx="22" cy="64" r="7" fill="#555"/><circle cx="22" cy="64" r="3" fill="#888"/>
+            <circle cx="95" cy="64" r="7" fill="#555"/><circle cx="95" cy="64" r="3" fill="#888"/>
+            <rect x="5" y="23" width="69" height="36" rx="2" fill="#fff" stroke="#ddd"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 6 Pack cards grid -->
+      <div class="pack-grid">
+
+        <!-- 1: ミニパック(小) -->
+        <div class="pack-card">
+          <div class="pack-card-header">ミニパック<span class="pack-size">(小)</span></div>
+          <div class="pack-photo"></div>
+          <div class="pack-card-body">
+            <p class="pack-desc">お部屋のちょっとしたお片付けにおすすめ</p>
+            <div class="pack-badge-row"><span class="pb-green">間取り</span><span class="pb-val">—</span></div>
+            <div class="pack-badge-row"><span class="pb-green">対応車</span><span class="pb-val">カゴ車</span></div>
+            <div class="pack-badge-row"><span class="pb-red">料金</span><span class="pb-price">5,500円（税込）〜</span></div>
+          </div>
+        </div>
+
+        <!-- 2: ミニパック(大) -->
+        <div class="pack-card">
+          <div class="pack-card-header">ミニパック<span class="pack-size">(大)</span></div>
+          <div class="pack-photo"></div>
+          <div class="pack-card-body">
+            <p class="pack-desc">大きな家電や家具の処分におすすめ</p>
+            <div class="pack-badge-row"><span class="pb-green">間取り</span><span class="pb-val">—</span></div>
+            <div class="pack-badge-row"><span class="pb-green">対応車</span><span class="pb-val">軽トラ</span></div>
+            <div class="pack-badge-row"><span class="pb-red">料金</span><span class="pb-price">11,000円（税込）〜</span></div>
+          </div>
+        </div>
+
+        <!-- 3: レギュラーパック -->
+        <div class="pack-card">
+          <div class="pack-card-header">レギュラーパック</div>
+          <div class="pack-photo"></div>
+          <div class="pack-card-body">
+            <p class="pack-desc">1人暮らしのお片付けにおすすめ</p>
+            <div class="pack-badge-row"><span class="pb-green">間取り</span><span class="pb-val">1R〜1K</span></div>
+            <div class="pack-badge-row"><span class="pb-green">対応車</span><span class="pb-val">軽トラ〜1tトラック</span></div>
+            <div class="pack-badge-row"><span class="pb-red">料金</span><span class="pb-price">16,500円（税込）〜</span></div>
+          </div>
+        </div>
+
+        <!-- 4: ファミリーパック(小) -->
+        <div class="pack-card">
+          <div class="pack-card-header">ファミリーパック<span class="pack-size">(小)</span></div>
+          <div class="pack-photo"></div>
+          <div class="pack-card-body">
+            <p class="pack-desc">ご家族暮らし（2〜3人）お片付けにおすすめ</p>
+            <div class="pack-badge-row"><span class="pb-green">間取り</span><span class="pb-val">1DK〜1LDK</span></div>
+            <div class="pack-badge-row"><span class="pb-green">対応車</span><span class="pb-val">1〜2tトラック</span></div>
+            <div class="pack-badge-row"><span class="pb-red">料金</span><span class="pb-price">33,000円（税込）〜</span></div>
+          </div>
+        </div>
+
+        <!-- 5: ファミリーパック(大) -->
+        <div class="pack-card">
+          <div class="pack-card-header">ファミリーパック<span class="pack-size">(大)</span></div>
+          <div class="pack-photo"></div>
+          <div class="pack-card-body">
+            <p class="pack-desc">ご家族暮らし（3〜5人）お片付けにおすすめ</p>
+            <div class="pack-badge-row"><span class="pb-green">間取り</span><span class="pb-val">2K〜2DK</span></div>
+            <div class="pack-badge-row"><span class="pb-green">対応車</span><span class="pb-val">2tトラック</span></div>
+            <div class="pack-badge-row"><span class="pb-red">料金</span><span class="pb-price">55,000円（税込）〜</span></div>
+          </div>
+        </div>
+
+        <!-- 6: その他 -->
+        <div class="pack-card">
+          <div class="pack-card-header">その他</div>
+          <div class="pack-photo pack-photo-other"></div>
+          <div class="pack-card-body">
+            <p class="pack-desc">遺品整理やゴミ屋敷など一軒家のお片付け</p>
+            <div class="pack-badge-row"><span class="pb-green">間取り</span><span class="pb-val">—</span></div>
+            <div class="pack-badge-row"><span class="pb-green">対応車</span><span class="pb-val">—</span></div>
+            <div class="pack-badge-row"><span class="pb-red">料金</span><span class="pb-price">要相談</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Notice -->
+      <div class="pricing-notice" style="margin-top:20px;">
+        <span class="pnotice-icon">ℹ</span>
+        <div class="pnotice-text">
+          <p>※上記は目安の料金となり、リサイクル品の可否、回収品の距離・量・サイズ、作業内容などによって変更をお受取もみられることがあります。</p>
+          <p>詳細なお見積もりは、お気軽にメールにてお問い合わせください。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== PRICING FEATURES SECTION ===== -->
+  <div class="pf-section">
+
+    <!-- Title -->
+    <div class="pf-title-area">
+      <div class="pf-sub"><span class="pf-deco">╲</span> 他社とここが違う！ <span class="pf-deco">╱</span></div>
+      <h2 class="pf-title">クオーレ埼玉の料金プランの特徴</h2>
+    </div>
+
+    <div class="pf-inner">
+
+      <!-- Row 1: photo left, text right -->
+      <div class="pf-row">
+        <div class="pf-photo pf-photo-truck"></div>
+        <div class="pf-content">
+          <div class="pf-badge">01</div>
+          <div class="pf-heading">
+            荷載量とプライバシー重視の<br>
+            <span class="pf-heading-main">パン型トラック</span>
+          </div>
+          <p class="pf-desc">クオーレ埼玉は安心・安全な不用品回収のためのトラック送りにもこだわります。平ボディではなく不用品・粗大ゴミを多く積み込めるパンのトラックを使用することで、追加費を置いて作業料金が大幅削減し、作業時間の短縮が可能。また、トレーラー車内の遮光し、積み合わせが外から見えることもないので、お客様のプライバシーも保護も可能です。</p>
+        </div>
+      </div>
+
+      <!-- Row 2: text left, photo right -->
+      <div class="pf-row pf-row-reverse">
+        <div class="pf-content">
+          <div class="pf-badge">02</div>
+          <div class="pf-heading">
+            あらゆる費用込みの<br>
+            <span class="pf-heading-main">正直な見積もりをご提示</span>
+          </div>
+          <p class="pf-desc">クオーレ埼玉は他社に特徴を比較費を全て含めて作業費をきちんに提示し、費用でなく、作業費用にお答えいただく料金をお伝えして、見積書と料金の解決の取組をその場でお伝えします。作業完了によく使うと作業料金を追加することは一切ありません。<strong>もちろん</strong>、<strong>WEB割引</strong>なども合わせてお選びパックプランにも適合して、料金・作業量ともに公開一番でも対応します。</p>
+        </div>
+        <div class="pf-photo pf-photo-calc"></div>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <div class="pf-btn-wrap">
+      <a href="#" class="pf-btn">料金について <span>›</span></a>
+    </div>
+
+  </div>
+
+  <!-- ===== CONTACT SECTION (repeat) ===== -->
+  <div class="contact-section">
+    <div class="contact-header-bar">
+      <span class="chb-badge">ご相談・お見積もり無料</span>
+      <span class="chb-title">お気軽にお問い合わせを！</span>
+    </div>
+    <div class="contact-bg">
+      <div class="contact-card">
+        <div class="contact-left">
+          <div class="contact-city-bg">
+            <div class="contact-staff">
+              <svg viewBox="0 0 80 140" fill="none">
+                <circle cx="40" cy="22" r="18" fill="#c8a070"/>
+                <rect x="12" y="42" width="56" height="70" rx="10" fill="#3a9fd8"/>
+                <rect x="14" y="80" width="20" height="42" rx="7" fill="#2a8fc8"/>
+                <rect x="46" y="80" width="20" height="42" rx="7" fill="#2a8fc8"/>
+                <rect x="4"  y="55" width="16" height="36" rx="7" fill="#3a9fd8"/>
+                <rect x="60" y="55" width="16" height="36" rx="7" fill="#3a9fd8"/>
+                <text x="20" y="68" font-family="Arial" font-weight="900" font-size="10" fill="white">QUORE</text>
+              </svg>
+            </div>
+            <div class="contact-badge-yellow"><span>最短即日で<br>駆けつけ！</span></div>
+            <div class="contact-badge-google">
+              <div class="cbg-title">Google口コミ</div>
+              <div class="cbg-stars">★4.8獲得</div>
+              <div class="cbg-star-row">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-middle">
+          <div class="contact-campaign-bar"><span>🎉</span> WEB限定&nbsp; 割引キャンペーン <span>🧮</span></div>
+          <div class="contact-offer-text">見積もり価格から<span class="co-big">20%OFF割引</span>を実施中！</div>
+          <div class="contact-phone-row">
+            <div class="contact-free-badge"><span>ご相談<br>お見積もり<br>無料</span></div>
+            <div class="contact-phone-block">
+              <div class="contact-phone-num">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                0120-996-638
+              </div>
+              <div class="contact-phone-sub">✓ 24時間受付対応&nbsp;<span class="cpb-tag">土日祝OK</span><span class="cpb-tag">通話無料</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <a href="#" class="contact-btn-mail">
+            <div class="cbtn-sub">── お見積もり無料受付 ──</div>
+            <div class="cbtn-main">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              メールでお問い合わせ
+            </div>
+          </a>
+          <a href="#" class="contact-btn-line">
+            <div class="cbtn-sub">── 24時間・365日受付 ──</div>
+            <div class="cbtn-main">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.7 1.3 5.12 3.35 6.82L4.5 22l4.37-2.27A10.8 10.8 0 0 0 12 20c5.52 0 10-4.03 10-9S17.52 2 12 2zm1 13H7v-2h6v2zm2-4H7V9h8v2z"/></svg>
+              LINEでお問い合わせ
+            </div>
+          </a>
         </div>
       </div>
     </div>
