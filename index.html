@@ -223,6 +223,15 @@
     .nav-bar {
       background: #fff;
       border-bottom: 2px solid #ddd;
+      position: relative;
+    }
+
+    /* Hamburger button — hidden on desktop */
+    .hamburger-btn {
+      display: none;
+    }
+    .nav-overlay {
+      display: none;
     }
 
     .nav-bar ul {
@@ -2655,15 +2664,50 @@
 
   <!-- NAVIGATION -->
   <nav class="nav-bar">
-    <ul>
-      <li><a href="#">トップ</a></li>
-      <li><a href="#">サービス一覧</a></li>
-      <li><a href="#">料金について</a></li>
-      <li><a href="#">回収対象品目一覧</a></li>
-      <li><a href="#">不用品買取</a></li>
-      <li><a href="#">会社概要</a></li>
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMenu()" aria-label="メニュー">
+      <span class="hb-icon" id="hbIcon">
+        <span></span><span></span><span></span>
+      </span>
+      <span class="hb-label">メニュー</span>
+    </button>
+
+    <!-- Desktop nav list / Mobile dropdown -->
+    <ul id="navMenu">
+      <li><a href="#" onclick="closeMenu()">トップ</a></li>
+      <li><a href="#" onclick="closeMenu()">サービス一覧</a></li>
+      <li><a href="#" onclick="closeMenu()">料金について</a></li>
+      <li><a href="#" onclick="closeMenu()">回収対象品目一覧</a></li>
+      <li><a href="#" onclick="closeMenu()">不用品買取</a></li>
+      <li><a href="#" onclick="closeMenu()">会社概要</a></li>
     </ul>
   </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('navMenu');
+      var overlay = document.getElementById('navOverlay');
+      var btn = document.getElementById('hamburgerBtn');
+      var isOpen = menu.classList.contains('nav-open');
+      if (isOpen) {
+        menu.classList.remove('nav-open');
+        overlay.classList.remove('nav-open');
+        btn.classList.remove('is-open');
+      } else {
+        menu.classList.add('nav-open');
+        overlay.classList.add('nav-open');
+        btn.classList.add('is-open');
+      }
+    }
+    function closeMenu() {
+      document.getElementById('navMenu').classList.remove('nav-open');
+      document.getElementById('navOverlay').classList.remove('nav-open');
+      document.getElementById('hamburgerBtn').classList.remove('is-open');
+    }
+  </script>
 
   <!-- NOTICE BAR -->
   <div class="notice-bar">
@@ -6302,6 +6346,153 @@ function jcsScroll(dir) {
 
   /* === GLOBAL === */
   .teal-btn { font-size: 13px; padding: 12px 24px; }
+
+  /* === OVERFLOW FIX === */
+  html, body { overflow-x: hidden; }
+
+  /* === HEADER LOGO shrink === */
+  .header-top { padding: 8px 10px; gap: 6px; }
+  .logo-text { height: auto; flex-wrap: wrap; gap: 2px; }
+  .logo-text .fuyohin { font-size: 16px; }
+  .logo-text .quolle  { font-size: 16px; }
+  .logo-text .saitama { font-size: 13px; padding: 0 5px; }
+  .logo-discount      { font-size: 10px; padding: 1px 6px; }
+  .logo-discount span { font-size: 13px; }
+  .phone-number       { font-size: 20px; }
+  .phone-icon         { width: 28px; height: 20px; }
+  .free-badge         { width: 50px; height: 50px; font-size: 9px; }
+  .free-badge .big    { font-size: 13px; }
+  .cta-area           { gap: 5px; }
+  .btn-cta            { min-width: 120px; padding: 6px 10px; font-size: 12px; }
+  .btn-cta .btn-label-small { font-size: 9px; }
+  .btn-cta .btn-label-main  { font-size: 12px; }
+  .phone-meta         { font-size: 11px; gap: 5px; }
+  .phone-meta .badge-holiday { font-size: 10px; padding: 1px 5px; }
+
+  /* === NAV BAR → HAMBURGER === */
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .hb-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 22px;
+  }
+  .hb-icon span {
+    display: block;
+    height: 2px;
+    background: #2ea84f;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+  /* open state → X */
+  .hamburger-btn.is-open .hb-icon span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger-btn.is-open .hb-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-btn.is-open .hb-icon span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Nav menu hidden by default on mobile */
+  .nav-bar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 2px solid #2ea84f;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-bar ul.nav-open {
+    display: flex;
+  }
+  .nav-bar ul li {
+    flex: none;
+    border-bottom: 1px solid #eee;
+  }
+  .nav-bar ul li a {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 14px;
+    border-right: none;
+    border-left: none;
+  }
+  .nav-bar ul li:first-child a {
+    border-left: none;
+  }
+  .nav-bar ul li a:hover {
+    background: #f0faf2;
+    padding-left: 26px;
+  }
+  /* Overlay */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 998;
+  }
+  .nav-overlay.nav-open {
+    display: block;
+  }
+
+  /* === CONTACT HEADER BAR === */
+  .contact-header-bar { flex-wrap: wrap; gap: 6px; padding: 10px 14px; }
+  .chb-title          { font-size: 17px; }
+  .chb-badge          { font-size: 10px; padding: 3px 8px; }
+
+  /* === CONTACT MIDDLE === */
+  .contact-campaign-bar { font-size: 11px; padding: 6px 10px; }
+  .contact-offer-text   { font-size: 13px; }
+  .co-big               { font-size: 18px; }
+  .contact-phone-row    { flex-wrap: wrap; gap: 8px; }
+  .contact-free-badge   { width: 60px; height: 60px; font-size: 9px; }
+  .contact-phone-num    { font-size: 19px !important; }
+  .contact-phone-sub    { font-size: 10px; flex-wrap: wrap; gap: 3px; }
+
+  /* === CONTACT BUTTONS === */
+  .contact-btn-mail, .contact-btn-line { padding: 10px 12px; }
+  .cbtn-main { font-size: 13px; }
+  .cbtn-sub  { font-size: 10px; }
+
+  /* === KAITORI INTRO CARD === */
+  .kaitori-intro-card  { flex-direction: column !important; gap: 12px; }
+  .kaitori-intro-right { flex: none !important; width: 100% !important; }
+  .kaitori-intro-img   { width: 100% !important; height: 140px; }
+
+  /* === KAITORI BLOCKS === */
+  .kaitori-block-body  { flex-direction: column !important; gap: 12px; }
+  .kaitori-block-img   { width: 100% !important; height: 140px; flex: none !important; }
+  .kaitori-block-content { flex: none !important; width: 100% !important; }
+
+  /* === BANNER text fix === */
+  .banner-content { gap: 16px; }
+  .banner-title   { font-size: 20px; }
+  .banner-sub     { font-size: 11px; }
+  .banner-phone   { font-size: 18px; }
+
+  /* === GREEN STRIP text fix === */
+  .green-strip { font-size: 12px; text-align: center; justify-content: center; }
 }
 </style>
 
