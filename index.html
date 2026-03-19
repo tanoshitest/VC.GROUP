@@ -6350,24 +6350,68 @@ function jcsScroll(dir) {
   /* === OVERFLOW FIX === */
   html, body { overflow-x: hidden; }
 
-  /* === HEADER LOGO shrink === */
-  .header-top { padding: 8px 10px; gap: 6px; }
+  /* === HEADER MOBILE: Row1=Logo+Badge / Row2=Buttons === */
+  .header-top {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 10px 10px 8px;
+    gap: 0;
+    align-items: flex-start;
+  }
+  /* Row 1 left: logo */
+  .logo-area {
+    flex: 0 0 calc(100% - 72px) !important;
+    order: 1;
+    padding-right: 4px;
+  }
+  /* Row 1 right: red badge — pull out of phone-area via absolute */
+  .free-badge {
+    position: absolute !important;
+    top: 10px;
+    right: 10px;
+    width: 58px !important;
+    height: 58px !important;
+    font-size: 9px !important;
+  }
+  .free-badge .big { font-size: 12px !important; }
+
+  /* Row 2: CTA buttons full width */
+  .cta-area {
+    order: 2;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin-top: 8px;
+    gap: 8px;
+  }
+  .btn-cta {
+    flex: 1;
+    min-width: 0 !important;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .btn-cta .btn-label-small { font-size: 9px; }
+  .btn-cta .btn-label-main  { font-size: 13px; }
+
+  /* Row 3: phone-area (number + meta) */
+  .phone-area {
+    order: 3;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin-top: 8px;
+    padding-left: 2px;
+  }
+  .phone-number { font-size: 20px; }
+  .phone-icon   { width: 28px; height: 20px; }
+  .phone-meta   { font-size: 11px; gap: 5px; }
+  .phone-meta .badge-holiday { font-size: 10px; padding: 1px 5px; }
+
+  /* Logo text sizes */
   .logo-text { height: auto; flex-wrap: wrap; gap: 2px; }
   .logo-text .fuyohin { font-size: 16px; }
   .logo-text .quolle  { font-size: 16px; }
   .logo-text .saitama { font-size: 13px; padding: 0 5px; }
   .logo-discount      { font-size: 10px; padding: 1px 6px; }
   .logo-discount span { font-size: 13px; }
-  .phone-number       { font-size: 20px; }
-  .phone-icon         { width: 28px; height: 20px; }
-  .free-badge         { width: 50px; height: 50px; font-size: 9px; }
-  .free-badge .big    { font-size: 13px; }
-  .cta-area           { gap: 5px; }
-  .btn-cta            { min-width: 120px; padding: 6px 10px; font-size: 12px; }
-  .btn-cta .btn-label-small { font-size: 9px; }
-  .btn-cta .btn-label-main  { font-size: 12px; }
-  .phone-meta         { font-size: 11px; gap: 5px; }
-  .phone-meta .badge-holiday { font-size: 10px; padding: 1px 5px; }
 
   /* === NAV BAR → HAMBURGER === */
   .hamburger-btn {
