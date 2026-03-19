@@ -6358,11 +6358,11 @@ function jcsScroll(dir) {
     gap: 0;
     align-items: flex-start;
   }
-  /* Row 1 left: logo */
+  /* Row 1: logo full width, pad-right for badge */
   .logo-area {
-    flex: 0 0 calc(100% - 72px) !important;
+    flex: 0 0 100% !important;
     order: 1;
-    padding-right: 4px;
+    padding-right: 70px;
   }
   /* Row 1 right: red badge — pull out of phone-area via absolute */
   .free-badge {
@@ -6375,35 +6375,36 @@ function jcsScroll(dir) {
   }
   .free-badge .big { font-size: 12px !important; }
 
-  /* Row 2: CTA buttons full width */
-  .cta-area {
-    order: 2;
-    flex: 0 0 100% !important;
-    width: 100% !important;
-    margin-top: 8px;
-    gap: 8px;
-  }
-  .btn-cta {
-    flex: 1;
-    min-width: 0 !important;
-    padding: 8px 10px;
-    font-size: 12px;
-  }
-  .btn-cta .btn-label-small { font-size: 9px; }
-  .btn-cta .btn-label-main  { font-size: 13px; }
-
-  /* Row 3: phone-area (number + meta) */
+  /* Row 2: phone-area LEFT + cta-area RIGHT — same row */
   .phone-area {
-    order: 3;
-    flex: 0 0 100% !important;
-    width: 100% !important;
+    order: 2;
+    flex: 1 1 0 !important;
+    width: auto !important;
     margin-top: 8px;
     padding-left: 2px;
+    min-width: 0;
   }
-  .phone-number { font-size: 20px; }
-  .phone-icon   { width: 28px; height: 20px; }
-  .phone-meta   { font-size: 11px; gap: 5px; }
-  .phone-meta .badge-holiday { font-size: 10px; padding: 1px 5px; }
+  .phone-number { font-size: 16px; gap: 4px; white-space: nowrap; }
+  .phone-icon   { width: 22px; height: 16px; }
+  .phone-meta   { font-size: 9.5px; gap: 3px; flex-wrap: wrap; margin-top: 3px; }
+  .phone-meta .badge-holiday { font-size: 9px; padding: 1px 4px; }
+
+  .cta-area {
+    order: 2;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    margin-top: 8px;
+    gap: 6px;
+    align-items: stretch;
+  }
+  .btn-cta {
+    min-width: 0 !important;
+    padding: 6px 8px;
+    font-size: 11px;
+    width: 110px;
+  }
+  .btn-cta .btn-label-small { font-size: 8px; }
+  .btn-cta .btn-label-main  { font-size: 12px; }
 
   /* Logo text sizes */
   .logo-text { height: auto; flex-wrap: wrap; gap: 2px; }
