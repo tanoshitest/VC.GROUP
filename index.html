@@ -2204,7 +2204,375 @@
       letter-spacing: -1px;
     }
 
-  </style>
+  
+/* ===== 不用品買取 SECTION ===== */
+.kaitori-section {
+  background: #fff;
+  padding: 60px 20px 50px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.kaitori-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.kaitori-header-small {
+  font-size: 13px;
+  color: #2ea84f;
+  margin-bottom: 4px;
+  position: relative;
+  display: inline-block;
+}
+.kaitori-header-small::before,
+.kaitori-header-small::after {
+  content: '';
+  margin: 0 6px;
+  color: #2ea84f;
+}
+.kaitori-header-big {
+  font-size: 28px;
+  font-weight: 900;
+  color: #222;
+  letter-spacing: 1px;
+}
+/* Intro card */
+.kaitori-intro-card {
+  display: flex;
+  gap: 24px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+.kaitori-intro-left {
+  flex: 1;
+}
+.kaitori-stars {
+  color: #f5c518;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+.kaitori-intro-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2ea84f;
+  padding-bottom: 6px;
+}
+.kaitori-intro-text {
+  font-size: 12.5px;
+  color: #444;
+  line-height: 1.8;
+  margin: 0;
+}
+.kaitori-intro-right {
+  flex: 0 0 200px;
+}
+.kaitori-intro-img {
+  width: 200px;
+  height: 150px;
+  background: linear-gradient(135deg, #c8e6c9 0%, #e8f5e9 40%, #b2dfdb 100%);
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+/* Blocks */
+.kaitori-block {
+  margin-bottom: 30px;
+}
+.kaitori-block-header {
+  background: #2a7a3e;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 4px 4px 0 0;
+}
+.kaitori-block-body {
+  display: flex;
+  gap: 20px;
+  border: 1.5px solid #ddd;
+  border-top: none;
+  padding: 20px;
+  align-items: flex-start;
+}
+.kaitori-block-img {
+  flex: 0 0 160px;
+  height: 140px;
+  background: linear-gradient(135deg, #ffe082 0%, #ffd54f 50%, #ffca28 100%);
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.kaitori-img-cash {
+  background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 50%, #80cbc4 100%);
+}
+.kaitori-img-chart {
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.kaitori-block-content {
+  flex: 1;
+}
+.kaitori-block-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+}
+.kaitori-block-text {
+  font-size: 12.5px;
+  color: #444;
+  line-height: 1.8;
+  margin: 0 0 12px;
+}
+/* Chart */
+.kaitori-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.kc-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.kc-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.kc-bar {
+  width: 40px;
+  border-radius: 3px 3px 0 0;
+}
+.kc-bar-blue { background: #42a5f5; }
+.kc-bar-pink { background: #ef9a9a; }
+.kc-bar-blue2 { background: #42a5f5; }
+.kc-arrow {
+  font-size: 20px;
+  color: #888;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.kc-col-label {
+  font-size: 9px;
+  color: #555;
+  text-align: center;
+  max-width: 50px;
+  line-height: 1.3;
+}
+.kc-caption {
+  font-size: 9px;
+  color: #555;
+  text-align: center;
+  line-height: 1.5;
+}
+/* Notice box */
+.kaitori-notice-box {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+.knb-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2a7a3e;
+  margin-bottom: 6px;
+}
+.knb-text {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+.kaitori-btn-wrap {
+  text-align: center;
+  margin-top: 36px;
+}
+
+
+/* ===== 買取可能な品目 SECTION ===== */
+.kaitori-items-section {
+  background: #eef7ee;
+  padding: 50px 20px;
+}
+.kaitori-items-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.ki-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.ki-title-green { color: #2ea84f; }
+.ki-intro {
+  display: flex;
+  gap: 24px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.ki-intro-left { flex: 1; }
+.ki-intro-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #2ea84f;
+  margin-bottom: 10px;
+}
+.ki-intro-text {
+  font-size: 12.5px;
+  color: #444;
+  line-height: 1.85;
+  margin: 0;
+}
+.ki-intro-right { flex: 0 0 200px; }
+.ki-intro-img {
+  width: 200px;
+  height: 150px;
+  background: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 40%, #81c784 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ki-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.ki-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+}
+.ki-card-badge {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 4px;
+  text-align: center;
+}
+.ki-card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ki-card-text {
+  font-size: 10px;
+  color: #444;
+  line-height: 1.6;
+  padding: 8px 8px 10px;
+  flex: 1;
+}
+.ki-btn-wrap {
+  text-align: center;
+  margin-top: 24px;
+}
+
+
+/* ===== 買取事例 SECTION ===== */
+.jirei-section {
+  background: #eef7ee;
+  padding: 50px 20px 60px;
+}
+.jirei-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.jirei-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.jirei-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+.jirei-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.jirei-card-img {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 50%, #eeeeee 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.jirei-card-img svg { opacity: 0.35; }
+.jirei-card-body {
+  padding: 12px 14px 16px;
+}
+.jirei-card-name {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  min-height: 38px;
+}
+.jirei-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.jirei-badge {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.jirei-price {
+  font-size: 18px;
+  font-weight: 900;
+  color: #e53935;
+}
+.jirei-btn-wrap {
+  text-align: center;
+}
+
+</style>
 </head>
 <body>
 <div class="page-wrapper">
@@ -3756,6 +4124,2186 @@
       </div>
     </div>
   </div>
+
+<!-- ===== 不用品買取 SECTION ===== -->
+<div class="kaitori-section">
+  <div class="kaitori-header">
+    <div class="kaitori-header-small">不用品回収クオーレ埼玉の</div>
+    <div class="kaitori-header-big">不用品買取について</div>
+  </div>
+
+  <!-- Intro card -->
+  <div class="kaitori-intro-card">
+    <div class="kaitori-intro-left">
+      <div class="kaitori-stars">★★★★★</div>
+      <div class="kaitori-intro-title">無料で適正査定いたします！</div>
+      <p class="kaitori-intro-text">不用品回収クオーレ埼玉は地域を超えた対応で、国内外の中古市場に幅広いコネクションが強みです。多くの品目を扱うことで幅広い市場と家電・家具の品質買取を対応しております。さまざまな経験によって得られた安定した査定で、断り続けられた品物でも査定を行います。不用品の査定は無料にて対応しており、お引越の際など価値のわからない品物のご相談もお任せください。一切費用はかかりませんのでご安心ください。</p>
+    </div>
+    <div class="kaitori-intro-right">
+      <div class="kaitori-intro-img"></div>
+    </div>
+  </div>
+
+  <!-- Block 2 -->
+  <div class="kaitori-block">
+    <div class="kaitori-block-header">幅広い品目を買取</div>
+    <div class="kaitori-block-body">
+      <div class="kaitori-block-img"></div>
+      <div class="kaitori-block-content">
+        <div class="kaitori-block-title">家具、家電、ブランド品など幅広く対応</div>
+        <p class="kaitori-block-text">不用品回収クオーレ埼玉では家具やブランド品など中古需要が多い品目だけでなく、専門的な家電・家具類も査定します。品物によっては計画変更が生じてもお任せください。クオーレ埼玉の査定で品質買取が更に楽になります。まずはお気軽にご相談ください。地域を超えてご満足いただけるよう対応いたします。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Block 3 -->
+  <div class="kaitori-block">
+    <div class="kaitori-block-header">査定後すぐに現金買取</div>
+    <div class="kaitori-block-body">
+      <div class="kaitori-block-img kaitori-img-cash"></div>
+      <div class="kaitori-block-content">
+        <div class="kaitori-block-title">査定額にご納得いただけたらその場で現金買取</div>
+        <p class="kaitori-block-text">不用品回収クオーレ埼玉は不用品の査定後すぐに現金でお支払いします。査定金額にご納得いただけましたら、品物の搬出まで丁寧に仕上げ、査定後すぐにご支払いします。クオーレ埼玉のスタッフが信頼した査定金額に基づき、その場ですぐに現金でお支払いします。後日・後払いの対応はなく、その場でお支払いいたします。査定・ご相談は追加費用なくお申し付けください。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Block 4 -->
+  <div class="kaitori-block">
+    <div class="kaitori-block-header">価値ある品物の買取で回収費用削減</div>
+    <div class="kaitori-block-body">
+      <div class="kaitori-block-img kaitori-img-chart">
+        <div class="kaitori-chart">
+          <div class="kc-bars">
+            <div class="kc-col">
+              <div class="kc-bar kc-bar-blue" style="height:110px;"></div>
+              <div class="kc-col-label">回収料金</div>
+            </div>
+            <div class="kc-arrow">→</div>
+            <div class="kc-col">
+              <div class="kc-bar kc-bar-pink" style="height:55px;"></div>
+              <div class="kc-bar kc-bar-blue2" style="height:55px;"></div>
+              <div class="kc-col-label">買取できる金額</div>
+            </div>
+          </div>
+          <div class="kc-caption">買取金額が多いほど<br>支払う金額が少なくなります</div>
+        </div>
+      </div>
+      <div class="kaitori-block-content">
+        <div class="kaitori-block-title">作業料金からの差し引きで回収費用を削減可能</div>
+        <p class="kaitori-block-text">不用品の廃棄・粗大ゴミなどの費用と比べ、再利用できる品物が含まれている場合、買取金額を回収費用から差し引きすることで、実質的なお支払い金額を削減することが可能です。クオーレ埼玉では適切な査定を行い、回収費用の削減に貢献します。</p>
+        <div class="kaitori-notice-box">
+          <div class="knb-title">◆ どんなお品物でもまずはお気軽にご相談ください</div>
+          <p class="knb-text">買取金額が出ない場合の買取品でも、独自に高値で引き取れる場合があります。お気軽にクオーレ埼玉のお電話査定をご利用ください。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Button -->
+  <div class="kaitori-btn-wrap">
+    <a href="#" class="teal-btn">不用品買取 &nbsp;&rsaquo;</a>
+  </div>
+</div>
+
+<!-- ===== 買取可能な品目 SECTION ===== -->
+<div class="kaitori-items-section">
+  <div class="kaitori-items-inner">
+    <div class="ki-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2ea84f" stroke-width="2" width="26" height="26"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
+      <span><span class="ki-title-green">買取可能</span>な品目</span>
+    </div>
+    <div class="ki-intro">
+      <div class="ki-intro-left">
+        <div class="ki-intro-title">幅広い品目の買取に柔軟に対応</div>
+        <p class="ki-intro-text">不用品回収クオーレ埼玉では幅広い品目の買取に対応しています。家電に限らず、スポーツ用品・家電製品・加工食品といった家電機器・オフィス家具などまで幅広い品目を実績豊富に対応することができます。断り続けられた不用品から価値ある中古品まで、こだわりなく査定を行い不用品や再利用できる品目でもクオーレ埼玉であればいかなる場合でもまずお気軽にご相談ください。</p>
+      </div>
+      <div class="ki-intro-right">
+        <div class="ki-intro-img">
+          <svg viewBox="0 0 80 60" width="100" height="80" fill="none" stroke="#4caf50" stroke-width="2"><rect x="5" y="10" width="55" height="40" rx="4"/><path d="M20 10 L20 4 L50 4 L50 10"/><line x1="20" y1="25" x2="50" y2="25"/><line x1="20" y1="35" x2="40" y2="35"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="ki-grid">
+      <div class="ki-card">
+        <div class="ki-card-badge">パソコン類</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><rect x="8" y="8" width="44" height="30" rx="3"/><rect x="22" y="38" width="16" height="6" rx="1"/><rect x="16" y="44" width="28" height="3" rx="1"/></svg>
+        </div>
+        <p class="ki-card-text">パソコン中古品・アクセサリー・プリンタなどを総合買取にて査定します。</p>
+      </div>
+      <div class="ki-card">
+        <div class="ki-card-badge">家電製品</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><rect x="10" y="14" width="40" height="28" rx="3"/><circle cx="30" cy="28" r="8"/><rect x="12" y="46" width="8" height="6" rx="1"/><rect x="40" y="46" width="8" height="6" rx="1"/></svg>
+        </div>
+        <p class="ki-card-text">冷蔵庫から小型家電まで家電全て対応。専門スタッフが丁寧に買取を行っています。</p>
+      </div>
+      <div class="ki-card">
+        <div class="ki-card-badge">ブランド家具類</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><rect x="8" y="24" width="44" height="20" rx="4"/><rect x="12" y="44" width="6" height="10" rx="2"/><rect x="42" y="44" width="6" height="10" rx="2"/><rect x="4" y="30" width="6" height="10" rx="2"/><rect x="50" y="30" width="6" height="10" rx="2"/></svg>
+        </div>
+        <p class="ki-card-text">海外アンティーク・家具・ブランド家具など中古需要の高い品目も対応します。</p>
+      </div>
+      <div class="ki-card">
+        <div class="ki-card-badge">ゲーム類</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><rect x="8" y="18" width="44" height="28" rx="6"/><circle cx="38" cy="27" r="3"/><circle cx="44" cy="33" r="3"/><line x1="17" y1="27" x2="25" y2="27"/><line x1="21" y1="23" x2="21" y2="31"/></svg>
+        </div>
+        <p class="ki-card-text">ゲーム本体、周辺機器、アクセサリー、ゲームソフトまで買取します。</p>
+      </div>
+      <div class="ki-card">
+        <div class="ki-card-badge">ブランド品</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><path d="M15 20 Q20 10 30 10 Q40 10 45 20 L48 50 H12 Z"/><line x1="22" y1="20" x2="38" y2="20"/></svg>
+        </div>
+        <p class="ki-card-text">有名ブランドから幅広く世界有名なブランド電機機器もブランド品として買取します。</p>
+      </div>
+    </div>
+    <div class="ki-grid">
+      <div class="ki-card">
+        <div class="ki-card-badge">貴金属</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><circle cx="30" cy="30" r="16"/><circle cx="30" cy="30" r="9"/></svg>
+        </div>
+        <p class="ki-card-text">金・銀・プラチナ・指輪・金貨などの貴金属類を幅広く買取します。</p>
+      </div>
+      <div class="ki-card">
+        <div class="ki-card-badge">骨董品</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><path d="M20 10 Q30 6 40 10 L44 30 Q30 38 16 30 Z"/><ellipse cx="30" cy="44" rx="14" ry="6"/><line x1="16" y1="30" x2="16" y2="44"/><line x1="44" y1="30" x2="44" y2="44"/></svg>
+        </div>
+        <p class="ki-card-text">掛け軸や茶器などの骨董品やトレーなどクオーレ埼玉は適切に査定します。</p>
+      </div>
+      <div class="ki-card">
+        <div class="ki-card-badge">楽器類</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><path d="M10 46 Q18 30 30 20 L36 14 L46 14 L46 24 L40 24 Q28 34 20 50 Z"/><circle cx="14" cy="47" r="6"/><line x1="36" y1="14" x2="46" y2="24"/></svg>
+        </div>
+        <p class="ki-card-text">ピアノ・ギター・管楽器・電子楽器など、音楽専門スタッフも買取します。</p>
+      </div>
+      <div class="ki-card">
+        <div class="ki-card-badge">車両・バイク</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><circle cx="16" cy="42" r="10"/><circle cx="44" cy="42" r="10"/><path d="M16 32 L26 20 L40 20 L48 32 L44 32"/><line x1="16" y1="32" x2="44" y2="32"/><path d="M30 20 L30 12 L38 16"/></svg>
+        </div>
+        <p class="ki-card-text">自動車、バイク、自転車、電動キックボード、二・四輪バイクなどを対応できます。</p>
+      </div>
+      <div class="ki-card">
+        <div class="ki-card-badge">農具・工具</div>
+        <div class="ki-card-img">
+          <svg viewBox="0 0 60 60" width="55" height="55" fill="none" stroke="#666" stroke-width="2"><path d="M10 50 L28 22 L34 26 L16 54 Z"/><path d="M30 20 L40 10 L50 10 L50 20 L40 30 Z"/><line x1="34" y1="24" x2="44" y2="14"/></svg>
+        </div>
+        <p class="ki-card-text">専門性の高い農業機器を始め、DIYなど工具類を丁寧にご専門スタッフが買取します。</p>
+      </div>
+    </div>
+    <div class="ki-btn-wrap">
+      <a href="#" class="teal-btn">買取対象品目一覧 &nbsp;&rsaquo;</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 買取事例 SECTION ===== -->
+<div class="jirei-section">
+  <div class="jirei-inner">
+    <div class="jirei-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2ea84f" stroke-width="2" width="26" height="26"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
+      買取事例のご紹介
+    </div>
+    <div class="jirei-grid">
+      <!-- Card 1 -->
+      <div class="jirei-card">
+        <div class="jirei-card-img">
+          <svg viewBox="0 0 120 80" width="120" height="80" fill="none" stroke="#999" stroke-width="2">
+            <ellipse cx="40" cy="50" rx="18" ry="26"/>
+            <path d="M22 30 Q40 10 58 30"/>
+            <line x1="40" y1="24" x2="40" y2="10"/>
+            <rect x="65" y="20" width="40" height="50" rx="4"/>
+            <line x1="75" y1="20" x2="75" y2="70"/>
+          </svg>
+        </div>
+        <div class="jirei-card-body">
+          <div class="jirei-card-name">ジーストリング ウクレレ<br>GString ハードケース</div>
+          <div class="jirei-price-row">
+            <span class="jirei-badge">買取価格</span>
+            <span class="jirei-price">18,000円</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="jirei-card">
+        <div class="jirei-card-img">
+          <svg viewBox="0 0 120 80" width="120" height="80" fill="none" stroke="#999" stroke-width="2">
+            <rect x="10" y="10" width="40" height="56" rx="3"/>
+            <rect x="40" y="14" width="40" height="56" rx="3"/>
+            <rect x="70" y="10" width="40" height="56" rx="3"/>
+            <line x1="20" y1="25" x2="40" y2="25"/>
+            <line x1="20" y1="33" x2="40" y2="33"/>
+          </svg>
+        </div>
+        <div class="jirei-card-body">
+          <div class="jirei-card-name">少年ジャンプ<br>1985 1月29日号/ほか4点</div>
+          <div class="jirei-price-row">
+            <span class="jirei-badge">買取価格</span>
+            <span class="jirei-price">5,050円</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="jirei-card">
+        <div class="jirei-card-img">
+          <svg viewBox="0 0 120 80" width="120" height="80" fill="none" stroke="#999" stroke-width="2">
+            <rect x="20" y="15" width="60" height="50" rx="6"/>
+            <rect x="28" y="22" width="44" height="30" rx="3"/>
+            <circle cx="38" cy="58" r="5"/>
+            <circle cx="62" cy="58" r="5"/>
+            <rect x="50" y="55" width="10" height="6" rx="2"/>
+            <rect x="80" y="20" width="20" height="35" rx="4"/>
+          </svg>
+        </div>
+        <div class="jirei-card-body">
+          <div class="jirei-card-name">初代 ゲームボーイ<br>本体 箱付き</div>
+          <div class="jirei-price-row">
+            <span class="jirei-badge">買取価格</span>
+            <span class="jirei-price">1,000円</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jirei-btn-wrap">
+      <a href="#" class="teal-btn">買取事例一覧 &nbsp;&rsaquo;</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== 作業事例 CAROUSEL SECTION ===== -->
+<div class="jirei-cases-section">
+  <div class="jirei-cases-title-wrap">
+    <div class="jcs-title-small">
+      <span class="jcs-slash">╲</span> 不用品回収クオーレ埼玉の <span class="jcs-slash">╱</span>
+    </div>
+    <div class="jcs-title-big">作業事例</div>
+  </div>
+
+  <div class="jcs-carousel-wrap">
+    <!-- Prev button -->
+    <button class="jcs-nav jcs-nav-prev" onclick="jcsScroll(-1)">&#9664;</button>
+
+    <div class="jcs-carousel" id="jcsCarousel">
+
+      <!-- CASE 01 -->
+      <div class="jcs-card">
+        <div class="jcs-card-header">
+          <div class="jcs-case-badge"><span class="jcs-case-lbl">CASE</span><span class="jcs-case-num">01</span></div>
+          <div class="jcs-case-title">1人暮らしの引越しに伴い、不用品を一式処分したいとクオーレ埼玉へご依頼いただいたケース</div>
+        </div>
+        <div class="jcs-card-body">
+          <div class="jcs-card-left">
+            <div class="jcs-room-img"></div>
+            <div class="jcs-img-caption">※イメージです</div>
+            <div class="jcs-tags">
+              <span class="jcs-tag-label">部屋タイプ</span>
+              <span class="jcs-tag-val">1K</span>
+              <span class="jcs-tag-label">作業人数</span>
+              <span class="jcs-tag-val">2人</span>
+            </div>
+          </div>
+          <div class="jcs-card-right">
+            <div class="jcs-category-label">1人暮らし <span class="jcs-cat-sub">回収・処分・作業後の清掃</span></div>
+            <div class="jcs-cost-table">
+              <div class="jcs-cost-head jcs-ch-gray">回収費用</div>
+              <div class="jcs-cost-head jcs-ch-green">買取3点</div>
+              <div class="jcs-cost-val">22,000円<span class="jcs-tax">（税込）</span></div>
+              <div class="jcs-cost-val">
+                5,500円<span class="jcs-tax">（税込）</span>
+                <div class="jcs-cost-note">※花瓶・陶器など</div>
+              </div>
+            </div>
+            <div class="jcs-minus-row">ー</div>
+            <div class="jcs-total-bar">合計</div>
+            <div class="jcs-total-price">16,500円<span class="jcs-total-tax">（税込）</span></div>
+          </div>
+        </div>
+        <div class="jcs-review">
+          <div class="jcs-review-avatar">
+            <svg viewBox="0 0 40 40" width="40" height="40" fill="none"><circle cx="20" cy="20" r="20" fill="#c8e6c9"/><circle cx="20" cy="15" r="7" fill="#81c784"/><ellipse cx="20" cy="34" rx="12" ry="8" fill="#81c784"/></svg>
+          </div>
+          <div class="jcs-review-body">
+            <div class="jcs-review-name">T.Kさん</div>
+            <p class="jcs-review-text">急な引越しで困っていたところ、レスポンスも早くて丁寧に対応してくれました。仕事が多い仕事なのでまた埼玉に来ることがあればクオーレさんへお願いしたいと思います。</p>
+          </div>
+        </div>
+        <div class="jcs-staff">
+          <div class="jcs-staff-title"><span class="jcs-staff-bar">|</span> 担当スタッフより</div>
+          <div class="jcs-staff-body">
+            <p class="jcs-staff-text">今回はご要望に合わせてお客様の不用品を買取し、回収品は全て丁寧に分別してリサイクルしました。一人暮らしの引越しでも安心してお任せください。クオーレ埼玉スタッフ一同心を込めて対応いたします。</p>
+            <div class="jcs-staff-photo"></div>
+          </div>
+        </div>
+        <div class="jcs-disclaimer">※上記は目安の料金であり、リサイクルの可否、回収品の状態・量・サイズ、作業内容などによって実際のお見積もりは異なります。</div>
+      </div>
+
+      <!-- CASE 02 -->
+      <div class="jcs-card">
+        <div class="jcs-card-header">
+          <div class="jcs-case-badge"><span class="jcs-case-lbl">CASE</span><span class="jcs-case-num">02</span></div>
+          <div class="jcs-case-title">部屋を空けるため、不用品や趣味の品を整理・処分したいとクオーレ埼玉へご依頼いただいたケース</div>
+        </div>
+        <div class="jcs-card-body">
+          <div class="jcs-card-left">
+            <div class="jcs-room-img jcs-room-img2"></div>
+            <div class="jcs-img-caption">※イメージです</div>
+            <div class="jcs-tags">
+              <span class="jcs-tag-label">部屋タイプ</span>
+              <span class="jcs-tag-val">2LDK</span>
+              <span class="jcs-tag-label">作業人数</span>
+              <span class="jcs-tag-val">3人</span>
+            </div>
+          </div>
+          <div class="jcs-card-right">
+            <div class="jcs-category-label">ご家庭 <span class="jcs-cat-sub">回収・処分・作業後の清掃</span></div>
+            <div class="jcs-cost-table">
+              <div class="jcs-cost-head jcs-ch-gray">回収費用</div>
+              <div class="jcs-cost-head jcs-ch-green">買取5点</div>
+              <div class="jcs-cost-val">71,500円<span class="jcs-tax">（税込）</span></div>
+              <div class="jcs-cost-val">
+                16,500円<span class="jcs-tax">（税込）</span>
+                <div class="jcs-cost-note">※家具・おもちゃなど</div>
+              </div>
+            </div>
+            <div class="jcs-minus-row">ー</div>
+            <div class="jcs-total-bar">合計</div>
+            <div class="jcs-total-price">55,000円<span class="jcs-total-tax">（税込）</span></div>
+          </div>
+        </div>
+        <div class="jcs-review">
+          <div class="jcs-review-avatar">
+            <svg viewBox="0 0 40 40" width="40" height="40" fill="none"><circle cx="20" cy="20" r="20" fill="#c8e6c9"/><circle cx="20" cy="15" r="7" fill="#81c784"/><ellipse cx="20" cy="34" rx="12" ry="8" fill="#81c784"/></svg>
+          </div>
+          <div class="jcs-review-body">
+            <div class="jcs-review-name">S.Tさん</div>
+            <p class="jcs-review-text">実家の母と同居するので、部屋を空けるため集めていた趣味の品を数点だけ残し、他は不用品と一緒に廃棄処分することに。クオーレ埼玉の担当さんは親切で、スタッフさん達の作業も丁寧で早く、感動しました。実家も埼玉周内なので母がこちらに来るときの引越しや実家の不用品・粗大ゴミの処分も一緒にお願いすることになりました。クオーレ埼玉さん、引き続きよろしくお願いします。</p>
+          </div>
+        </div>
+        <div class="jcs-staff">
+          <div class="jcs-staff-title"><span class="jcs-staff-bar">|</span> 担当スタッフより</div>
+          <div class="jcs-staff-body">
+            <p class="jcs-staff-text">今回はご要望に合わせて玩具類や家具など数点を買取し、廃品家電や衣類、書籍類を回収しました。喜んでいただけたようで、クオーレ埼玉スタッフ一同もとても嬉しく思います。お母様のお引越し、ご実家の不用品・粗大ゴミの回収・処分も引き続きお任せいただきありがとうございます。真心を込めて作業に当たります。</p>
+            <div class="jcs-staff-photo"></div>
+          </div>
+        </div>
+        <div class="jcs-disclaimer">※上記は目安の料金であり、リサイクルの可否、回収品の状態・量・サイズ、作業内容などによって実際のお見積もりは異なります。</div>
+      </div>
+
+      <!-- CASE 03 -->
+      <div class="jcs-card">
+        <div class="jcs-card-header">
+          <div class="jcs-case-badge"><span class="jcs-case-lbl">CASE</span><span class="jcs-case-num">03</span></div>
+          <div class="jcs-case-title">ゴミ屋敷と化した実家の不用品や粗大ゴミを片付けてほしいとクオーレ埼玉へご依頼いただいたケース</div>
+        </div>
+        <div class="jcs-card-body">
+          <div class="jcs-card-left">
+            <div class="jcs-room-img jcs-room-img3"></div>
+            <div class="jcs-img-caption">※イメージです</div>
+            <div class="jcs-tags">
+              <span class="jcs-tag-label">部屋タイプ</span>
+              <span class="jcs-tag-val">3LDK</span>
+              <span class="jcs-tag-label">作業人数</span>
+              <span class="jcs-tag-val">5人</span>
+            </div>
+          </div>
+          <div class="jcs-card-right">
+            <div class="jcs-category-label">ゴミ屋敷 <span class="jcs-cat-sub">回収・処分・消臭・清掃</span></div>
+            <div class="jcs-cost-table">
+              <div class="jcs-cost-head jcs-ch-gray">回収費用</div>
+              <div class="jcs-cost-head jcs-ch-green">買取2点</div>
+              <div class="jcs-cost-val">341,000円<span class="jcs-tax">（税込）</span></div>
+              <div class="jcs-cost-val">
+                11,000円<span class="jcs-tax">（税込）</span>
+                <div class="jcs-cost-note">※家電・家具など</div>
+              </div>
+            </div>
+            <div class="jcs-minus-row">ー</div>
+            <div class="jcs-total-bar">合計</div>
+            <div class="jcs-total-price">330,000円<span class="jcs-total-tax">（税込）</span></div>
+          </div>
+        </div>
+        <div class="jcs-review">
+          <div class="jcs-review-avatar">
+            <svg viewBox="0 0 40 40" width="40" height="40" fill="none"><circle cx="20" cy="20" r="20" fill="#c8e6c9"/><circle cx="20" cy="15" r="7" fill="#81c784"/><ellipse cx="20" cy="34" rx="12" ry="8" fill="#81c784"/></svg>
+          </div>
+          <div class="jcs-review-body">
+            <div class="jcs-review-name">H.Mさん</div>
+            <p class="jcs-review-text">数年前に帰省したら実家がゴミ屋敷に。不用品や荷物の山は私だけでは手に負えないと思いクオーレ埼玉さんへ依頼しました。担当したノツハウを参考に整理整頓の仕方や散らかないコツも伝えてくれました。私がすることは全然無かったうえ、廃品分別も丁寧に仕上げてくれて感謝です。</p>
+          </div>
+        </div>
+        <div class="jcs-staff">
+          <div class="jcs-staff-title"><span class="jcs-staff-bar">|</span> 担当スタッフより</div>
+          <div class="jcs-staff-body">
+            <p class="jcs-staff-text">クオーレ埼玉は大量の不用品・廃品・粗大ゴミも一括回収し、弊社にて分別、廃棄処分しますのでお客様の手を煩わせません。クオーレ埼玉が蓄積したノウハウを参考に整理整頓の仕方や散らかないコツもお伝えします。処分するには惜しい、依頼ある品は査定・買取にて引き取りますのでまた機会があればぜひご相談を。</p>
+            <div class="jcs-staff-photo"></div>
+          </div>
+        </div>
+        <div class="jcs-disclaimer">※上記は目安の料金であり、リサイクルの可否、回収品の状態・量・サイズ、作業内容などによって実際のお見積もりは異なります。</div>
+      </div>
+
+    </div><!-- /jcs-carousel -->
+
+    <!-- Next button -->
+    <button class="jcs-nav jcs-nav-next" onclick="jcsScroll(1)">&#9654;</button>
+  </div>
+</div>
+
+<style>
+/* ===== 作業事例 CAROUSEL ===== */
+.jirei-cases-section {
+  background: #eef7ee;
+  padding: 50px 0 60px;
+  overflow: hidden;
+}
+.jirei-cases-title-wrap {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.jcs-title-small {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+.jcs-slash { color: #2ea84f; font-weight: 700; }
+.jcs-title-big {
+  font-size: 30px;
+  font-weight: 900;
+  color: #222;
+  display: inline-block;
+  border-bottom: 4px solid #f5c400;
+  padding-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+/* Carousel wrapper */
+.jcs-carousel-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jcs-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 60px 20px;
+  scrollbar-width: none;
+  max-width: 1100px;
+  width: 100%;
+}
+.jcs-carousel::-webkit-scrollbar { display: none; }
+/* Nav buttons */
+.jcs-nav {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+.jcs-nav-prev { left: 8px; }
+.jcs-nav-next { right: 8px; }
+.jcs-nav:hover { background: #555; }
+/* Card */
+.jcs-card {
+  flex: 0 0 640px;
+  scroll-snap-align: center;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.1);
+}
+.jcs-card-header {
+  background: #2ea84f;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+}
+.jcs-case-badge {
+  background: #1a7a35;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-align: center;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+.jcs-case-lbl { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; }
+.jcs-case-num { display: block; font-size: 22px; font-weight: 900; }
+.jcs-case-title { color: #fff; font-size: 14px; font-weight: 700; line-height: 1.6; }
+/* Card body */
+.jcs-card-body {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+}
+.jcs-card-left { flex: 0 0 220px; }
+.jcs-room-img {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(135deg, #d7ccc8 0%, #bcaaa4 50%, #a1887f 100%);
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+.jcs-room-img2 { background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 50%, #ffa726 100%); }
+.jcs-room-img3 { background: linear-gradient(135deg, #b0bec5 0%, #90a4ae 50%, #607d8b 100%); }
+.jcs-img-caption { font-size: 10px; color: #888; text-align: right; margin-bottom: 8px; }
+.jcs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.jcs-tag-label {
+  background: #555;
+  color: #fff;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+.jcs-tag-val {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+/* Right side cost */
+.jcs-card-right { flex: 1; }
+.jcs-category-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+.jcs-cat-sub { font-size: 11px; font-weight: 400; color: #666; }
+.jcs-cost-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.jcs-cost-head {
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.jcs-ch-gray { background: #777; }
+.jcs-ch-green { background: #2ea84f; }
+.jcs-cost-val {
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+.jcs-tax { font-size: 10px; font-weight: 400; }
+.jcs-cost-note { font-size: 9px; color: #888; font-weight: 400; margin-top: 3px; }
+.jcs-minus-row {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin: 6px 0 0;
+  font-weight: 700;
+}
+.jcs-total-bar {
+  background: #e53935;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px;
+  margin-top: 6px;
+  border-radius: 4px 4px 0 0;
+}
+.jcs-total-price {
+  background: #fff;
+  border: 2px solid #e53935;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: #e53935;
+  padding: 8px;
+  border-radius: 0 0 4px 4px;
+}
+.jcs-total-tax { font-size: 13px; font-weight: 400; }
+/* Review */
+.jcs-review {
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  align-items: flex-start;
+}
+.jcs-review-avatar { flex-shrink: 0; }
+.jcs-review-name { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 4px; }
+.jcs-review-text { font-size: 11.5px; color: #555; line-height: 1.7; margin: 0; }
+/* Staff */
+.jcs-staff {
+  padding: 14px 20px;
+  border-top: 1px solid #eee;
+}
+.jcs-staff-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.jcs-staff-bar { color: #2ea84f; font-size: 20px; }
+.jcs-staff-body { display: flex; gap: 14px; align-items: flex-start; }
+.jcs-staff-text { font-size: 11.5px; color: #555; line-height: 1.75; margin: 0; flex: 1; }
+.jcs-staff-photo {
+  flex: 0 0 100px;
+  height: 120px;
+  background: linear-gradient(160deg, #a5d6a7, #66bb6a);
+  border-radius: 8px;
+}
+.jcs-disclaimer {
+  font-size: 10px;
+  color: #999;
+  padding: 8px 20px 14px;
+  border-top: 1px solid #eee;
+  line-height: 1.5;
+}
+</style>
+
+<script>
+function jcsScroll(dir) {
+  const c = document.getElementById('jcsCarousel');
+  c.scrollBy({ left: dir * 660, behavior: 'smooth' });
+}
+</script>
+
+
+<!-- ===== その他の作業事例 SECTION ===== -->
+<div class="other-jirei-section">
+  <div class="other-jirei-inner">
+    <h2 class="other-jirei-title">その他の作業事例</h2>
+
+    <div class="oj-grid">
+      <!-- Card 1 -->
+      <div class="oj-card">
+        <div class="oj-card-header">1Kのアパートのお部屋からテレビを搬出しました</div>
+        <div class="oj-meta">
+          <span class="oj-date">📅 2020/02/17掲載</span>
+          <span class="oj-loc">📍 埼玉県さいたま市 ／ ハイツ</span>
+        </div>
+        <div class="oj-photo oj-photo1"></div>
+        <div class="oj-card-body">
+          <span class="oj-type-badge">不用品回収</span>
+          <div class="oj-info-row">
+            <span class="oj-info-lbl">間取り</span><span class="oj-info-val">1K</span>
+            <span class="oj-info-lbl">作業時間</span><span class="oj-info-val">20分</span>
+          </div>
+          <div class="oj-price-row">
+            <span class="oj-price-lbl">総額</span>
+            <span class="oj-price-val">8,800円<small>（税込）</small></span>
+          </div>
+          <a href="#" class="oj-detail-btn">詳しく見る &rsaquo;</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="oj-card">
+        <div class="oj-card-header">カラーボックスや引き出しなどをお引き受けしました</div>
+        <div class="oj-meta">
+          <span class="oj-date">📅 2020/05/22掲載</span>
+          <span class="oj-loc">📍 埼玉県草加市 ／ マンション</span>
+        </div>
+        <div class="oj-photo oj-photo2"></div>
+        <div class="oj-card-body">
+          <span class="oj-type-badge">不用品回収</span>
+          <div class="oj-info-row">
+            <span class="oj-info-lbl">間取り</span><span class="oj-info-val">1K</span>
+            <span class="oj-info-lbl">作業時間</span><span class="oj-info-val">10分</span>
+          </div>
+          <div class="oj-price-row">
+            <span class="oj-price-lbl">総額</span>
+            <span class="oj-price-val">11,000円<small>（税込）</small></span>
+          </div>
+          <a href="#" class="oj-detail-btn">詳しく見る &rsaquo;</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="oj-card">
+        <div class="oj-card-header">1Kのマンションのお部屋からテレビをお引き受けしました</div>
+        <div class="oj-meta">
+          <span class="oj-date">📅 2020/08/03掲載</span>
+          <span class="oj-loc">📍 埼玉県さいたま市 ／ マンション</span>
+        </div>
+        <div class="oj-photo oj-photo3"></div>
+        <div class="oj-card-body">
+          <span class="oj-type-badge">不用品回収</span>
+          <div class="oj-info-row">
+            <span class="oj-info-lbl">間取り</span><span class="oj-info-val">1K</span>
+            <span class="oj-info-lbl">作業時間</span><span class="oj-info-val">30分</span>
+          </div>
+          <div class="oj-price-row">
+            <span class="oj-price-lbl">総額</span>
+            <span class="oj-price-val">14,300円<small>（税込）</small></span>
+          </div>
+          <a href="#" class="oj-detail-btn">詳しく見る &rsaquo;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <p class="oj-disclaimer">※上記は目安の料金であり、リサイクルの可否、回収品の状態・量・サイズ、作業内容などによって実際のお見積もりは異なります。<br>掲載されたお客様より、お写真またはメールにてお断りいただきありがとうございます。</p>
+
+    <!-- Campaign banner reuse -->
+    <div class="cp-wrapper" style="margin: 20px 0;">
+      <div class="campaign-box">
+        <div class="campaign-left">
+          <div class="camp-web-badge">WEB限定 割引キャンペーン 🎉</div>
+          <div class="camp-offer">見積もりから <span class="camp-pct">20<span class="camp-off">%OFF</span></span> キャンペーン実施中！</div>
+          <div class="camp-sub">ホームページからお問い合わせいただいたお客様限定</div>
+        </div>
+        <div class="campaign-right">
+          <div class="camp-img-placeholder"></div>
+        </div>
+      </div>
+    </div>
+    <p class="oj-disclaimer">※割引上限は¥100,000円までとなります。<br>※上記キャンペーンは、予告なく変更・廃止する場合がございます。予めご了承ください。</p>
+
+    <div style="text-align:center; margin-top:24px;">
+      <a href="#" class="teal-btn">作業事例一覧 &nbsp;&rsaquo;</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 不用品回収の流れ SECTION ===== -->
+<div class="flow-section">
+  <div class="flow-inner">
+    <h2 class="flow-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2ea84f" stroke-width="2" width="28" height="28"><rect x="1" y="14" width="14" height="8" rx="2"/><path d="M15 16h4l3-3V9h-7v7z"/><circle cx="5.5" cy="22" r="2"/><circle cx="18.5" cy="22" r="2"/></svg>
+      不用品回収の<strong>流れ</strong>
+    </h2>
+
+    <div class="flow-steps">
+      <!-- STEP 01 -->
+      <div class="flow-step">
+        <div class="flow-step-badge">STEP 01</div>
+        <div class="flow-step-photo fs-photo1"></div>
+        <div class="flow-step-name">お見積もり相談</div>
+        <p class="flow-step-text">地元何でもご相談ください。無料でお見積もりいたします。</p>
+      </div>
+      <div class="flow-arrow">›</div>
+
+      <!-- STEP 02 -->
+      <div class="flow-step">
+        <div class="flow-step-badge">STEP 02</div>
+        <div class="flow-step-photo fs-photo2"></div>
+        <div class="flow-step-name">商品搬出・搬搬</div>
+        <p class="flow-step-text">蔵と畳大工のコツで品質、複数分別もクオーレが行います。</p>
+      </div>
+      <div class="flow-arrow">›</div>
+
+      <!-- STEP 03 -->
+      <div class="flow-step">
+        <div class="flow-step-badge">STEP 03</div>
+        <div class="flow-step-photo fs-photo3"></div>
+        <div class="flow-step-name">作業後の清掃</div>
+        <p class="flow-step-text">搬出後のお部屋の中をきれいにクオーレしお掃除。</p>
+      </div>
+      <div class="flow-arrow">›</div>
+
+      <!-- STEP 04 -->
+      <div class="flow-step">
+        <div class="flow-step-badge">STEP 04</div>
+        <div class="flow-step-photo fs-photo4"></div>
+        <div class="flow-step-name">作業完了・臨客</div>
+        <p class="flow-step-text">効率的かつ丁寧な作業が完了。ご確認後、ご請求となります。</p>
+      </div>
+      <div class="flow-arrow">›</div>
+
+      <!-- STEP 05 -->
+      <div class="flow-step">
+        <div class="flow-step-badge">STEP 05</div>
+        <div class="flow-step-photo fs-photo5"></div>
+        <div class="flow-step-name">リサイクル</div>
+        <p class="flow-step-text">回収した不用品は適切にリユース・リサイクルします。</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:32px;">
+      <a href="#" class="teal-btn">不用品回収の流れ &nbsp;&rsaquo;</a>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ===== その他の作業事例 ===== */
+.other-jirei-section {
+  background: #fff;
+  padding: 50px 20px;
+}
+.other-jirei-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.other-jirei-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 28px;
+}
+.oj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.oj-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.oj-card-header {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 12px;
+  line-height: 1.5;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+}
+.oj-meta {
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 1px solid #eee;
+}
+.oj-date, .oj-loc {
+  font-size: 10px;
+  color: #777;
+}
+.oj-photo {
+  width: 100%;
+  height: 160px;
+}
+.oj-photo1 { background: linear-gradient(135deg, #90caf9, #42a5f5, #1565c0); }
+.oj-photo2 { background: linear-gradient(135deg, #a5d6a7, #66bb6a, #2e7d32); }
+.oj-photo3 { background: linear-gradient(135deg, #ffcc80, #ffa726, #e65100); }
+.oj-card-body {
+  padding: 10px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.oj-type-badge {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+.oj-info-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.oj-info-lbl {
+  background: #555;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+}
+.oj-info-val {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 3px;
+}
+.oj-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.oj-price-lbl {
+  background: #e53935;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+.oj-price-val {
+  font-size: 18px;
+  font-weight: 900;
+  color: #e53935;
+}
+.oj-price-val small { font-size: 11px; font-weight: 400; }
+.oj-detail-btn {
+  display: block;
+  border: 2px solid #2ea84f;
+  color: #2ea84f;
+  text-align: center;
+  padding: 7px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: auto;
+  transition: all 0.2s;
+}
+.oj-detail-btn:hover { background: #2ea84f; color: #fff; }
+.oj-disclaimer {
+  font-size: 10.5px;
+  color: #888;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+/* ===== 不用品回収の流れ ===== */
+.flow-section {
+  background: #eef7ee;
+  padding: 50px 20px;
+}
+.flow-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.flow-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.flow-title strong { font-weight: 900; }
+.flow-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.flow-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.flow-step-badge {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+.flow-step-photo {
+  width: 100%;
+  height: 110px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.fs-photo1 { background: linear-gradient(135deg, #fff9c4, #f9a825); }
+.fs-photo2 { background: linear-gradient(135deg, #c8e6c9, #388e3c); }
+.fs-photo3 { background: linear-gradient(135deg, #b3e5fc, #0288d1); }
+.fs-photo4 { background: linear-gradient(135deg, #ffe0b2, #f57c00); }
+.fs-photo5 { background: linear-gradient(135deg, #dcedc8, #558b2f); }
+.flow-step-name {
+  font-size: 12px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 5px;
+}
+.flow-step-text {
+  font-size: 10.5px;
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
+}
+.flow-arrow {
+  font-size: 26px;
+  color: #2ea84f;
+  font-weight: 900;
+  padding-top: 44px;
+  flex-shrink: 0;
+}
+</style>
+
+
+<!-- ===== 埼玉の不用品回収について SECTION ===== -->
+<div class="saitama-section">
+  <div class="saitama-inner">
+
+    <!-- Title -->
+    <div class="sa-title-wrap">
+      <div class="sa-title-small">── 埼玉の ──</div>
+      <div class="sa-title-big">不用品回収について</div>
+    </div>
+
+    <!-- Block 1: 埼玉の不用品回収事情 -->
+    <div class="sa-block-header">埼玉の不用品回収事情</div>
+    <div class="sa-block1-body">
+      <div class="sa-block1-left">
+        <div class="sa-photo sa-photo1"></div>
+      </div>
+      <div class="sa-block1-right">
+        <div class="sa-subtitle">自治体で不用品を処分する方法</div>
+        <p class="sa-text">地域で廃棄・粗大ゴミを処分するには「お近くの自治体に不用品をお申出、相談してもらう」「自治体指定の粗大ゴミ収集センターに持ち込む」「短距離の不用品・粗大ゴミ収集業者を利用する」の3つの方法があり、それぞれサービス料や手続、引き取られる品数が変わります。また、どの地域での作業時間以てかつごとに聞かれた明確な内容がなるので、便利で費用には対象地域の自治体ホームページをしっかりと確認する、また各事情に際り合わせることをお薦えします。</p>
+
+        <!-- Numbered boxes -->
+        <div class="sa-num-box">
+          <div class="sa-num-circle">1</div>
+          <p class="sa-num-text">事前の粗大ゴミ処理申請先、当日立会いなど、費用や支払方法は自治体によって異なる点や注意点</p>
+        </div>
+        <div class="sa-num-box">
+          <div class="sa-num-circle">2</div>
+          <p class="sa-num-text">自治体では回収対象品に上限があり、一定以上の品目品数が必要な全室では近隣への配慮が有効</p>
+        </div>
+
+        <p class="sa-text" style="margin-top:12px;">埼玉の自治体回収を利用する際は、廃棄予定する不用品・粗大ゴミの処理方法をルールとして確認しましょう。地域ごとに支払い方法や対象物の量や種類に応じて方法ごとに費用が変わります。また、粗大ゴミ収集センターへの持ち込みの場合でも事前の申込みが必要なため、事前に確認する必要があります。これらの手続が煩雑で大変は思われる方など、業者が近くへの粗大ゴミを自分分かる知識感覚でより合計置き換えするのがよいでしょう。</p>
+      </div>
+    </div>
+
+    <!-- Block 2: 行政 vs 民間 -->
+    <div class="sa-block2-wrap">
+      <div class="sa-block2-top">
+        <div class="sa-block2-left">
+          <div class="sa-subtitle2">行政の不用品回収と民間の不用品回収業者の違い</div>
+          <p class="sa-text">埼玉での自治体回収処理廃棄物処理業者を対比すると大きな違いは法規制です。自治体では法粗大ゴミ数の申請・相談、相対することに費用・期間調整がありますが、対照的なものに一括搬出のゴミのたとえ、品物整頓はは品数が少ないことや、対象として大きな前提から細かい一択部分がありがちです。問屋制度に上限が定められたいどに品目があります。来年の不用品廃棄が想定される場合は特に、初期費対象の整理において合理的な場面ある事情もあります。</p>
+        </div>
+        <div class="sa-block2-right">
+          <div class="sa-photo sa-photo2"></div>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="sa-compare-table">
+        <!-- Header row -->
+        <div class="sa-cmp-cell sa-cmp-empty"></div>
+        <div class="sa-cmp-cell sa-cmp-head">行政の不用品回収</div>
+        <div class="sa-cmp-cell sa-cmp-head">民間の不用品回収</div>
+
+        <!-- メリット row -->
+        <div class="sa-cmp-cell sa-cmp-label">メリット</div>
+        <div class="sa-cmp-cell sa-cmp-body">
+          <ul class="sa-cmp-list">
+            <li>品目が広く、トラブルに混入なる心配がない</li>
+            <li>不用品・粗大ゴミを自治体費用全額で対応できる</li>
+          </ul>
+        </div>
+        <div class="sa-cmp-cell sa-cmp-body">
+          <ul class="sa-cmp-list">
+            <li>自分のペースに合わせて回収依頼・調整してくれる</li>
+            <li>不用品、不動産、家電の不用品回収対応も幅広い</li>
+            <li>不用品分別や種目自社で引き受けられる</li>
+            <li>掃除や特殊なゴミ・廃棄業者が対応できる場合もある</li>
+            <li>見積もりが0・費用対象費目のない丁寧な対応をしてくれる</li>
+            <li>大型品目は優良業者に相談が良い</li>
+          </ul>
+        </div>
+
+        <!-- デメリット row -->
+        <div class="sa-cmp-cell sa-cmp-label sa-cmp-demerit">デメリット</div>
+        <div class="sa-cmp-cell sa-cmp-body">
+          <ul class="sa-cmp-list">
+            <li>事前予約や対象品の申請が必要でわかりづらい場合がある</li>
+            <li>対応できない粗大ゴミや品目も多くある</li>
+            <li>業者からの費用がかかる場合も多い</li>
+            <li>実地外対応でも費用外対応の品目がある</li>
+            <li>1日では対象品の品数が限定があ</li>
+          </ul>
+        </div>
+        <div class="sa-cmp-cell sa-cmp-body">
+          <ul class="sa-cmp-list">
+            <li>自分だけで全て行うよりも費用がかかる場合もある</li>
+            <li>法外な業者運送への費用にある場合もある</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sa-text" style="margin-top:18px;">埼玉の自治体処理以前の安全のお品廃棄物空き場で完結できるのが最大のメリットです。しかし「対応日時の設定が多い」「上限量を超える量がある以上がお申し立て方がある」などの制約があることも事実です。不用品・粗大ゴミが多くもしくは処分しきれない場合の場合に判断が一番理由で業者への依頼が多い、と利用者の多い位置付けになっています。その場合は地域を問わずどこでもご対応の地域幅広い担当が一人ひとりお客様に寄り添いながら対応してくれる方を見つけるよう心掛けましょう。</p>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ===== 埼玉の不用品回収について ===== */
+.saitama-section {
+  background: #fff;
+  padding: 50px 20px;
+}
+.saitama-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.sa-title-wrap {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sa-title-small {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+.sa-title-big {
+  font-size: 26px;
+  font-weight: 900;
+  color: #222;
+  display: inline-block;
+  border-bottom: 4px solid #f5c400;
+  padding-bottom: 4px;
+}
+.sa-block-header {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+/* Block 1 */
+.sa-block1-body {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+.sa-block1-left { flex: 0 0 220px; }
+.sa-photo {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+.sa-photo1 { background: linear-gradient(135deg, #d7ccc8, #a1887f 60%, #795548); }
+.sa-photo2 { background: linear-gradient(135deg, #b3e5fc, #4fc3f7 60%, #0288d1); }
+.sa-block1-right { flex: 1; }
+.sa-subtitle {
+  font-size: 16px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+}
+.sa-text {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.85;
+  margin: 0 0 10px;
+}
+/* Numbered boxes */
+.sa-num-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #e8f5e9;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+}
+.sa-num-circle {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: #2ea84f;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sa-num-text {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+}
+/* Block 2 */
+.sa-block2-wrap { margin-top: 10px; }
+.sa-block2-top {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+.sa-block2-left { flex: 1; }
+.sa-block2-right { flex: 0 0 200px; }
+.sa-subtitle2 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+/* Comparison table */
+.sa-compare-table {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sa-cmp-cell {
+  padding: 12px 14px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  color: #333;
+  line-height: 1.7;
+}
+.sa-cmp-cell:last-child, .sa-cmp-cell:nth-child(3n) { border-right: none; }
+.sa-cmp-empty { background: #f5f5f5; }
+.sa-cmp-head {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+.sa-cmp-label {
+  background: #e8f5e9;
+  font-size: 13px;
+  font-weight: 800;
+  color: #2ea84f;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sa-cmp-demerit {
+  background: #fce4e4;
+  color: #e53935;
+}
+.sa-cmp-body { background: #fff; vertical-align: top; }
+.sa-cmp-list {
+  margin: 0;
+  padding-left: 16px;
+}
+.sa-cmp-list li { margin-bottom: 4px; font-size: 11.5px; }
+</style>
+
+
+<!-- ===== 悪徳業者にご注意を！ ===== -->
+<div class="warningbiz-section">
+  <div class="warningbiz-inner">
+    <div class="wb-title">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+      悪徳業者にご注意を！
+    </div>
+    <p class="wb-text">業務での引っ越しや廃棄物処理を行い、失礼に品目が少ない見を処理されるケースや、引き取りを実施していない商品などをお断りと一緒に処理や引取りされるといった事例など、悪質な不用品回収業者によるトラブルが、地域差を含む日本全域で多数報告されています。</p>
+    <p class="wb-text">こういった状況に遭わないために、不用品回収業者の支払方法や情報の示す丁寧な確認し、慎重に業者を選定しましょう。クオーレ埼玉はお客様の品質第一で、ご不安なことは何でもご気軽くください。</p>
+  </div>
+</div>
+
+<!-- ===== よくあるご質問 ===== -->
+<div class="faq-section">
+  <div class="faq-inner">
+    <h2 class="faq-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2ea84f" stroke-width="2" width="26" height="26"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      不用品回収の<strong>よくあるご質問</strong>
+    </h2>
+
+    <div class="faq-grid">
+      <!-- Q1 -->
+      <div class="faq-card">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>支払いはどのタイミングですか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A</span>対作業完了後にお願いしています。支払い方法は現金・クレジットカード・PayPayが利用できますので、ご希望の方法をお申し付けください。</div>
+      </div>
+      <!-- Q2 -->
+      <div class="faq-card">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>不用品1つだけでも良いですか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A</span>もちろん大丈夫です。不用品や粗大ゴミは少量からご対応いたします。今すぐ点数でも気軽にご依頼をお申し付けください。</div>
+      </div>
+      <!-- Q3 -->
+      <div class="faq-card">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>急ぎでも対応可能ですか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A</span>はい、当社は対応のスケジュール次第で当日即対応対応は対応も対応できます。ご事情に合わせて調整しますので、ご安心ぜひしてくお問合ください。</div>
+      </div>
+      <!-- Q4 -->
+      <div class="faq-card">
+        <div class="faq-q"><span class="faq-q-badge">Q</span>土日祝日も来てくれますか？</div>
+        <div class="faq-a"><span class="faq-a-badge">A</span>クオーレ埼玉は平日以外にも土日祝日も対応しております。作業時間対応に予定が合わない場合も安心してご相談ください。</div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:28px;">
+      <a href="#" class="teal-btn">よくあるご質問一覧 &nbsp;&rsaquo;</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 会社情報 ===== -->
+<div class="company-section">
+  <div class="company-inner">
+    <h2 class="company-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2ea84f" stroke-width="2" width="26" height="26"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      不用品回収クオーレ埼玉の<strong>会社情報</strong>
+    </h2>
+
+    <!-- Map placeholder -->
+    <div class="company-map">
+      <div class="company-map-inner">
+        <svg viewBox="0 0 400 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <rect width="400" height="200" fill="#e8f0e8"/>
+          <line x1="0" y1="80" x2="400" y2="80" stroke="#c5d5c5" stroke-width="12"/>
+          <line x1="0" y1="140" x2="400" y2="140" stroke="#c5d5c5" stroke-width="8"/>
+          <line x1="120" y1="0" x2="120" y2="200" stroke="#c5d5c5" stroke-width="10"/>
+          <line x1="260" y1="0" x2="260" y2="200" stroke="#c5d5c5" stroke-width="6"/>
+          <rect x="130" y="20" width="60" height="40" rx="3" fill="#d0e8d0"/>
+          <rect x="200" y="30" width="50" height="35" rx="3" fill="#d0e8d0"/>
+          <rect x="270" y="15" width="70" height="55" rx="3" fill="#d0e8d0"/>
+          <rect x="30" y="95" width="80" height="35" rx="3" fill="#d0e8d0"/>
+          <rect x="130" y="95" width="55" height="35" rx="3" fill="#d0e8d0"/>
+          <rect x="270" y="95" width="90" height="35" rx="3" fill="#d0e8d0"/>
+          <circle cx="200" cy="115" r="14" fill="#e53935"/>
+          <path d="M200 101 C193 101 186 108 186 115 C186 124 200 135 200 135 C200 135 214 124 214 115 C214 108 207 101 200 101Z" fill="#e53935"/>
+          <circle cx="200" cy="115" r="5" fill="#fff"/>
+          <rect x="140" y="155" width="120" height="30" rx="4" fill="#fff" opacity="0.8"/>
+          <text x="200" y="175" font-family="Arial" font-size="10" fill="#333" text-anchor="middle">さいたま市緑区元大芦</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Info table -->
+    <div class="company-table">
+      <div class="company-row">
+        <div class="company-lbl">所在地</div>
+        <div class="company-val">〒339-0072　埼玉県さいたま市緑区元大芦 1-1-10-2F</div>
+      </div>
+      <div class="company-row">
+        <div class="company-lbl">電話番号</div>
+        <div class="company-val">0120-996-638</div>
+      </div>
+      <div class="company-row">
+        <div class="company-lbl">各種許可番号</div>
+        <div class="company-val">
+          一般廃棄物処理業許可番号：[さいたま市] さいたま市政許第239号<br>
+          産業廃棄物処理業許可番号：第01100161573号<br>
+          古物商許可証番号：5427911008000号<br>
+          簡易製作士：一般社団法人 品品鑑定士認定協会
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:24px;">
+      <a href="#" class="teal-btn">会社案内 &nbsp;&rsaquo;</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ご挨拶 ===== -->
+<div class="greeting-section">
+  <div class="greeting-inner">
+    <div class="gr-title-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2ea84f" stroke-width="2" width="22" height="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      ご挨拶
+    </div>
+    <div class="gr-subtitle">当社のホームページをご覧いただきありがとうございます</div>
+    <div class="gr-body">
+      <div class="gr-text-col">
+        <p class="gr-text">不用品回収クオーレ埼玉のホームページをご覧いただきありがとうございます。不用品や粗大ゴミの処分は人々が確認、断然などどれが一つとりない便利な品費品費となっています。その他、人生の需要の転換となるタイミングでお住居になることが多い作業です。しかし、当人最中の品質が丁寧に対応されていると思います。一人暮らしの方に大変なことでしても、私達はそんな身倩に伝えて誰に続いています。</p>
+        <p class="gr-text">担当して日々LGKS業界でわりのに使い続けています。不用品だけでなく当社の引越し、不動産の品質整理なども丁寧にお引き受けできますので当社をご依頼される方も中の保護員をしています。</p>
+        <p class="gr-text">特別のお引越しの片付け・にてるものはもちろん、地域組地域の合わせや回収物件に対して法令を遵守し品目にてお客さまに常に整理しています。今後も皆様のお役に立てるよう精力することをお誓いします。</p>
+      </div>
+      <div class="gr-img-col">
+        <div class="gr-truck-img">
+          <!-- Decorative circles -->
+          <div class="gr-circle gr-c1"></div>
+          <div class="gr-circle gr-c2"></div>
+          <div class="gr-circle gr-c3"></div>
+          <svg viewBox="0 0 200 140" width="200" height="140" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative;z-index:2;">
+            <!-- Truck body -->
+            <rect x="10" y="50" width="120" height="60" rx="4" fill="#fff" stroke="#ddd" stroke-width="2"/>
+            <rect x="130" y="65" width="55" height="45" rx="4" fill="#fff" stroke="#ddd" stroke-width="2"/>
+            <rect x="132" y="67" width="26" height="30" rx="2" fill="#b3e5fc"/>
+            <!-- Wheels -->
+            <circle cx="40" cy="115" r="14" fill="#555"/>
+            <circle cx="40" cy="115" r="7" fill="#888"/>
+            <circle cx="110" cy="115" r="14" fill="#555"/>
+            <circle cx="110" cy="115" r="7" fill="#888"/>
+            <circle cx="163" cy="115" r="14" fill="#555"/>
+            <circle cx="163" cy="115" r="7" fill="#888"/>
+            <!-- Boxes on truck -->
+            <rect x="20" y="20" width="30" height="30" rx="3" fill="#81c784"/>
+            <rect x="55" y="25" width="25" height="25" rx="3" fill="#4db6ac"/>
+            <rect x="84" y="18" width="35" height="32" rx="3" fill="#64b5f6"/>
+            <!-- Lines on boxes -->
+            <line x1="20" y1="35" x2="50" y2="35" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+            <line x1="35" y1="20" x2="35" y2="50" stroke="#fff" stroke-width="1.5" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ===== 悪徳業者 ===== */
+.warningbiz-section {
+  background: #1a5c35;
+  padding: 28px 20px;
+}
+.warningbiz-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.wb-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wb-text {
+  color: #d4edda;
+  font-size: 11.5px;
+  line-height: 1.8;
+  margin: 0 0 8px;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+  background: #fff;
+  padding: 50px 20px;
+}
+.faq-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.faq-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.faq-title strong { font-weight: 900; }
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.faq-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.faq-q {
+  background: #f1f8f1;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.faq-a {
+  padding: 12px 14px;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.75;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.faq-q-badge {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: #2ea84f;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq-a-badge {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: #e87722;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== 会社情報 ===== */
+.company-section {
+  background: #eef7ee;
+  padding: 50px 20px;
+}
+.company-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.company-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.company-title strong { font-weight: 900; }
+.company-map {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.company-map-inner { width: 100%; height: 100%; }
+.company-table {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.company-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+.company-row:last-child { border-bottom: none; }
+.company-lbl {
+  background: #2ea84f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 14px 16px;
+  flex: 0 0 110px;
+  display: flex;
+  align-items: center;
+}
+.company-val {
+  padding: 14px 16px;
+  font-size: 12.5px;
+  color: #333;
+  line-height: 1.8;
+  flex: 1;
+  background: #fff;
+}
+
+/* ===== ご挨拶 ===== */
+.greeting-section {
+  background: #fff;
+  padding: 50px 20px 60px;
+}
+.greeting-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.gr-title-wrap {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.gr-subtitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  border-bottom: 3px solid #2ea84f;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+.gr-body {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.gr-text-col { flex: 1; }
+.gr-text {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.9;
+  margin: 0 0 12px;
+}
+.gr-img-col {
+  flex: 0 0 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gr-truck-img {
+  position: relative;
+  width: 220px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gr-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+.gr-c1 { width: 160px; height: 160px; background: #4db6ac; top: 0; right: 0; }
+.gr-c2 { width: 100px; height: 100px; background: #64b5f6; bottom: 10px; left: 10px; }
+.gr-c3 { width: 60px; height: 60px; background: #81c784; top: 20px; left: 30px; }
+</style>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+
+      <!-- Col 1: Company -->
+      <div class="footer-col">
+        <div class="footer-company-name">VC GROUP 株式会社</div>
+        <div class="footer-company-sub">VC GROUP 株式会社</div>
+        <div class="footer-info-list">
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            〒343-0837 埼玉県越谷市蒲生本町3-30
+          </div>
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            営業時間: 9:00〜18:00（年中無休）
+          </div>
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            対応エリア: Saitama &amp; Tokyo
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2: Contact -->
+      <div class="footer-col">
+        <div class="footer-col-title">お問い合わせ</div>
+        <div class="footer-info-list">
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 5.42 5.42l1.14-1.15a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.27 15z"/></svg>
+            048-919-2962
+          </div>
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            info@vcgroup.jp
+          </div>
+        </div>
+        <div class="footer-sns-title">SNS・メッセージ</div>
+        <div class="footer-sns-row">
+          <!-- Facebook -->
+          <a href="#" class="footer-sns-btn footer-sns-fb">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- LINE -->
+          <a href="#" class="footer-sns-btn footer-sns-line">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.7 1.3 5.12 3.35 6.82L4.5 22l4.37-2.27A10.8 10.8 0 0 0 12 20c5.52 0 10-4.03 10-9S17.52 2 12 2zm1 13H7v-2h6v2zm2-4H7V9h8v2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 3: 会社情報 -->
+      <div class="footer-col">
+        <div class="footer-col-title">会社情報</div>
+        <div class="footer-info-list">
+          <div class="footer-info-item footer-info-plain">設立: 2020年12月28日</div>
+          <div class="footer-info-item footer-info-plain">資本金: ２０００万円</div>
+        </div>
+      </div>
+
+    </div><!-- /footer-cols -->
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      © 2025 VC GROUP 株式会社. Prototype owned by Tanoshi Vietnam
+    </div>
+  </div>
+</footer>
+
+<style>
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+  font-family: inherit;
+}
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 44px 20px 36px;
+}
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+}
+/* Col headings */
+.footer-company-name {
+  font-size: 20px;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 6px;
+}
+.footer-company-sub {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 16px;
+}
+.footer-col-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 14px;
+}
+/* Info list */
+.footer-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #555;
+  line-height: 1.6;
+}
+.footer-info-item svg { flex-shrink: 0; margin-top: 2px; color: #888; }
+.footer-info-plain { color: #555; font-size: 13px; }
+/* SNS */
+.footer-sns-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  margin: 18px 0 12px;
+}
+.footer-sns-row {
+  display: flex;
+  gap: 10px;
+}
+.footer-sns-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.footer-sns-btn:hover { opacity: 0.82; }
+.footer-sns-fb   { background: #1877f2; }
+.footer-sns-line { background: #06c755; }
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid #e8e8e8;
+  padding: 16px 20px;
+}
+.footer-bottom-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+}
+</style>
+
+<style>
+/* ============================================
+   MOBILE RESPONSIVE — max-width: 640px
+   ============================================ */
+@media (max-width: 640px) {
+
+  /* === HEADER === */
+  .header-top { flex-wrap: wrap; gap: 6px; padding: 6px 10px; }
+  .header-logo { flex: 0 0 auto; }
+  .header-logo img, .logo-svg { width: 60px; height: auto; }
+  .header-nav { display: none; }
+  .header-contact { flex-direction: column; gap: 4px; font-size: 11px; }
+  .header-phone { font-size: 16px; }
+  .notice-bar { font-size: 10px; padding: 4px 10px; }
+
+  /* === BANNER === */
+  .banner-section { height: auto; min-height: 260px; padding: 30px 16px; }
+  .banner-content { flex-direction: column; gap: 12px; }
+  .banner-left { text-align: center; }
+  .banner-title { font-size: 22px; }
+  .banner-sub { font-size: 12px; }
+
+  /* === GREEN STRIP === */
+  .green-strip { padding: 10px 14px; flex-wrap: wrap; gap: 6px; font-size: 11px; }
+  .gs-dots { display: none; }
+
+  /* === CAMPAIGN + PAYMENT === */
+  .cp-wrapper { padding: 14px 10px; }
+  .campaign-box { flex-direction: column; gap: 10px; }
+  .campaign-left, .campaign-right { width: 100%; }
+  .camp-pct { font-size: 40px; }
+  .feature-badges { flex-direction: column; gap: 8px; }
+  .payment-logos { flex-wrap: wrap; justify-content: center; gap: 6px; }
+
+  /* === NO1 STRIP === */
+  .no1-strip { font-size: 13px; padding: 10px; gap: 6px; }
+  .no1-strip svg { width: 24px; height: 24px; }
+
+  /* === INTRO SECTION === */
+  .intro-section { padding: 30px 14px; }
+  .intro-section > div,
+  .intro-inner { flex-direction: column !important; width: 100% !important; }
+  .intro-left { width: 100% !important; flex: none !important; min-width: 0 !important; }
+  .intro-right { width: 100% !important; flex: none !important; min-width: 0 !important; }
+  .intro-title { font-size: 18px; }
+  .intro-badges { flex-wrap: wrap; gap: 6px; }
+
+  /* === WORRIES SECTION === */
+  .worries-section { padding: 20px 12px; }
+  .worries-grid { flex-direction: column !important; gap: 12px; }
+  .worries-left, .worries-right { width: 100% !important; }
+  .worries-center { width: 100% !important; min-height: 180px; }
+  .wbox { width: 100% !important; }
+
+  /* === REASONS SECTION === */
+  .reasons-section { padding: 20px 12px; }
+  .reasons-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  .reason-card-wide { grid-column: span 2 !important; }
+  .compare-table { font-size: 10px; }
+
+  /* === CONTACT SECTION === */
+  .contact-card { flex-direction: column !important; gap: 16px; }
+  .contact-left, .contact-middle, .contact-right { width: 100% !important; flex: none !important; }
+  .contact-phone-row { flex-direction: column; gap: 8px; }
+  .contact-phone-num { font-size: 22px; }
+
+  /* === VOICE SECTION === */
+  .voice-section { width: 100% !important; max-width: 100% !important; overflow: hidden; }
+  .voice-intro { flex-direction: column !important; gap: 12px; }
+  .voice-intro-left, .voice-intro-right { width: 100% !important; flex: none !important; }
+  .voice-cards { flex-direction: column !important; gap: 12px; }
+  .voice-card { width: 100% !important; min-width: 0 !important; }
+  .staff-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* === SERVICE SECTION === */
+  .service-section { padding: 20px 12px; }
+  .service-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  .service-grid-other { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+
+  /* === SDGs SECTION === */
+  .sdgs-section { padding: 20px 12px; }
+  .sdg-goals-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 4px; }
+  .sdg-cert-row { flex-direction: column; gap: 10px; }
+
+  /* === PRICING SECTION === */
+  .pricing-section { padding: 20px 12px; }
+  .pricing-intro { flex-direction: column !important; gap: 12px; }
+  .price-table { font-size: 11px; }
+  .price-table th, .price-table td { padding: 6px 4px; }
+
+  /* === PACK SECTION === */
+  .pack-section { padding: 20px 12px; }
+  .pack-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+
+  /* === PRICING FEATURES === */
+  .pf-section { padding: 20px 12px; }
+  .pf-row { flex-direction: column !important; gap: 12px; }
+  .pf-img, .pf-text { width: 100% !important; flex: none !important; }
+
+  /* === KAITORI ITEMS === */
+  .kaitori-items-section { padding: 30px 12px; }
+  .ki-intro { flex-direction: column !important; gap: 12px; }
+  .ki-intro-right { flex: none !important; width: 100% !important; }
+  .ki-intro-img { width: 100% !important; height: 160px; }
+  .ki-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+
+  /* === 買取事例 === */
+  .jirei-section { padding: 30px 12px; }
+  .jirei-grid { flex-direction: column !important; gap: 14px; }
+
+  /* === 作業事例 CAROUSEL === */
+  .jcs-card { flex: 0 0 320px !important; }
+  .jcs-card-body { flex-direction: column !important; }
+  .jcs-card-left { flex: none !important; width: 100% !important; }
+  .jcs-card-right { flex: none !important; width: 100% !important; }
+  .jcs-staff-body { flex-direction: column !important; }
+  .jcs-staff-photo { width: 100% !important; height: 80px; flex: none !important; }
+  .jcs-carousel { padding: 10px 30px 20px; }
+  .jcs-nav { width: 32px; height: 32px; font-size: 12px; }
+
+  /* === その他の作業事例 === */
+  .other-jirei-section { padding: 30px 12px; }
+  .oj-grid { grid-template-columns: 1fr !important; gap: 14px; }
+
+  /* === FLOW === */
+  .flow-section { padding: 30px 12px; }
+  .flow-steps { flex-wrap: wrap !important; gap: 10px; }
+  .flow-step { flex: 0 0 calc(50% - 8px) !important; }
+  .flow-arrow { display: none; }
+
+  /* === 埼玉の不用品回収について === */
+  .saitama-section { padding: 30px 12px; }
+  .sa-block1-body { flex-direction: column !important; gap: 12px; }
+  .sa-block1-left { flex: none !important; width: 100% !important; }
+  .sa-photo { height: 140px; }
+  .sa-block2-top { flex-direction: column !important; gap: 12px; }
+  .sa-block2-left, .sa-block2-right { flex: none !important; width: 100% !important; }
+  .sa-compare-table {
+    display: flex !important;
+    flex-direction: column !important;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .sa-cmp-cell {
+    width: 100% !important;
+    border-right: none !important;
+  }
+  .sa-cmp-empty { display: none !important; }
+  .sa-cmp-head {
+    display: block !important;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .sa-cmp-label {
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+    justify-content: flex-start !important;
+    border-bottom: 1px solid #ddd;
+    background: #e8f5e9;
+    color: #2ea84f;
+    font-weight: 800;
+  }
+  .sa-cmp-demerit { background: #fce4e4 !important; color: #e53935 !important; }
+  .sa-cmp-cell { padding: 8px 6px !important; }
+  .sa-cmp-list { padding-left: 12px !important; }
+  .sa-cmp-list li { font-size: 9.5px; }
+
+  /* === 悪徳業者 === */
+  .warningbiz-section { padding: 20px 14px; }
+  .wb-text { font-size: 11px; }
+
+  /* === FAQ === */
+  .faq-section { padding: 30px 12px; }
+  .faq-grid { grid-template-columns: 1fr !important; gap: 12px; }
+
+  /* === 会社情報 === */
+  .company-section { padding: 30px 12px; }
+  .company-map { height: 170px; }
+  .company-lbl { flex: 0 0 80px; font-size: 11px; padding: 10px 8px; }
+  .company-val { font-size: 11px; padding: 10px 10px; }
+
+  /* === ご挨拶 === */
+  .greeting-section { padding: 30px 12px 40px; }
+  .gr-body { flex-direction: column !important; gap: 16px; }
+  .gr-img-col { flex: none !important; width: 100% !important; }
+  .gr-truck-img { width: 100%; }
+
+  /* === FOOTER === */
+  .footer-cols { grid-template-columns: 1fr !important; gap: 24px; }
+  .footer-inner { padding: 30px 16px 24px; }
+  .footer-company-name { font-size: 16px; }
+  .site-footer { border-top: 2px solid #e0e0e0; }
+
+  /* === VOICE SECTION ALL FLEX ROWS === */
+  .voice-intro-body,
+  .voice-staff-box,
+  .voice-card-inner,
+  .voice-before-after {
+    flex-direction: column !important;
+  }
+  .voice-intro-photo {
+    width: 100% !important;
+    min-height: 160px;
+    flex-shrink: 1 !important;
+  }
+  .voice-intro-text {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .vsb-left, .vsb-right {
+    width: 100% !important;
+    flex: none !important;
+    min-width: 0 !important;
+  }
+  .vsb-right {
+    min-width: 0 !important;
+  }
+
+  /* === SERVICE other-grid cards === */
+  .other-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .other-grid .svc-row-card {
+    grid-column: auto !important;
+  }
+  .svc-row-card {
+    flex-direction: column !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .svc-row-photo {
+    width: 100% !important;
+    height: 120px !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+  }
+  .svc-row-body {
+    width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+  .svc-row-desc {
+    width: 100% !important;
+    min-width: 0 !important;
+    word-break: break-word;
+  }
+
+  /* === SERVICE main grid === */
+  .main-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .main-grid .svc-card:last-child,
+  .main-grid .svc-card[style*="span"] {
+    grid-column: span 2 !important;
+  }
+
+  /* === WORRIES center image === */
+  .worries-center-img {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  /* === REASONS compare table === */
+  .compare-table {
+    font-size: 9.5px;
+  }
+  .compare-table th, .compare-table td {
+    padding: 5px 4px;
+  }
+
+  /* === CONTACT section === */
+  .contact-section { padding: 0 10px; }
+  .contact-card {
+    flex-direction: column !important;
+    gap: 14px;
+    padding: 14px !important;
+  }
+  .contact-left { min-width: 0 !important; width: 100% !important; }
+  .contact-middle { min-width: 0 !important; width: 100% !important; }
+  .contact-right { min-width: 0 !important; width: 100% !important; }
+  .contact-phone-num { font-size: 20px !important; }
+  .contact-btn-mail, .contact-btn-line { font-size: 13px; }
+
+  /* === SDG grid shrink === */
+  .sdg-goals-grid {
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 3px;
+  }
+  .sdg-item { font-size: 7px; }
+
+  /* === PACK grid === */
+  .pack-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* === 作業事例 carousel cards === */
+  .jcs-card {
+    flex: 0 0 290px !important;
+  }
+  .jcs-cost-table {
+    font-size: 10px;
+  }
+  .jcs-total-price {
+    font-size: 18px;
+  }
+
+  /* === INTRO section specific === */
+  .intro-inner {
+    flex-direction: column !important;
+  }
+  .intro-left {
+    width: 100% !important;
+    flex: none !important;
+  }
+  .intro-right {
+    width: 100% !important;
+    flex: none !important;
+    min-width: 0 !important;
+  }
+
+  /* === GLOBAL === */
+  .teal-btn { font-size: 13px; padding: 12px 24px; }
+}
+</style>
 
 </div>
 </body>
