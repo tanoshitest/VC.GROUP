@@ -3222,6 +3222,116 @@
     .prp-banner-img { display: none; }
   }
 
+
+  /* ===== SERVICE FEATURES SECTION ===== */
+  .prf-section {
+    background: #fff;
+    padding: 64px 20px 80px;
+  }
+  .prf-inner { max-width: 860px; margin: 0 auto; }
+
+  /* Header */
+  .prf-header {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  .prf-header-small {
+    font-size: 14px; color: #2ea84f; font-style: italic;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin-bottom: 8px;
+  }
+  .prf-header-small::before,
+  .prf-header-small::after {
+    content: '/'; font-size: 18px; font-style: normal; color: #2ea84f;
+  }
+  .prf-header-title {
+    font-size: 30px; font-weight: 900; color: #1a1a1a;
+    line-height: 1.3;
+  }
+  .prf-header-title .hl {
+    background: linear-gradient(transparent 55%, #f5e84a 55%);
+  }
+
+  /* Card wrapper */
+  .prf-card {
+    border: 1.5px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  /* Each feature row */
+  .prf-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 40px 40px;
+    border-bottom: 1.5px dashed #e0e0e0;
+  }
+  .prf-row:last-child { border-bottom: none; }
+  .prf-row.reverse { flex-direction: row-reverse; }
+
+  /* Text side */
+  .prf-text { flex: 1; min-width: 0; padding: 0 32px 0 0; }
+  .prf-row.reverse .prf-text { padding: 0 0 0 32px; }
+
+  .prf-num-title {
+    display: flex; align-items: flex-start; gap: 14px;
+    margin-bottom: 14px;
+  }
+  .prf-num {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    background: #2ea84f;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 900; color: #fff;
+    margin-top: 2px;
+  }
+  .prf-titles { flex: 1; }
+  .prf-title-sub {
+    font-size: 14px; font-weight: 500; color: #333;
+    margin-bottom: 2px;
+  }
+  .prf-title-main {
+    font-size: 21px; font-weight: 900; color: #1a1a1a;
+    line-height: 1.3;
+  }
+  .prf-title-main .hl {
+    background: linear-gradient(transparent 55%, #f5e84a 55%);
+  }
+  .prf-desc {
+    font-size: 12.5px; color: #555; line-height: 1.9;
+    padding-left: 50px;
+  }
+
+  /* Image side */
+  .prf-img {
+    flex: 0 0 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 60%, #80cbc4 100%);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .prf-img.img2 {
+    background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 60%, #c5e1a5 100%);
+  }
+  .prf-img.img3 {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 60%, #90caf9 100%);
+  }
+
+  @media (max-width: 640px) {
+    .prf-row, .prf-row.reverse { flex-direction: column !important; gap: 20px; padding: 24px 20px; }
+    .prf-img { flex: none !important; width: 100% !important; height: 180px; }
+    .prf-text { padding: 0 !important; }
+    .prf-desc { padding-left: 0 !important; }
+    .prf-header-title { font-size: 22px; }
+    .prf-title-main { font-size: 18px; }
+  }
+
 </style>
 </style>
 </head>
@@ -3608,6 +3718,178 @@
     </div>
   </div>
 
+
+
+
+  <!-- SERVICE FEATURES -->
+  <div class="prf-section">
+    <div class="prf-inner">
+
+      <!-- Header -->
+      <div class="prf-header">
+        <div class="prf-header-small">他社とは違う</div>
+        <div class="prf-header-title">クオーレ埼玉の<span class="hl">サービスの特徴</span></div>
+      </div>
+
+      <!-- Card -->
+      <div class="prf-card">
+
+        <!-- 01 -->
+        <div class="prf-row">
+          <div class="prf-text">
+            <div class="prf-num-title">
+              <div class="prf-num">01</div>
+              <div class="prf-titles">
+                <div class="prf-title-sub">使用するトラックは</div>
+                <div class="prf-title-main">平ボディ型では<br>なくバン型</div>
+              </div>
+            </div>
+            <p class="prf-desc">
+              当社は荷台が壁で囲われた形状のバン型トラックを使用し、作業時も周囲の方に配慮して運搬に行うなど、お客様のプライバシー保護を徹底した不用品回収を行っています。また、バン型トラックは不用品を平型よりも多く積み込める特徴があります。不用品の量が多い場合でもトラックの台数を半型よりも減らせることで、料金を削減できます。
+            </p>
+          </div>
+          <div class="prf-img">
+            <svg viewBox="0 0 280 180" width="280" fill="none">
+              <!-- Van truck body (box truck) -->
+              <!-- Main box body -->
+              <rect x="10" y="40" width="170" height="100" rx="4" fill="rgba(255,255,255,0.55)" stroke="rgba(255,255,255,0.85)" stroke-width="2.5"/>
+              <!-- Box body details - vertical lines suggesting panels -->
+              <line x1="60" y1="40" x2="60" y2="140" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+              <line x1="110" y1="40" x2="110" y2="140" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+              <line x1="155" y1="40" x2="155" y2="140" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <!-- Cab -->
+              <rect x="180" y="70" width="82" height="70" rx="4" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.85)" stroke-width="2"/>
+              <!-- Cab roof curve -->
+              <path d="M180 70 Q200 52 220 50 L262 54 L262 70Z" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+              <!-- Windshield -->
+              <rect x="192" y="72" width="58" height="36" rx="3" fill="rgba(180,230,220,0.6)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+              <!-- Side window -->
+              <rect x="224" y="76" width="28" height="20" rx="2" fill="rgba(180,230,220,0.5)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <!-- Door line cab -->
+              <line x1="218" y1="70" x2="218" y2="140" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+              <!-- Front bumper -->
+              <rect x="254" y="126" width="18" height="6" rx="2" fill="rgba(255,255,255,0.6)"/>
+              <!-- Headlight -->
+              <rect x="256" y="110" width="12" height="10" rx="2" fill="rgba(255,230,100,0.7)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <!-- Wheels -->
+              <circle cx="50" cy="148" r="20" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.8)" stroke-width="3"/>
+              <circle cx="50" cy="148" r="10" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+              <circle cx="50" cy="148" r="3" fill="rgba(255,255,255,0.8)"/>
+              <circle cx="145" cy="148" r="20" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.8)" stroke-width="3"/>
+              <circle cx="145" cy="148" r="10" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+              <circle cx="145" cy="148" r="3" fill="rgba(255,255,255,0.8)"/>
+              <circle cx="230" cy="148" r="18" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.8)" stroke-width="3"/>
+              <circle cx="230" cy="148" r="9" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+              <circle cx="230" cy="148" r="3" fill="rgba(255,255,255,0.8)"/>
+              <!-- Ground shadow line -->
+              <line x1="10" y1="168" x2="270" y2="168" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Road lines -->
+              <line x1="0" y1="172" x2="50" y2="172" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+              <line x1="100" y1="172" x2="180" y2="172" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="prf-row reverse">
+          <div class="prf-img img2">
+            <svg viewBox="0 0 280 180" width="280" fill="none">
+              <!-- Calculator -->
+              <rect x="70" y="20" width="90" height="130" rx="8" fill="rgba(255,255,255,0.55)" stroke="rgba(255,255,255,0.85)" stroke-width="2"/>
+              <!-- Screen -->
+              <rect x="80" y="32" width="70" height="30" rx="4" fill="rgba(200,230,210,0.6)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+              <!-- Number displayed -->
+              <text x="140" y="53" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="end">¥0</text>
+              <!-- Button grid -->
+              <rect x="80" y="70" width="16" height="12" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <rect x="102" y="70" width="16" height="12" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <rect x="124" y="70" width="16" height="12" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <rect x="80" y="88" width="16" height="12" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <rect x="102" y="88" width="16" height="12" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <rect x="124" y="88" width="16" height="12" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <rect x="80" y="106" width="16" height="12" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <rect x="102" y="106" width="16" height="12" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <rect x="124" y="106" width="16" height="12" rx="2" fill="rgba(100,200,140,0.6)"/>
+              <rect x="80" y="124" width="38" height="12" rx="2" fill="rgba(255,255,255,0.4)"/>
+              <rect x="124" y="124" width="16" height="12" rx="2" fill="rgba(100,200,140,0.6)"/>
+              <!-- Plant leaves left -->
+              <path d="M30 160 Q10 100 40 70 Q50 120 30 160Z" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <path d="M30 160 Q60 90 80 100 Q60 140 30 160Z" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+              <path d="M30 160 Q5 130 15 100 Q35 120 30 160Z" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+              <line x1="30" y1="165" x2="30" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Plant pot -->
+              <path d="M18 165 L42 165 L38 178 L22 178Z" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <!-- Coins / money icon right -->
+              <circle cx="218" cy="90" r="22" fill="rgba(255,230,100,0.35)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+              <circle cx="218" cy="90" r="15" fill="rgba(255,230,100,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <text x="218" y="96" font-family="serif" font-size="16" font-weight="bold" fill="rgba(255,255,255,0.8)" text-anchor="middle">¥</text>
+              <circle cx="246" cy="118" r="16" fill="rgba(255,230,100,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <text x="246" y="123" font-family="serif" font-size="12" font-weight="bold" fill="rgba(255,255,255,0.7)" text-anchor="middle">¥</text>
+              <!-- Checkmark -->
+              <circle cx="230" cy="50" r="16" fill="rgba(100,200,140,0.4)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+              <path d="M222 50l6 6 10-12" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="prf-text">
+            <div class="prf-num-title">
+              <div class="prf-num">02</div>
+              <div class="prf-titles">
+                <div class="prf-title-sub">お見積もりは全て</div>
+                <div class="prf-title-main"><span class="hl">コミコミの金額</span>で提示</div>
+              </div>
+            </div>
+            <p class="prf-desc">
+              当社では見積もり段階で諸経費を含めた作業料金をご提示しています。作業料金がわかりやすくなることで追加料金の発生を心配することなく、安心してご利用いただけます。また、わかりやすい見積書の作成にも努めておりますので、料金面に関してわからないことがあればお気軽にご相談を。安心してご利用いただけるよう、誠実にお答えします。
+            </p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="prf-row">
+          <div class="prf-text">
+            <div class="prf-num-title">
+              <div class="prf-num">03</div>
+              <div class="prf-titles">
+                <div class="prf-title-sub">回収後は適切な</div>
+                <div class="prf-title-main">リユース・<span class="hl">リサイクル処理</span></div>
+              </div>
+            </div>
+            <p class="prf-desc">
+              回収した不用品はすぐに廃棄するのではなく、まだ使える物はリユース品として活用し、素材ごとに分別してリサイクル処理を行っています。環境への配慮はもちろん、リユース・リサイクルの売却益をサービス料金に還元することで、低価格でのサービスを実現しています。
+            </p>
+          </div>
+          <div class="prf-img img3">
+            <svg viewBox="0 0 280 180" width="280" fill="none">
+              <!-- Recycling arrows (circular) -->
+              <g transform="translate(140,85)">
+                <!-- Three curved arrows forming recycle symbol -->
+                <path d="M0 -55 A55 55 0 0 1 47.6 27.5" stroke="rgba(255,255,255,0.7)" stroke-width="10" stroke-linecap="round" fill="none"/>
+                <polygon points="47.6,27.5 60,10 35,15" fill="rgba(255,255,255,0.7)"/>
+
+                <path d="M47.6 27.5 A55 55 0 0 1 -47.6 27.5" stroke="rgba(255,255,255,0.6)" stroke-width="10" stroke-linecap="round" fill="none"/>
+                <polygon points="-47.6,27.5 -28,40 -35,15" fill="rgba(255,255,255,0.6)"/>
+
+                <path d="M-47.6 27.5 A55 55 0 0 1 0 -55" stroke="rgba(255,255,255,0.5)" stroke-width="10" stroke-linecap="round" fill="none"/>
+                <polygon points="0,-55 -18,-40 8,-42" fill="rgba(255,255,255,0.5)"/>
+              </g>
+              <!-- Center icon -->
+              <circle cx="140" cy="85" r="22" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <text x="140" y="92" font-family="sans-serif" font-size="18" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">♻</text>
+              <!-- Small items being sorted -->
+              <rect x="30" y="30" width="28" height="22" rx="3" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <rect x="222" y="30" width="28" height="22" rx="3" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <rect x="30" y="125" width="28" height="22" rx="3" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <!-- Labels -->
+              <text x="44" y="44" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" text-anchor="middle">家電</text>
+              <text x="236" y="44" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" text-anchor="middle">家具</text>
+              <text x="44" y="139" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.7)" text-anchor="middle">金属</text>
+            </svg>
+          </div>
+        </div>
+
+      </div><!-- /.prf-card -->
+    </div>
+  </div>
 
 
   <!-- パック料金一覧 -->
