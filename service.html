@@ -2824,6 +2824,251 @@
     .sv-contact-strip { flex-wrap: wrap; gap: 8px; }
   }
 
+
+  /* ===== SERVICE AREA SECTION ===== */
+  .area-section {
+    background: linear-gradient(180deg, #e8f4fd 0%, #d4ecf7 60%, #c8e8f5 100%);
+    padding: 50px 20px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .area-cityscape {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 120px;
+    background: linear-gradient(180deg, transparent 0%, rgba(180,210,230,0.4) 100%);
+    pointer-events: none;
+  }
+  .area-inner { max-width: 960px; margin: 0 auto; position: relative; }
+
+  /* Top 2-col */
+  .area-top {
+    display: flex; align-items: flex-start; gap: 30px;
+    margin-bottom: 36px;
+  }
+  .area-top-left { flex: 1; min-width: 0; }
+  .area-small-label {
+    font-size: 12px; color: #555; margin-bottom: 6px;
+  }
+  .area-title {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 28px; font-weight: 900; color: #1a1a1a;
+    margin-bottom: 16px;
+  }
+  .area-title svg { flex-shrink: 0; }
+  .area-subtitle {
+    font-size: 15px; font-weight: 800; color: #1a6e2e;
+    margin-bottom: 10px;
+  }
+  .area-subtitle span { color: #e53935; }
+  .area-desc { font-size: 12px; color: #555; line-height: 1.85; }
+  .area-top-right {
+    flex: 0 0 260px;
+    position: relative;
+    display: flex; align-items: flex-start; justify-content: center;
+  }
+  .area-map {
+    width: 220px; height: 200px;
+    background: linear-gradient(135deg, #43a047 0%, #66bb6a 40%, #81c784 100%);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .area-badge-yellow {
+    position: absolute; top: 8px; right: 8px;
+    background: #f5c518; color: #333;
+    font-size: 11px; font-weight: 800;
+    padding: 6px 10px; border-radius: 50px;
+    white-space: nowrap; text-align: center; line-height: 1.4;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  /* エリア table */
+  .area-table-wrap {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 24px;
+  }
+  .area-table-header {
+    background: #1a6e2e;
+    color: #fff;
+    font-size: 15px; font-weight: 800;
+    padding: 12px 20px;
+    text-align: center;
+  }
+  .area-table-body {
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px 8px;
+  }
+  .area-city {
+    font-size: 11.5px; color: #333;
+    display: flex; align-items: center; gap: 3px;
+    padding: 3px 0;
+    white-space: nowrap;
+  }
+  .area-city::before {
+    content: '›'; color: #2ea84f; font-weight: 700; flex-shrink: 0;
+  }
+
+  /* Info boxes */
+  .area-info-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    margin-bottom: 24px;
+  }
+  .area-info-box {
+    background: #fff;
+    border: 1px solid #ddd; border-radius: 8px;
+    padding: 16px 20px;
+  }
+  .area-info-title {
+    font-size: 12px; font-weight: 700; color: #333;
+    text-align: center; margin-bottom: 12px;
+    padding-bottom: 8px; border-bottom: 1px solid #eee;
+  }
+  .area-logos-row {
+    display: flex; align-items: center; gap: 10px;
+    flex-wrap: wrap; margin-bottom: 10px;
+    justify-content: center;
+  }
+  .area-paypay-row {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11px; color: #555; justify-content: center;
+  }
+  .area-insurance {
+    text-align: center;
+  }
+  .area-ins-label { font-size: 11px; color: #555; margin-bottom: 6px; }
+  .area-ins-amount {
+    font-size: 22px; font-weight: 900; color: #e53935;
+    display: flex; align-items: baseline; gap: 2px; justify-content: center;
+  }
+  .area-ins-amount span { font-size: 13px; color: #333; }
+  .area-ins-logo {
+    font-size: 10px; color: #888; margin-top: 6px;
+    padding: 4px 10px; border: 1px solid #ccc; border-radius: 4px;
+    display: inline-block;
+  }
+
+  /* Invoice banner */
+  .area-invoice {
+    border: 3px solid #2ea84f;
+    border-radius: 10px;
+    background: #fff;
+    padding: 16px 24px;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    margin-bottom: 50px;
+  }
+  .area-invoice-main {
+    font-size: 36px; font-weight: 900; color: #1a1a1a;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .area-invoice-sub {
+    font-size: 11px; color: #666;
+  }
+
+  @media (max-width: 640px) {
+    .area-top { flex-direction: column !important; }
+    .area-top-right { flex: none !important; width: 100% !important; align-items: center; }
+    .area-table-body { grid-template-columns: repeat(3, 1fr) !important; }
+    .area-info-row { grid-template-columns: 1fr !important; }
+    .area-invoice-main { font-size: 24px; }
+    .area-title { font-size: 22px; }
+  }
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+  font-family: inherit;
+}
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 44px 20px 36px;
+}
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+}
+/* Col headings */
+.footer-company-name {
+  font-size: 20px;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 6px;
+}
+.footer-company-sub {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 16px;
+}
+.footer-col-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 14px;
+}
+/* Info list */
+.footer-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #555;
+  line-height: 1.6;
+}
+.footer-info-item svg { flex-shrink: 0; margin-top: 2px; color: #888; }
+.footer-info-plain { color: #555; font-size: 13px; }
+/* SNS */
+.footer-sns-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  margin: 18px 0 12px;
+}
+.footer-sns-row {
+  display: flex;
+  gap: 10px;
+}
+.footer-sns-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.footer-sns-btn:hover { opacity: 0.82; }
+.footer-sns-fb   { background: #1877f2; }
+.footer-sns-line { background: #06c755; }
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid #e8e8e8;
+  padding: 16px 20px;
+}
+.footer-bottom-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+}
+</style>
+  /* footer mobile */
+  @media(max-width:640px){.footer-cols{grid-template-columns:1fr!important;gap:24px;}.footer-inner{padding:30px 16px 24px;}.footer-company-name{font-size:16px;}}
 </style>
 </head>
 <body>
@@ -3305,6 +3550,221 @@
       </div>
     </div>
   </div>
+
+
+  <!-- SERVICE AREA SECTION -->
+  <div class="area-section">
+    <div class="area-inner">
+
+      <!-- Top: title + map -->
+      <div class="area-top">
+        <div class="area-top-left">
+          <div class="area-small-label">不用品回収クオーレ埼玉の</div>
+          <div class="area-title">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#2ea84f" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            サービス対応エリア
+          </div>
+          <div class="area-subtitle">スピード回収！<span>最短即日</span>で対応いたします！</div>
+          <p class="area-desc">不用品回収クオーレ埼玉では以前を松戸市域をお発品と不用品・粗大ゴミ対応を行っています。埼玉を始め対応エリア内などにても訪問し、無料にて無料見積査定成形をします。近場通じてのお引渡り対応も可能ですので、不用品の処分にお困りならばクオーレ埼玉にご相談ください。</p>
+        </div>
+        <div class="area-top-right">
+          <div class="area-map">
+            <svg viewBox="0 0 120 140" width="130" height="150" fill="none">
+              <!-- Simplified Saitama map shape -->
+              <path d="M30 20 L50 10 L80 15 L100 30 L110 50 L105 75 L95 90 L80 110 L65 125 L50 120 L35 105 L20 85 L15 60 L20 40 Z" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+              <path d="M40 55 L55 45 L70 50 L80 65 L75 80 L60 85 L45 78 L38 65 Z" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <circle cx="58" cy="65" r="5" fill="rgba(255,255,255,0.8)"/>
+              <circle cx="58" cy="65" r="2" fill="#fff"/>
+            </svg>
+            <div class="area-badge-yellow">最短即日で<br>駆けつけ！</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- エリア table -->
+      <div class="area-table-wrap">
+        <div class="area-table-header">埼玉県のサービス対応エリア</div>
+        <div class="area-table-body">
+          <div class="area-city">さいたま市西区</div>
+        <div class="area-city">さいたま市北区</div>
+        <div class="area-city">さいたま市大宮区</div>
+        <div class="area-city">さいたま市見沼区</div>
+        <div class="area-city">さいたま市中央区</div>
+        <div class="area-city">さいたま市桜区</div>
+        <div class="area-city">さいたま市浦和区</div>
+        <div class="area-city">さいたま市南区</div>
+        <div class="area-city">さいたま市緑区</div>
+        <div class="area-city">さいたま市岩槻区</div>
+        <div class="area-city">川口市</div>
+        <div class="area-city">所沢市</div>
+        <div class="area-city">川越市</div>
+        <div class="area-city">越谷市</div>
+        <div class="area-city">草加市</div>
+        <div class="area-city">上尾市</div>
+        <div class="area-city">春日部市</div>
+        <div class="area-city">入間市</div>
+        <div class="area-city">志木市</div>
+        <div class="area-city">朝霞市</div>
+        <div class="area-city">蕨市</div>
+        <div class="area-city">狭山市</div>
+        <div class="area-city">八潮市</div>
+        <div class="area-city">富士見市</div>
+        <div class="area-city">新座市</div>
+        <div class="area-city">桶川市</div>
+        <div class="area-city">久喜市</div>
+        <div class="area-city">北本市</div>
+        <div class="area-city">吉川市</div>
+        <div class="area-city">蓮田市</div>
+        <div class="area-city">行田市</div>
+        <div class="area-city">日高市</div>
+        <div class="area-city">白岡市</div>
+        <div class="area-city">鶴ヶ島市</div>
+        <div class="area-city">坂戸市</div>
+        <div class="area-city">秩父市</div>
+        <div class="area-city">深谷市</div>
+        <div class="area-city">熊谷市</div>
+        <div class="area-city">本庄市</div>
+        <div class="area-city">東松山市</div>
+        <div class="area-city">羽生市</div>
+        <div class="area-city">加須市</div>
+        <div class="area-city">鴻巣市</div>
+        <div class="area-city">上尾市</div>
+        <div class="area-city">伊奈町</div>
+        <div class="area-city">三芳町</div>
+        <div class="area-city">毛呂山町</div>
+        <div class="area-city">越生町</div>
+        <div class="area-city">滑川町</div>
+        <div class="area-city">嵐山町</div>
+        <div class="area-city">小川町</div>
+        <div class="area-city">ときがわ町</div>
+        <div class="area-city">横瀬町</div>
+        <div class="area-city">皆野町</div>
+        <div class="area-city">長瀞町</div>
+        <div class="area-city">上里町</div>
+        <div class="area-city">寄居町</div>
+        <div class="area-city">宮代町</div>
+        <div class="area-city">杉戸町</div>
+        <div class="area-city">松伏町</div>
+        <div class="area-city">吉見町</div>
+        <div class="area-city">川島町</div>
+        <div class="area-city">ふじみ野市</div>
+        <div class="area-city">富士見市</div>
+        <div class="area-city">長瀞町</div>
+        </div>
+      </div>
+
+      <!-- Info boxes -->
+      <div class="area-info-row">
+        <div class="area-info-box">
+          <div class="area-info-title">各種クレジットカードがご利用いただけます</div>
+          <div class="area-logos-row">
+            <!-- VISA -->
+            <svg viewBox="0 0 60 20" width="56" height="20"><rect width="60" height="20" rx="3" fill="#1a1f71"/><text x="30" y="15" font-family="Arial" font-weight="900" font-size="12" fill="white" text-anchor="middle">VISA</text></svg>
+            <!-- JCB -->
+            <svg viewBox="0 0 44 30" width="40" height="28"><rect width="44" height="30" rx="4" fill="#003087"/><rect x="2" y="2" width="12" height="26" rx="3" fill="#003087"/><rect x="16" y="2" width="12" height="26" rx="3" fill="#e31837"/><rect x="30" y="2" width="12" height="26" rx="3" fill="#007b40"/><text x="8" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">J</text><text x="22" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">C</text><text x="36" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">B</text></svg>
+            <!-- Mastercard -->
+            <svg viewBox="0 0 44 28" width="40" height="26"><circle cx="16" cy="14" r="13" fill="#eb001b"/><circle cx="28" cy="14" r="13" fill="#f79e1b"/><path d="M22 5.3a13 13 0 0 1 0 17.4A13 13 0 0 1 22 5.3z" fill="#ff5f00"/></svg>
+            <!-- AMEX -->
+            <svg viewBox="0 0 60 22" width="56" height="20"><rect width="60" height="22" rx="3" fill="#2e77bc"/><text x="30" y="16" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">AMERICAN EXPRESS</text></svg>
+          </div>
+          <div class="area-paypay-row">
+            <span>スマホ決済にも対応！</span>
+            <svg viewBox="0 0 80 28" width="70" height="24"><rect width="80" height="28" rx="4" fill="#fff" stroke="#e00"/><text x="40" y="19" font-family="Arial" font-weight="900" font-size="14" fill="#e00" text-anchor="middle">PayPay</text></svg>
+          </div>
+        </div>
+        <div class="area-info-box">
+          <div class="area-info-title">万が一の際には損害賠償免責</div>
+          <div class="area-insurance">
+            <div class="area-ins-label">人身・物損に適応</div>
+            <div class="area-ins-amount">最高<span></span>5,000<span>万円まで</span></div>
+            <div class="area-ins-logo">あいおいニッセイ同期損保</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invoice banner -->
+      <div class="area-invoice">
+        <div class="area-invoice-main">
+          インボイス
+          <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#2ea84f" stroke-width="2"><rect x="4" y="2" width="24" height="28" rx="3"/><line x1="10" y1="10" x2="22" y2="10"/><line x1="10" y1="16" x2="22" y2="16"/><line x1="10" y1="22" x2="18" y2="22"/></svg>
+          登録店
+        </div>
+        <div class="area-invoice-sub">適格請求書発行事業者制度</div>
+      </div>
+
+    </div>
+    <div class="area-cityscape"></div>
+  </div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+
+      <!-- Col 1: Company -->
+      <div class="footer-col">
+        <div class="footer-company-name">VC GROUP 株式会社</div>
+        <div class="footer-company-sub">VC GROUP 株式会社</div>
+        <div class="footer-info-list">
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            〒343-0837 埼玉県越谷市蒲生本町3-30
+          </div>
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            営業時間: 9:00〜18:00（年中無休）
+          </div>
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            対応エリア: Saitama &amp; Tokyo
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2: Contact -->
+      <div class="footer-col">
+        <div class="footer-col-title">お問い合わせ</div>
+        <div class="footer-info-list">
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 5.42 5.42l1.14-1.15a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.27 15z"/></svg>
+            048-919-2962
+          </div>
+          <div class="footer-info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            info@vcgroup.jp
+          </div>
+        </div>
+        <div class="footer-sns-title">SNS・メッセージ</div>
+        <div class="footer-sns-row">
+          <!-- Facebook -->
+          <a href="#" class="footer-sns-btn footer-sns-fb">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- LINE -->
+          <a href="#" class="footer-sns-btn footer-sns-line">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.7 1.3 5.12 3.35 6.82L4.5 22l4.37-2.27A10.8 10.8 0 0 0 12 20c5.52 0 10-4.03 10-9S17.52 2 12 2zm1 13H7v-2h6v2zm2-4H7V9h8v2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 3: 会社情報 -->
+      <div class="footer-col">
+        <div class="footer-col-title">会社情報</div>
+        <div class="footer-info-list">
+          <div class="footer-info-item footer-info-plain">設立: 2020年12月28日</div>
+          <div class="footer-info-item footer-info-plain">資本金: ２０００万円</div>
+        </div>
+      </div>
+
+    </div><!-- /footer-cols -->
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      © 2025 VC GROUP 株式会社. Prototype owned by Tanoshi Vietnam
+    </div>
+  </div>
+</footer>
 
 </div>
 </body>
