@@ -3079,6 +3079,149 @@
     .pr-pack-price { font-size: 20px; }
   }
 
+
+  /* ===== パック料金一覧 ===== */
+  .prp-section {
+    background: #f0f9f2;
+    padding: 60px 20px 70px;
+  }
+  .prp-inner { max-width: 960px; margin: 0 auto; }
+
+  /* Section header */
+  .prp-header {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    font-size: 24px; font-weight: 900; color: #1a1a1a;
+    margin-bottom: 24px;
+  }
+  .prp-header-icon {
+    width: 36px; height: 36px;
+    background: #2ea84f;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* Info banner */
+  .prp-banner {
+    border: 1.5px solid #b2dfdb;
+    border-radius: 10px;
+    background: #fff;
+    padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    margin-bottom: 32px;
+  }
+  .prp-banner-text {
+    font-size: 12.5px; color: #444; line-height: 1.9; flex: 1;
+  }
+  .prp-banner-text strong { color: #2ea84f; }
+  .prp-banner-img {
+    flex: 0 0 160px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Cards grid */
+  .prp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  .prp-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    display: flex; flex-direction: column;
+  }
+  .prp-card-head {
+    background: #2ea84f;
+    padding: 10px 14px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .prp-card-head-icon {
+    width: 22px; height: 22px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .prp-card-head-name {
+    font-size: 14px; font-weight: 800; color: #fff;
+  }
+
+  /* Photo area */
+  .prp-card-photo {
+    width: 100%; height: 150px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .prp-card-photo svg { width: 100%; height: 100%; }
+  /* Color variants */
+  .prp-photo-a { background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 60%, #81c784 100%); }
+  .prp-photo-b { background: linear-gradient(135deg, #b2ebf2 0%, #80deea 60%, #4dd0e1 100%); }
+  .prp-photo-c { background: linear-gradient(135deg, #dcedc8 0%, #c5e1a5 60%, #aed581 100%); }
+  .prp-photo-d { background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 60%, #ffa726 100%); }
+  .prp-photo-e { background: linear-gradient(135deg, #f8bbd0 0%, #f48fb1 60%, #f06292 100%); }
+  .prp-photo-f { background: linear-gradient(135deg, #b0bec5 0%, #90a4ae 60%, #78909c 100%); }
+
+  /* Body */
+  .prp-card-body { padding: 14px 16px 18px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .prp-card-desc {
+    font-size: 12.5px; font-weight: 700; color: #1a1a1a;
+    line-height: 1.6; text-align: center;
+  }
+
+  /* Spec tags row */
+  .prp-specs { display: flex; flex-direction: column; gap: 5px; }
+  .prp-spec-row {
+    display: flex; align-items: center; gap: 6px;
+  }
+  .prp-spec-label {
+    font-size: 10px; font-weight: 700; color: #fff;
+    background: #555;
+    padding: 2px 8px; border-radius: 3px;
+    flex-shrink: 0; min-width: 46px; text-align: center;
+  }
+  .prp-spec-label.green { background: #2ea84f; }
+  .prp-spec-val {
+    font-size: 12px; color: #333;
+  }
+
+  /* Price */
+  .prp-price-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 4px;
+  }
+  .prp-price-label {
+    font-size: 10px; font-weight: 700; color: #fff;
+    background: #e53935;
+    padding: 3px 10px; border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .prp-price-val {
+    font-size: 17px; font-weight: 900; color: #e53935;
+  }
+  .prp-price-val .psub { font-size: 11px; color: #888; font-weight: 400; }
+
+  /* Note box */
+  .prp-note-box {
+    background: #fff8f0;
+    border: 1.5px solid #ffcc80;
+    border-radius: 8px;
+    padding: 14px 20px;
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 12px; color: #555; line-height: 1.8;
+  }
+  .prp-note-icon {
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  @media (max-width: 640px) {
+    .prp-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+    .prp-banner { flex-direction: column; }
+    .prp-banner-img { display: none; }
+  }
+
 </style>
 </style>
 </head>
@@ -3462,6 +3605,334 @@
         ※ 記載のない品目もお気軽にご相談ください。無料にてお見積もりいたします。<br>
         ※ <span>産業廃棄物・医療廃棄物など法令上対応不可のものがございます。</span>
       </p>
+    </div>
+  </div>
+
+
+
+  <!-- パック料金一覧 -->
+  <div class="prp-section">
+    <div class="prp-inner">
+
+      <!-- Header -->
+      <div class="prp-header">
+        <div class="prp-header-icon">
+          <svg viewBox="0 0 24 24" width="20" fill="none" stroke="#fff" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <line x1="8" y1="9" x2="16" y2="9"/>
+            <line x1="8" y1="13" x2="16" y2="13"/>
+            <line x1="8" y1="17" x2="12" y2="17"/>
+          </svg>
+        </div>
+        パック料金一覧
+      </div>
+
+      <!-- Info banner -->
+      <div class="prp-banner">
+        <div class="prp-banner-text">
+          不用品回収をお近くにご利用いただけるよう、<strong>パック料金</strong>をご用意しました。<br>
+          定の対応量よりも<strong>パック料金の方が安く、実績</strong>で請けします。
+        </div>
+        <div class="prp-banner-img">
+          <svg viewBox="0 0 200 100" width="180" fill="none">
+            <!-- Truck -->
+            <rect x="4" y="28" width="108" height="54" rx="4" fill="#e8f5e9" stroke="#2ea84f" stroke-width="2"/>
+            <path d="M112 44h62l14 32H112V44Z" fill="#e8f5e9" stroke="#2ea84f" stroke-width="2"/>
+            <!-- Cab window -->
+            <rect x="120" y="48" width="38" height="18" rx="2" fill="#b2dfdb" stroke="#2ea84f" stroke-width="1.5"/>
+            <!-- Wheels -->
+            <circle cx="30" cy="84" r="12" fill="#fff" stroke="#2ea84f" stroke-width="2.5"/>
+            <circle cx="30" cy="84" r="5" fill="#2ea84f"/>
+            <circle cx="92" cy="84" r="12" fill="#fff" stroke="#2ea84f" stroke-width="2.5"/>
+            <circle cx="92" cy="84" r="5" fill="#2ea84f"/>
+            <circle cx="158" cy="84" r="12" fill="#fff" stroke="#2ea84f" stroke-width="2.5"/>
+            <circle cx="158" cy="84" r="5" fill="#2ea84f"/>
+            <!-- Speed lines -->
+            <line x1="0" y1="50" x2="20" y2="50" stroke="#2ea84f" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <line x1="0" y1="58" x2="14" y2="58" stroke="#2ea84f" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+            <line x1="0" y1="66" x2="18" y2="66" stroke="#2ea84f" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="prp-grid">
+
+        <!-- ミニパック(小) -->
+        <div class="prp-card">
+          <div class="prp-card-head">
+            <div class="prp-card-head-icon">
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="#fff" stroke-width="1.8"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8h6M8 5v6"/></svg>
+            </div>
+            <span class="prp-card-head-name">ミニパック（小）</span>
+          </div>
+          <div class="prp-card-photo prp-photo-a" style="display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 120 100" width="100" fill="none">
+              <!-- Single box / small item -->
+              <rect x="30" y="25" width="60" height="50" rx="4" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+              <line x1="30" y1="50" x2="90" y2="50" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <path d="M50 25v-8a10 10 0 0 1 20 0v8" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+              <!-- small items inside suggestion -->
+              <rect x="40" y="55" width="16" height="12" rx="2" fill="rgba(255,255,255,0.4)"/>
+              <rect x="62" y="55" width="16" height="12" rx="2" fill="rgba(255,255,255,0.4)"/>
+            </svg>
+          </div>
+          <div class="prp-card-body">
+            <div class="prp-card-desc">お部屋のちょっとした<br>お片付けにおすすめ</div>
+            <div class="prp-specs">
+              <div class="prp-spec-row">
+                <span class="prp-spec-label">間取り</span>
+                <span class="prp-spec-val">—</span>
+              </div>
+              <div class="prp-spec-row">
+                <span class="prp-spec-label green">処理量</span>
+                <span class="prp-spec-val">カゴ車</span>
+              </div>
+            </div>
+            <div class="prp-price-row">
+              <span class="prp-price-label">料金</span>
+              <span class="prp-price-val">5,500円<span class="psub">（税込）〜</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ミニパック(大) -->
+        <div class="prp-card">
+          <div class="prp-card-head">
+            <div class="prp-card-head-icon">
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="#fff" stroke-width="1.8"><rect x="1" y="5" width="14" height="10" rx="2"/><path d="M5 5V4a3 3 0 0 1 6 0v1"/><line x1="8" y1="8" x2="8" y2="12"/></svg>
+            </div>
+            <span class="prp-card-head-name">ミニパック（大）</span>
+          </div>
+          <div class="prp-card-photo prp-photo-b" style="display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 120 100" width="100" fill="none">
+              <!-- Washing machine + appliance -->
+              <rect x="20" y="20" width="35" height="60" rx="3" fill="rgba(255,255,255,0.45)" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+              <circle cx="37" cy="48" r="14" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <circle cx="37" cy="48" r="6" fill="rgba(255,255,255,0.4)"/>
+              <rect x="23" y="24" width="12" height="6" rx="1" fill="rgba(255,255,255,0.5)"/>
+              <!-- TV -->
+              <rect x="65" y="25" width="40" height="28" rx="3" fill="rgba(255,255,255,0.45)" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+              <rect x="78" y="53" width="14" height="6" rx="1" fill="rgba(255,255,255,0.4)"/>
+              <line x1="71" y1="59" x2="99" y2="59" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="prp-card-body">
+            <div class="prp-card-desc">大きな家電や<br>家具の処分におすすめ</div>
+            <div class="prp-specs">
+              <div class="prp-spec-row">
+                <span class="prp-spec-label">間取り</span>
+                <span class="prp-spec-val">—</span>
+              </div>
+              <div class="prp-spec-row">
+                <span class="prp-spec-label green">処理量</span>
+                <span class="prp-spec-val">軽トラ</span>
+              </div>
+            </div>
+            <div class="prp-price-row">
+              <span class="prp-price-label">料金</span>
+              <span class="prp-price-val">11,000円<span class="psub">（税込）〜</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- レギュラーパック -->
+        <div class="prp-card">
+          <div class="prp-card-head">
+            <div class="prp-card-head-icon">
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="#fff" stroke-width="1.8"><path d="M2 14V7l6-4 6 4v7H2Z"/><rect x="5" y="9" width="6" height="5" rx="1"/></svg>
+            </div>
+            <span class="prp-card-head-name">レギュラーパック</span>
+          </div>
+          <div class="prp-card-photo prp-photo-c" style="display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 120 100" width="100" fill="none">
+              <!-- Living room 1K style -->
+              <rect x="10" y="40" width="50" height="45" rx="3" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+              <!-- Sofa -->
+              <rect x="15" y="56" width="40" height="18" rx="3" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <rect x="15" y="52" width="40" height="6" rx="2" fill="rgba(255,255,255,0.45)"/>
+              <!-- Table -->
+              <rect x="24" y="76" width="22" height="8" rx="1" fill="rgba(255,255,255,0.4)"/>
+              <!-- Plant -->
+              <line x1="82" y1="85" x2="82" y2="60" stroke="rgba(255,255,255,0.6)" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="82" cy="54" r="12" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <circle cx="75" cy="58" r="8" fill="rgba(255,255,255,0.3)"/>
+              <circle cx="89" cy="58" r="8" fill="rgba(255,255,255,0.3)"/>
+              <!-- Window suggestion -->
+              <rect x="12" y="15" width="95" height="18" rx="2" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="prp-card-body">
+            <div class="prp-card-desc">一人暮らしの<br>お片付けにおすすめ</div>
+            <div class="prp-specs">
+              <div class="prp-spec-row">
+                <span class="prp-spec-label">間取り</span>
+                <span class="prp-spec-val">1R〜1K</span>
+              </div>
+              <div class="prp-spec-row">
+                <span class="prp-spec-label green">処理量</span>
+                <span class="prp-spec-val">軽トラ〜1tトラック</span>
+              </div>
+            </div>
+            <div class="prp-price-row">
+              <span class="prp-price-label">料金</span>
+              <span class="prp-price-val">16,500円<span class="psub">（税込）〜</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ファミリーパック(小) -->
+        <div class="prp-card">
+          <div class="prp-card-head">
+            <div class="prp-card-head-icon">
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="5" cy="5" r="2.5"/><circle cx="11" cy="5" r="2.5"/><path d="M1 14c0-3.3 1.8-5 4-5M9 14c0-3.3 1.8-5 4-5"/></svg>
+            </div>
+            <span class="prp-card-head-name">ファミリーパック（小）</span>
+          </div>
+          <div class="prp-card-photo prp-photo-d" style="display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 120 100" width="100" fill="none">
+              <!-- Family room with sofa + table -->
+              <rect x="5" y="35" width="110" height="55" rx="3" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <!-- Big sofa -->
+              <rect x="10" y="55" width="65" height="22" rx="4" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+              <rect x="10" y="50" width="65" height="7" rx="3" fill="rgba(255,255,255,0.45)"/>
+              <line x1="35" y1="50" x2="35" y2="77" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+              <line x1="60" y1="50" x2="60" y2="77" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+              <!-- Coffee table -->
+              <rect x="82" y="62" width="30" height="18" rx="2" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <!-- TV stand -->
+              <rect x="85" y="38" width="26" height="18" rx="2" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="prp-card-body">
+            <div class="prp-card-desc">ご家族暮らし（2〜3人）<br>お片付けにおすすめ</div>
+            <div class="prp-specs">
+              <div class="prp-spec-row">
+                <span class="prp-spec-label">間取り</span>
+                <span class="prp-spec-val">1DK〜1LDK</span>
+              </div>
+              <div class="prp-spec-row">
+                <span class="prp-spec-label green">処理量</span>
+                <span class="prp-spec-val">1〜2tトラック</span>
+              </div>
+            </div>
+            <div class="prp-price-row">
+              <span class="prp-price-label">料金</span>
+              <span class="prp-price-val">33,000円<span class="psub">（税込）〜</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ファミリーパック(大) -->
+        <div class="prp-card">
+          <div class="prp-card-head">
+            <div class="prp-card-head-icon">
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="4" cy="5" r="2"/><circle cx="8" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><path d="M1 14c0-3 1.3-4.5 3-4.5M6 14c0-3 1.3-4.5 3-4.5M11 14c0-3 1.3-4.5 3-4.5"/></svg>
+            </div>
+            <span class="prp-card-head-name">ファミリーパック（大）</span>
+          </div>
+          <div class="prp-card-photo prp-photo-e" style="display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 120 100" width="100" fill="none">
+              <!-- Larger family room + dining -->
+              <rect x="5" y="30" width="110" height="60" rx="3" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <!-- Large sofa -->
+              <rect x="8" y="52" width="55" height="24" rx="4" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+              <rect x="8" y="47" width="55" height="7" rx="3" fill="rgba(255,255,255,0.45)"/>
+              <!-- Dining table -->
+              <rect x="72" y="42" width="40" height="26" rx="3" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <!-- Chairs -->
+              <rect x="75" y="36" width="10" height="8" rx="2" fill="rgba(255,255,255,0.35)"/>
+              <rect x="90" y="36" width="10" height="8" rx="2" fill="rgba(255,255,255,0.35)"/>
+              <rect x="75" y="68" width="10" height="8" rx="2" fill="rgba(255,255,255,0.35)"/>
+              <rect x="90" y="68" width="10" height="8" rx="2" fill="rgba(255,255,255,0.35)"/>
+              <!-- Bookshelf -->
+              <rect x="8" y="33" width="10" height="16" rx="1" fill="rgba(255,255,255,0.35)"/>
+              <line x1="8" y1="39" x2="18" y2="39" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+              <line x1="8" y1="44" x2="18" y2="44" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="prp-card-body">
+            <div class="prp-card-desc">ご家族暮らし（3〜5人）<br>お片付けにおすすめ</div>
+            <div class="prp-specs">
+              <div class="prp-spec-row">
+                <span class="prp-spec-label">間取り</span>
+                <span class="prp-spec-val">2K〜2DK</span>
+              </div>
+              <div class="prp-spec-row">
+                <span class="prp-spec-label green">処理量</span>
+                <span class="prp-spec-val">2tトラック</span>
+              </div>
+            </div>
+            <div class="prp-price-row">
+              <span class="prp-price-label">料金</span>
+              <span class="prp-price-val">55,000円<span class="psub">（税込）〜</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- その他 -->
+        <div class="prp-card">
+          <div class="prp-card-head" style="background:#555;">
+            <div class="prp-card-head-icon">
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="#fff" stroke-width="1.8"><path d="M2 14V7l6-4 6 4v7H2Z"/><rect x="5" y="9" width="6" height="5" rx="1"/></svg>
+            </div>
+            <span class="prp-card-head-name">その他</span>
+          </div>
+          <div class="prp-card-photo prp-photo-f" style="display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 120 100" width="100" fill="none">
+              <!-- House exterior -->
+              <path d="M20 85V45L60 15l40 30v40H20Z" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+              <!-- Roof line -->
+              <path d="M15 48L60 15l45 33" stroke="rgba(255,255,255,0.6)" stroke-width="2.5" stroke-linejoin="round"/>
+              <!-- Door -->
+              <rect x="46" y="62" width="28" height="23" rx="2" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <circle cx="70" cy="73" r="2" fill="rgba(255,255,255,0.8)"/>
+              <!-- Windows -->
+              <rect x="24" y="54" width="18" height="14" rx="1" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <rect x="78" y="54" width="18" height="14" rx="1" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <!-- Debris/trash piles -->
+              <rect x="16" y="78" width="10" height="7" rx="1" fill="rgba(255,255,255,0.3)"/>
+              <rect x="28" y="80" width="8" height="5" rx="1" fill="rgba(255,255,255,0.25)"/>
+              <rect x="92" y="79" width="12" height="6" rx="1" fill="rgba(255,255,255,0.3)"/>
+            </svg>
+          </div>
+          <div class="prp-card-body">
+            <div class="prp-card-desc">廃品整理やゴミ屋敷など<br>一般家のお片付け</div>
+            <div class="prp-specs">
+              <div class="prp-spec-row">
+                <span class="prp-spec-label">間取り</span>
+                <span class="prp-spec-val">—</span>
+              </div>
+              <div class="prp-spec-row">
+                <span class="prp-spec-label green">処理量</span>
+                <span class="prp-spec-val">—</span>
+              </div>
+            </div>
+            <div class="prp-price-row">
+              <span class="prp-price-label">料金</span>
+              <span class="prp-price-val" style="font-size:15px;color:#555;">要相談</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Note box -->
+      <div class="prp-note-box">
+        <div class="prp-note-icon">
+          <svg viewBox="0 0 20 20" width="20" fill="none" stroke="#f57c00" stroke-width="2">
+            <circle cx="10" cy="10" r="8"/>
+            <line x1="10" y1="7" x2="10" y2="11"/>
+            <circle cx="10" cy="14" r="0.8" fill="#f57c00" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          上記料金以外の追加費用が発生する場合があります。リサイクル法対象品目費、階段搬出費、サイズ・形状内容等によって<br>
+          費用追加の発生をする場合があります。<br>
+          詳細は担当スタッフにお確認いただくか、お電話またはメールにてお問い合わせください。
+        </div>
+      </div>
+
     </div>
   </div>
 
