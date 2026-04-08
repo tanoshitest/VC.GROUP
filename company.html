@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>不用品回収 クオーレ埼玉</title>
+  <title>会社概要 | 不用品回収 クオーレ埼玉</title>
   <style>
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -3059,9 +3060,177 @@
 }
   /* footer mobile */
   @media(max-width:640px){.footer-cols{grid-template-columns:1fr!important;gap:24px;}.footer-inner{padding:30px 16px 24px;}.footer-company-name{font-size:16px;}}
-</style>
+
+
+  /* ===== COMPANY PAGE ===== */
+  .co-hero {
+    background: linear-gradient(135deg, rgba(26,110,46,0.92) 0%, rgba(46,168,79,0.88) 60%, rgba(67,199,100,0.85) 100%);
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  .co-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><rect fill="%231a6e2e" width="1200" height="200"/><rect fill="%23228b3a" x="0" y="0" width="200" height="200" opacity="0.3"/><rect fill="%23228b3a" x="250" y="0" width="150" height="200" opacity="0.2"/><rect fill="%23228b3a" x="500" y="0" width="200" height="200" opacity="0.15"/><rect fill="%23228b3a" x="800" y="0" width="180" height="200" opacity="0.25"/><rect fill="%23228b3a" x="1050" y="0" width="150" height="200" opacity="0.2"/></svg>') center/cover;
+    opacity: 0.3;
+  }
+  .co-hero-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
+  .co-hero-title { font-size: 32px; font-weight: 900; letter-spacing: 0.08em; }
+
+  .co-breadcrumb {
+    background: #fff; padding: 10px 20px; font-size: 12px; color: #666;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .co-breadcrumb a { color: #2ea84f; text-decoration: none; }
+  .co-breadcrumb a:hover { text-decoration: underline; }
+
+  /* ===== ご挨拶 SECTION ===== */
+  .co-greeting {
+    background: #fff;
+    padding: 60px 20px 70px;
+  }
+  .co-greeting-inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .co-greeting-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  .co-greeting-bar {
+    width: 40px;
+    height: 3px;
+    background: #2ea84f;
+    border-radius: 2px;
+    margin: 0 auto 36px;
+  }
+  .co-greeting-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+  }
+  .co-greeting-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .co-greeting-heading {
+    font-size: 22px;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .co-greeting-heading .hl {
+    color: #2ea84f;
+  }
+  .co-greeting-body {
+    font-size: 14px;
+    color: #444;
+    line-height: 2;
+  }
+  .co-greeting-img {
+    flex: 0 0 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ===== 会社概要 TABLE ===== */
+  .co-info {
+    background: #edf7ed;
+    padding: 50px 20px 60px;
+  }
+  .co-info-inner { max-width: 960px; margin: 0 auto; }
+  .co-info-title {
+    text-align: center; font-size: 28px; font-weight: 900; color: #1a1a1a; margin-bottom: 10px;
+  }
+  .co-info-bar { width: 40px; height: 3px; background: #2ea84f; border-radius: 2px; margin: 0 auto 32px; }
+  .co-table {
+    width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #ddd; margin-bottom: 40px;
+  }
+  .co-table tr { border-bottom: 1px solid #ddd; }
+  .co-table tr:last-child { border-bottom: none; }
+  .co-table th {
+    background: #2ea84f; color: #fff; font-size: 13px; font-weight: 700;
+    padding: 14px 16px; text-align: left; width: 160px; vertical-align: top;
+    border-right: 1px solid rgba(255,255,255,0.2);
+  }
+  .co-table td {
+    font-size: 13px; color: #333; padding: 14px 16px; line-height: 1.7; vertical-align: top;
+  }
+  .co-table td a { color: #2ea84f; }
+  .co-map-embed {
+    width: 100%; max-width: 400px; height: 180px;
+    background: #e8e8e8; border-radius: 6px; margin-top: 8px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+
+  /* 各種許可証 */
+  .co-license { margin-bottom: 40px; }
+  .co-license-header {
+    background: #2ea84f; color: #fff; font-size: 14px; font-weight: 700;
+    padding: 8px 16px; margin-bottom: 12px;
+  }
+  .co-license-body {
+    font-size: 13px; color: #333; line-height: 1.9; padding: 0 16px 16px;
+  }
+  .co-license-sub {
+    background: #2ea84f; color: #fff; font-size: 12px; font-weight: 700;
+    padding: 5px 12px; margin: 16px 0 8px; display: inline-block;
+  }
+
+  /* SDGs, インボイス, 関連サイト */
+  .co-sdgs-row, .co-sites-row {
+    display: flex; align-items: flex-start; border-bottom: 1px solid #ddd; background: #fff;
+  }
+  .co-sdgs-label, .co-sites-label {
+    background: #2ea84f; color: #fff; font-size: 13px; font-weight: 700;
+    padding: 14px 16px; width: 160px; flex-shrink: 0;
+  }
+  .co-sdgs-content, .co-sites-content {
+    flex: 1; padding: 14px 16px; font-size: 13px; color: #333; line-height: 1.7;
+  }
+  .co-sites-grid {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .co-site-badge {
+    background: #f5f5f5; border: 1px solid #ddd; border-radius: 6px;
+    padding: 8px 14px; font-size: 12px; font-weight: 700; color: #2ea84f;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .co-site-badge:hover { background: #e8f5e9; }
+  .co-partner-grid {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .co-partner-card {
+    background: #fff; border: 1px solid #ddd; border-radius: 6px;
+    padding: 10px 16px; font-size: 13px; font-weight: 700; color: #333;
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .co-hero-title { font-size: 24px; }
+    .co-greeting-content { flex-direction: column; }
+    .co-greeting-img { flex: none; width: 100%; }
+    .co-greeting-heading { font-size: 18px; }
+    .co-greeting-body { font-size: 13px; }
+    .co-table th { width: 110px; font-size: 11px; padding: 10px 8px; }
+    .co-table td { font-size: 12px; padding: 10px 8px; }
+    .co-sdgs-row, .co-sites-row { flex-direction: column; }
+    .co-sdgs-label, .co-sites-label { width: 100%; }
+  }
+
+  </style>
 </head>
 <body>
+
 <div id="page-wrapper">
 
   <header class="header-top">
@@ -3191,300 +3360,342 @@
     アース埼玉はクオーレ埼玉にサービス名称を変更しました！
   </div>
 
+  
+  <!-- NOTICE BAR -->
+  
+
   <!-- PAGE HERO -->
-  <div class="sv-hero">
-    <div class="sv-hero-inner">
-      <div class="sv-hero-small">不用品回収クオーレ埼玉の</div>
-      <div class="sv-hero-title">サービス一覧</div>
+  <div class="co-hero">
+    <div class="co-hero-inner">
+      <div class="co-hero-title">会社概要</div>
     </div>
   </div>
 
-  <!-- SERVICE LIST SECTION -->
-  <div class="sv-list-section">
-    <div class="sv-breadcrumb" style="max-width:960px;margin:0 auto 20px;padding:8px 0;background:transparent;border:none;">
-      <a href="index.html">トップ</a>
-      <span>›</span>
-      <span>サービス一覧</span>
-    </div>
-    <div class="sv-list-inner">
+  <!-- BREADCRUMB -->
+  <div class="co-breadcrumb" style="max-width:960px;margin:0 auto;padding:10px 0;background:transparent;">
+    <a href="index.html">埼玉の不用品回収・粗大ゴミ処分業者クオーレ</a>
+    <span>＞</span>
+    <span>会社概要</span>
+  </div>
 
-      <div class="sv-main-title">主なサービス</div>
-      <div class="sv-title-bar"></div>
-
-      <div class="sv-grid">
-        <a href="#" class="sv-btn-green">
-          <span class="sv-btn-icon"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><rect x="4" y="8" width="24" height="18" rx="3"/><path d="M10 8V6a6 6 0 0 1 12 0v2"/><circle cx="16" cy="17" r="3"/></svg></span>
-          <span class="sv-btn-label">不用品回収</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-green">
-          <span class="sv-btn-icon"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><rect x="3" y="13" width="26" height="13" rx="3"/><path d="M7 13V11a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v2"/><rect x="9" y="18" width="4" height="4" rx="1"/><rect x="19" y="18" width="4" height="4" rx="1"/></svg></span>
-          <span class="sv-btn-label">粗大ゴミ処分</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-green">
-          <span class="sv-btn-icon"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><rect x="4" y="6" width="24" height="22" rx="2"/><line x1="10" y1="6" x2="10" y2="28"/><line x1="22" y1="6" x2="22" y2="28"/><line x1="4" y1="16" x2="28" y2="16"/></svg></span>
-          <span class="sv-btn-label">家具回収</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-green">
-          <span class="sv-btn-icon"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><rect x="4" y="8" width="24" height="18" rx="2"/><rect x="12" y="4" width="8" height="4" rx="1"/><circle cx="16" cy="20" r="4"/><circle cx="16" cy="20" r="1.5" fill="#fff"/></svg></span>
-          <span class="sv-btn-label">家電回収</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-green">
-          <span class="sv-btn-icon"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><rect x="2" y="15" width="20" height="11" rx="2"/><path d="M22 19h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4"/><path d="M2 21l4-8h12l4 8"/><circle cx="8" cy="27" r="2.5" fill="#2ea84f" stroke="#fff"/><circle cx="20" cy="27" r="2.5" fill="#2ea84f" stroke="#fff"/></svg></span>
-          <span class="sv-btn-label">廃品回収</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-green">
-          <span class="sv-btn-icon"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><path d="M10 28V10l6-6 6 6v18"/><rect x="13" y="20" width="6" height="8"/><line x1="7" y1="28" x2="25" y2="28"/></svg></span>
-          <span class="sv-btn-label">不用品買取</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
+  <!-- ご挨拶 SECTION -->
+  <div class="co-greeting">
+    <div class="co-greeting-inner">
+      <div class="co-greeting-title">ご挨拶</div>
+      <div class="co-greeting-bar"></div>
+      <div class="co-greeting-content">
+        <div class="co-greeting-text">
+          <div class="co-greeting-heading">
+            <span class="hl">不用品回収クオーレ埼玉</span>のホームページをご覧いただきありがとうございます
+          </div>
+          <div class="co-greeting-body">
+            不用品処分は引越しや遺品整理、空き家整理などあらゆる状況下で必要になるため、ご依頼くださるお客様の事情やご要望も千差万別です。すべてのお客様にご満足いただくため、不用品をただ回収するのではなく、お客様お一人おひとりのお悩みに耳を傾け、心に寄り添って作業することが重要だと当社は考えています。目の前のお客様に喜んでいただくために尽力するのはもちろん、社会の一端を担う企業としても、長期的な環境保全や福祉活動に積極的に取り組み、社会貢献に努めています。これからもたくさんの皆様に信頼され、必要とされるような企業であり続けるよう精進していきます。
+          </div>
+        </div>
+        <div class="co-greeting-img">
+          <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg">
+            <rect width="340" height="260" fill="#f5f9f5" rx="8"/>
+            <!-- Truck -->
+            <rect x="120" y="100" width="150" height="80" rx="6" fill="#e0e0e0"/>
+            <rect x="230" y="80" width="60" height="60" rx="4" fill="#bdbdbd"/>
+            <rect x="235" y="85" width="50" height="35" rx="3" fill="#e3f2fd"/>
+            <circle cx="155" cy="190" r="14" fill="#333" stroke="#666" stroke-width="3"/>
+            <circle cx="260" cy="190" r="14" fill="#333" stroke="#666" stroke-width="3"/>
+            <!-- Items -->
+            <rect x="30" y="140" width="70" height="50" rx="3" fill="#ffb74d"/>
+            <line x1="65" y1="140" x2="65" y2="190" stroke="#f57c00" stroke-width="1"/>
+            <rect x="50" y="110" width="40" height="35" rx="3" fill="#a5d6a7"/>
+            <rect x="20" y="120" width="25" height="30" rx="2" fill="#90caf9"/>
+            <!-- Decorative circles -->
+            <circle cx="280" cy="60" r="18" fill="#2ea84f" opacity="0.3"/>
+            <circle cx="310" cy="80" r="10" fill="#42a5f5" opacity="0.4"/>
+          </svg>
+        </div>
       </div>
-      <div class="sv-grid-2col">
-        <a href="#" class="sv-btn-green">
-          <span class="sv-btn-icon"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><rect x="2" y="16" width="20" height="10" rx="2"/><path d="M22 20h4a2 2 0 0 1 2 2v4H22"/><path d="M2 22l3-8h14l3 8"/><circle cx="8" cy="27" r="2.5" fill="#2ea84f" stroke="#fff"/><circle cx="18" cy="27" r="2.5" fill="#2ea84f" stroke="#fff"/><rect x="9" y="10" width="8" height="6" rx="1"/></svg></span>
-          <span class="sv-btn-label">引越しサポート</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-green">
-          <span class="sv-btn-icon"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" width="28" height="28"><path d="M6 28V10l10-7 10 7v18H6z"/><path d="M12 28v-8h8v8"/><line x1="16" y1="6" x2="16" y2="12"/><line x1="10" y1="16" x2="14" y2="16"/><line x1="18" y1="16" x2="22" y2="16"/></svg></span>
-          <span class="sv-btn-label">ゴミ屋敷片付け</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <div></div>
-      </div>
-
-      <div class="sv-other-title">その他のサービス</div>
-      <div class="sv-grid">
-        <a href="#" class="sv-btn-white">
-          <span class="sv-btn-label">遺品整理</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#2ea84f" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-white">
-          <span class="sv-btn-label">リフォーム・ハウスクリーニング</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#2ea84f" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-white">
-          <span class="sv-btn-label">不動産売却</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#2ea84f" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-      </div>
-      <div class="sv-grid-2col" style="margin-top:14px;">
-        <a href="#" class="sv-btn-white">
-          <span class="sv-btn-label">解体工事</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#2ea84f" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <a href="#" class="sv-btn-white">
-          <span class="sv-btn-label">法人のお客様向け</span>
-          <span class="sv-btn-chevron"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M2 4l4 4 4-4" stroke="#2ea84f" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
-        </a>
-        <div></div>
-      </div>
-
     </div>
   </div>
 
+  <!-- 会社概要 TABLE -->
+  <div class="co-info">
+    <div class="co-info-inner">
+      <div class="co-info-title">会社概要</div>
+      <div class="co-info-bar"></div>
 
-  <!-- SERVICE DETAIL SECTION -->
-  <div class="svd-section">
-    <div class="svd-inner">
+      <table class="co-table">
+        <tr><th>会社名</th><td>株式会社 クオーレ</td></tr>
+        <tr><th>運営サイト</th><td>不用品回収クオーレ埼玉(アース埼玉)</td></tr>
+        <tr><th>代表取締役</th><td>竹本良正</td></tr>
+        <tr><th>資本金</th><td>5,000万円</td></tr>
+        <tr><th>連絡先</th><td>〒339-0072 埼玉県さいたま市岩槻区古ヶ場1-1-18-2F<div class="co-map-embed"><svg viewBox="0 0 400 180" width="400" height="180"><rect width="400" height="180" fill="#e8f5e9" rx="4"/><rect x="20" y="20" width="360" height="140" fill="#fff" stroke="#ccc" rx="4"/><text x="200" y="95" font-family="Arial" font-size="14" fill="#999" text-anchor="middle">Google Maps</text><circle cx="200" cy="70" r="8" fill="#e53935"/><path d="M200 78 L200 62 Q200 55 207 55" fill="none" stroke="#e53935" stroke-width="2"/></svg></div></td></tr>
+        <tr><th>TEL</th><td>0120-996-638</td></tr>
+        <tr><th>URL</th><td><a href="#">https://www.fuyouhinkaishuu-saitama.com/</a></td></tr>
+        <tr><th>メール</th><td>お問い合わせは、<a href="#">メールフォーム</a>よりご連絡ください。</td></tr>
+        <tr><th>社員数</th><td>20名</td></tr>
+        <tr><th>事業内容</th><td>家具、バイク、農機具、家具、綺麗機器、オフィス用品などの回収不用品の対応、遺品整理、バイク回収、オフィス用品の売りなど</td></tr>
+        <tr><th>対応エリア</th><td>埼玉全域</td></tr>
+        <tr><th>損保加入先</th><td>西濃 西中山区計済共済共</td></tr>
+      </table>
 
-      <!-- 1. 不用品回収 -->
-      <div class="svd-row">
-        <div class="svd-img">
-          <svg viewBox="0 0 80 60" width="80" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><rect x="10" y="10" width="60" height="40" rx="4"/><path d="M20 10V6h40v4"/><circle cx="40" cy="30" r="10"/></svg>
-        </div>
-        <div class="svd-content">
-          <div class="svd-title">
-            <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="#1a9080" stroke-width="2"><rect x="3" y="5" width="14" height="12" rx="2"/><path d="M7 5V4a3 3 0 0 1 6 0v1"/><circle cx="10" cy="11" r="2"/></svg>
-            不用品回収
+      <!-- 各種許可証 -->
+      <div class="co-license">
+        <div class="co-license-header">各種許可証</div>
+        <div class="co-license-body">
+          <div class="co-license-sub">産業廃棄物収集運搬業許可証</div>
+          <div>
+            埼玉県　第01100166157号<br>
+            東京都　第13-00-166157号<br>
+            神奈川県　第01407166157号<br>
+            千葉県　第01200166157号<br>
+            熊本県　第00300166157号<br>
+            静岡県　第02200166157号<br>
+            岐阜県　第02100166157号<br>
+            愛知県　第02300166157号
           </div>
-          <p class="svd-text">大量廃棄や整理整頓で発生する不用品から溢れてしまった直後まで、様々な場面での不用品回収を行っております。大量中や中程度の引越労力なく手早く不要な不用品の整理ができるなど、一般の方だけではなかなか分からない不用品の処分方法も都度ご提案いたします。</p>
-          <a href="#" class="svd-btn">不用品回収 <span class="svd-btn-arrow">›</span></a>
+
+          <div class="co-license-sub">一般廃棄物収集運搬業許可証</div>
+          <div>
+            [さいたま市] さいたま市長 東京都民2号 第3009号<br>
+            本芝市 第25-12号
+          </div>
+
+          <div class="co-license-sub">医療リサイクル等システム場の回収等</div>
+          <div>
+            総本支店　第2232-5007-9639号<br>
+            横浜支店　第2232-5007-9660号<br>
+            千葉支店　第2232-5008-2232号<br>
+            名古屋支店　第2232-5007-0615号<br>
+            鳥本支店　第2232-5008-6714号<br>
+            西東京支店　第2232-5608-6715号<br>
+            静岡支店　第2232-5008-6716号<br>
+            横岡支店　第2232-5008-6717号<br>
+            宇都支店　第2232-5008-6718号
+          </div>
+
+          <div class="co-license-sub">古物商許可番号</div>
+          <div>54173110800号</div>
+
+          <div class="co-license-sub">賠償損害士</div>
+          <div>
+            一般社団法人 個品管理士認定協会<br>
+            一般社団法人 個品管理士認定協会認定 家庭地場得点保険保持士
+          </div>
+
+          <div class="co-license-sub">宅地建物取引業</div>
+          <div>変割相知事(1) 第24518号</div>
+
+          <div class="co-license-sub">解体工事業番号</div>
+          <div>変割相知事(P-30) 第937号</div>
+
+          <div class="co-license-sub">生活相談士</div>
+          <div>
+            一般社団法人 不用品管理界共催協会認定作業士<br>
+            一般社団法人 不用品管理界共催協会2種法定副部長
+          </div>
+
+          <div class="co-license-sub">家計管理士</div>
+          <div>一般社団法人 草リス管理士協会</div>
+
+          <div class="co-license-sub">機関理相士</div>
+          <div>一般社団法人 商品買取義会</div>
+
+          <div class="co-license-sub">資格保有者あり</div>
         </div>
       </div>
 
-      <!-- 2. 粗大ゴミ処分 -->
-      <div class="svd-row reverse">
-        <div class="svd-img img2">
-          <svg viewBox="0 0 80 60" width="80" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><rect x="8" y="18" width="64" height="32" rx="4"/><path d="M18 18V14a6 6 0 0 1 6-6h32a6 6 0 0 1 6 6v4"/><rect x="24" y="28" width="10" height="10" rx="1"/><rect x="46" y="28" width="10" height="10" rx="1"/></svg>
-        </div>
-        <div class="svd-content">
-          <div class="svd-title">
-            <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="#1a9080" stroke-width="2"><rect x="2" y="8" width="16" height="10" rx="2"/><path d="M6 8V6a4 4 0 0 1 8 0v2"/><line x1="10" y1="11" x2="10" y2="15"/></svg>
-            粗大ゴミ処分
-          </div>
-          <p class="svd-text">粗大ゴミを処分するためには二段台で宅配の事務所手数料を購入したうえ、部内での処理ができないことほど手数がかかります。クオーレ埼玉のスタッフが地域へ参い依頼管理やまで対応してくれます。面倒しい粗大ゴミもの悩みから解き放してくれます。</p>
-          <a href="#" class="svd-btn">粗大ゴミ処分 <span class="svd-btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      <!-- 3. 家具回収 -->
-      <div class="svd-row">
-        <div class="svd-img img3">
-          <svg viewBox="0 0 80 60" width="80" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><rect x="8" y="12" width="64" height="36" rx="3"/><line x1="20" y1="12" x2="20" y2="48"/><line x1="60" y1="12" x2="60" y2="48"/><line x1="8" y1="30" x2="72" y2="30"/></svg>
-        </div>
-        <div class="svd-content">
-          <div class="svd-title">
-            <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="#1a9080" stroke-width="2"><rect x="2" y="3" width="16" height="14" rx="2"/><line x1="6" y1="3" x2="6" y2="17"/><line x1="14" y1="3" x2="14" y2="17"/><line x1="2" y1="10" x2="18" y2="10"/></svg>
-            家具回収
-          </div>
-          <p class="svd-text">廃棄が判断当会大学受出の何倍も省おります。家庭で動かない大きさの家電テ、部屋に押置されている家具ものまで管轄をお任せいただけます。日別何らか廃分ができずに当なに当任せください。自分で廃分が難しいさずに当社へのお任せください。</p>
-          <a href="#" class="svd-btn">家具回収 <span class="svd-btn-arrow">›</span></a>
+      <!-- SDGs -->
+      <div class="co-sdgs-row">
+        <div class="co-sdgs-label">SDGs取組</div>
+        <div class="co-sdgs-content">
+          <svg viewBox="0 0 300 120" width="280" height="110" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="120" fill="#fff" rx="6"/>
+            <circle cx="40" cy="40" r="20" fill="#4caf50"/>
+            <text x="40" y="45" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">SDGs</text>
+            <text x="80" y="35" font-family="Arial" font-size="11" fill="#333">クオーレは持続可能な</text>
+            <text x="80" y="52" font-family="Arial" font-size="11" fill="#333">開発目標に取り組んでいます</text>
+            <rect x="20" y="75" width="24" height="24" rx="2" fill="#e5243b"/>
+            <rect x="50" y="75" width="24" height="24" rx="2" fill="#dda63a"/>
+            <rect x="80" y="75" width="24" height="24" rx="2" fill="#4c9f38"/>
+            <rect x="110" y="75" width="24" height="24" rx="2" fill="#c5192d"/>
+            <rect x="140" y="75" width="24" height="24" rx="2" fill="#ff3a21"/>
+            <rect x="170" y="75" width="24" height="24" rx="2" fill="#26bde2"/>
+            <rect x="200" y="75" width="24" height="24" rx="2" fill="#fcc30b"/>
+          </svg>
         </div>
       </div>
 
-      <!-- 4. 家電回収 -->
-      <div class="svd-row reverse">
-        <div class="svd-img img4">
-          <svg viewBox="0 0 80 60" width="80" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><rect x="10" y="8" width="60" height="36" rx="3"/><rect x="22" y="48" width="36" height="6" rx="1"/><circle cx="40" cy="26" r="10"/><circle cx="40" cy="26" r="4"/></svg>
-        </div>
-        <div class="svd-content">
-          <div class="svd-title">
-            <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="#1a9080" stroke-width="2"><rect x="2" y="4" width="16" height="12" rx="2"/><rect x="7" y="16" width="6" height="3" rx="1"/><circle cx="10" cy="10" r="3"/></svg>
-            家電回収
+      <!-- インボイス -->
+      <div class="co-sdgs-row">
+        <div class="co-sdgs-label">インボイス登録事業者番号</div>
+        <div class="co-sdgs-content">T3-1800-0110-0490</div>
+      </div>
+
+      <!-- 関連サイト -->
+      <div class="co-sdgs-row">
+        <div class="co-sdgs-label">関連サイト</div>
+        <div class="co-sdgs-content">
+          <div class="co-sites-grid">
+            <span class="co-site-badge">クオーレ 埼玉</span>
+            <span class="co-site-badge">クオーレ 東京</span>
+            <span class="co-site-badge">クオーレ 千葉</span>
+            <span class="co-site-badge">クオーレ 神奈川</span>
+            <span class="co-site-badge">クオーレ 静岡</span>
+            <span class="co-site-badge">クオーレ 名古屋</span>
+            <span class="co-site-badge">クオーレ 岐阜</span>
+            <span class="co-site-badge">クオーレ 熊本</span>
+            <span class="co-site-badge">クオーレ 大分</span>
+            <span class="co-site-badge">クオーレ 宮崎</span>
+            <span class="co-site-badge">クオーレ 鹿児島</span>
           </div>
-          <p class="svd-text">家電製品や数の回収は大きく少ない、小学家電はもちろん、取扱の管理製産への処理は外せなければならない法廃棄対してサイクルな家庭廃棄基はありなものです。作業で全国いたします。常々に設定されれた家電選択通りお任もし何卒からめてください。</p>
-          <a href="#" class="svd-btn">家電回収 <span class="svd-btn-arrow">›</span></a>
         </div>
       </div>
 
-      <!-- 5. 廃品回収 -->
-      <div class="svd-row">
-        <div class="svd-img img5">
-          <svg viewBox="0 0 80 60" width="80" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><rect x="4" y="22" width="52" height="26" rx="3"/><path d="M56 32h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H56"/><path d="M4 32l8-18h36l8 18"/><circle cx="18" cy="52" r="6"/><circle cx="50" cy="52" r="6"/></svg>
-        </div>
-        <div class="svd-content">
-          <div class="svd-title">
-            <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="#1a9080" stroke-width="2"><rect x="1" y="10" width="14" height="8" rx="2"/><path d="M15 14h3a2 2 0 0 1 2 2v2h-5"/><path d="M1 14l2-6h10l2 6"/><circle cx="5" cy="19" r="2"/><circle cx="13" cy="19" r="2"/></svg>
-            廃品回収
+      <!-- お勧めサイト -->
+      <div class="co-sdgs-row" style="border-bottom:none;">
+        <div class="co-sdgs-label">お勧めサイト</div>
+        <div class="co-sdgs-content">
+          <div class="co-partner-grid">
+            <span class="co-partner-card">Progress</span>
+            <span class="co-partner-card">不用品回収プログレス</span>
+            <span class="co-partner-card">CUORE:</span>
+            <span class="co-partner-card">七福神</span>
+            <span class="co-partner-card">クリエル</span>
           </div>
-          <p class="svd-text">ご自宅で使用みながたもなお全実ご処分、金属会業界の指定いた本物のおはほか各金属もあり実施しています。利用する物かわからない場合、廃れてしまった金属や家庭用のがはみ付き実施させております。処分方法がわからない場合もご相談ください。</p>
-          <a href="#" class="svd-btn">廃品回収 <span class="svd-btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      <!-- 6. 引越しサポート -->
-      <div class="svd-row reverse">
-        <div class="svd-img img6">
-          <svg viewBox="0 0 80 60" width="80" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><rect x="4" y="20" width="48" height="28" rx="3"/><path d="M52 30h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H52"/><path d="M4 30l6-16h36l6 16"/><circle cx="18" cy="52" r="6"/><circle cx="46" cy="52" r="6"/><rect x="14" y="8" width="20" height="14" rx="2"/></svg>
-        </div>
-        <div class="svd-content">
-          <div class="svd-title">
-            <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="#1a9080" stroke-width="2"><rect x="1" y="10" width="12" height="8" rx="2"/><path d="M13 14h4a2 2 0 0 1 2 2v2h-6"/><path d="M1 14l2-6h10l2 6"/><circle cx="5" cy="19" r="2"/><circle cx="11" cy="19" r="2"/><rect x="6" y="4" width="8" height="8" rx="1"/></svg>
-            引越しサポート
-          </div>
-          <p class="svd-text">新居から旧居先の品々はもちろん、引越し事前時に要らない不用品の回収処理も対応しております。大使に害を忌みながら旧居をした大多品の廃工から家電をの廃去・カスタマー・丸ゴミ・なと廃棄品をまとめてご対応します。不用品分きり対応なかとまとめていただけるために、不用品分担作業が実施する他にない特化して参ります。</p>
-          <a href="#" class="svd-btn">引越しサポート <span class="svd-btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      <!-- 7. ゴミ屋敷片付け -->
-      <div class="svd-row">
-        <div class="svd-img img7">
-          <svg viewBox="0 0 80 60" width="80" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><path d="M10 50V26L40 8l30 18v24H10Z"/><rect x="28" y="32" width="24" height="18" rx="2"/><line x1="28" y1="44" x2="52" y2="44"/></svg>
-        </div>
-        <div class="svd-content">
-          <div class="svd-title">
-            <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="#1a9080" stroke-width="2"><path d="M3 18V9l7-6 7 6v9H3Z"/><rect x="7" y="12" width="6" height="6" rx="1"/></svg>
-            ゴミ屋敷片付け
-          </div>
-          <p class="svd-text">どこから手をつければいいかわからないほど大量に溜まったゴミに困み込んでいませんか？クオーレ埼玉のスタッフが共に対して一気づつ連絡にかせ分、設置するだけでなく、設分作業や初期損害初期機器移動をもたせていただく形で大丈夫な廃棄に努めます。</p>
-          <a href="#" class="svd-btn">ゴミ屋敷片付け <span class="svd-btn-arrow">›</span></a>
         </div>
       </div>
 
     </div>
   </div>
 
-
-  <!-- その他のサービス CARDS -->
-  <div class="svo-section">
-    <div class="svo-inner">
-      <div class="svo-title">その他のサービス</div>
-
-      <!-- Row 1: 3 cards -->
-      <div class="svo-grid">
-        <div class="svo-card">
-          <div class="svo-card-img">
-            <svg viewBox="0 0 80 60" width="70" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="2"><rect x="10" y="8" width="60" height="44" rx="4"/><line x1="20" y1="20" x2="60" y2="20"/><line x1="20" y1="30" x2="50" y2="30"/><line x1="20" y1="40" x2="45" y2="40"/></svg>
+  <!-- SERVICE AREA SECTION -->
+  <div class="area-section">
+    <div class="area-inner">
+      <div class="area-top">
+        <div class="area-top-left">
+          <div class="area-small-label">不用品回収クオーレ埼玉の</div>
+          <div class="area-title">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#2ea84f" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            サービス対応エリア
           </div>
-          <div class="svo-card-body">
-            <div class="svo-card-title">
-              <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="#1a9080" stroke-width="1.5"><rect x="2" y="1" width="12" height="14" rx="2"/><line x1="5" y1="5" x2="11" y2="5"/><line x1="5" y1="8" x2="9" y2="8"/></svg>
-              遺品整理
-            </div>
-            <p class="svo-card-text">遺人様の大切な品物をご遺族様に確認しながら丁寧に仕分けして、整理いたします。</p>
-            <a href="#" class="svo-card-btn">詳しく見る ›</a>
-          </div>
+          <div class="area-subtitle">スピード回収！<span>最短即日</span>で対応いたします！</div>
+          <p class="area-desc">不用品回収クオーレ埼玉では埼玉県全域を対象に不用品・粗大ゴミの回収を行っています。埼玉を始め対応エリア内であれば訪問し、無料にてお見積もりいたします。お気軽にご相談ください。</p>
         </div>
-
-        <div class="svo-card">
-          <div class="svo-card-img img-b">
-            <svg viewBox="0 0 80 60" width="70" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="2"><rect x="8" y="10" width="64" height="40" rx="3"/><path d="M20 50V30 a8 8 0 0 1 16 0v20"/><path d="M44 50V20"/><line x1="38" y1="20" x2="50" y2="20"/></svg>
-          </div>
-          <div class="svo-card-body">
-            <div class="svo-card-title">
-              <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="#1a9080" stroke-width="1.5"><rect x="1" y="4" width="14" height="10" rx="2"/><path d="M5 4V3a3 3 0 0 1 6 0v1"/></svg>
-              リフォーム・ハウスクリーニング
-            </div>
-            <p class="svo-card-text">リフォームやハウスクリーニングを行い、専門技術をもって丁寧な対応に使います。</p>
-            <a href="#" class="svo-card-btn">詳しく見る ›</a>
-          </div>
-        </div>
-
-        <div class="svo-card">
-          <div class="svo-card-img img-c">
-            <svg viewBox="0 0 80 60" width="70" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="2"><path d="M10 50V22L40 6l30 16v28H10Z"/><rect x="28" y="32" width="24" height="18" rx="2"/><line x1="28" y1="44" x2="52" y2="44"/></svg>
-          </div>
-          <div class="svo-card-body">
-            <div class="svo-card-title">
-              <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="#1a9080" stroke-width="1.5"><path d="M2 14V7l6-4 6 4v7H2Z"/><rect x="5" y="9" width="6" height="5" rx="1"/></svg>
-              不動産売却
-            </div>
-            <p class="svo-card-text">物置が増えてしまったご家族や解体工事後の売却手続きなど、不動産の整理をお手伝いします。</p>
-            <a href="#" class="svo-card-btn">詳しく見る ›</a>
+        <div class="area-top-right">
+          <div class="area-map">
+            <svg viewBox="0 0 120 140" width="130" height="150" fill="none">
+              <path d="M30 20 L50 10 L80 15 L100 30 L110 50 L105 75 L95 90 L80 110 L65 125 L50 120 L35 105 L20 85 L15 60 L20 40 Z" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+              <path d="M40 55 L55 45 L70 50 L80 65 L75 80 L60 85 L45 78 L38 65 Z" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <circle cx="58" cy="65" r="5" fill="rgba(255,255,255,0.8)"/>
+              <circle cx="58" cy="65" r="2" fill="#fff"/>
+            </svg>
+            <div class="area-badge-yellow">最短即日で<br>駆けつけ！</div>
           </div>
         </div>
       </div>
 
-      <!-- Row 2: 2 cards -->
-      <div class="svo-grid-2">
-        <div class="svo-card">
-          <div class="svo-card-img img-d">
-            <svg viewBox="0 0 80 60" width="70" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="2"><rect x="6" y="30" width="68" height="24" rx="3"/><rect x="20" y="14" width="40" height="18" rx="2"/><rect x="30" y="6" width="20" height="10" rx="2"/></svg>
+      <div class="area-table-wrap">
+        <div class="area-table-header">埼玉県のサービス対応エリア</div>
+        <div class="area-table-body">
+          <div class="area-city">さいたま市西区</div>
+          <div class="area-city">さいたま市北区</div>
+          <div class="area-city">さいたま市大宮区</div>
+          <div class="area-city">さいたま市見沼区</div>
+          <div class="area-city">さいたま市中央区</div>
+          <div class="area-city">さいたま市桜区</div>
+          <div class="area-city">さいたま市浦和区</div>
+          <div class="area-city">さいたま市南区</div>
+          <div class="area-city">さいたま市緑区</div>
+          <div class="area-city">さいたま市岩槻区</div>
+          <div class="area-city">川口市</div>
+          <div class="area-city">所沢市</div>
+          <div class="area-city">川越市</div>
+          <div class="area-city">越谷市</div>
+          <div class="area-city">草加市</div>
+          <div class="area-city">上尾市</div>
+          <div class="area-city">春日部市</div>
+          <div class="area-city">入間市</div>
+          <div class="area-city">志木市</div>
+          <div class="area-city">朝霞市</div>
+          <div class="area-city">蕨市</div>
+          <div class="area-city">狭山市</div>
+          <div class="area-city">八潮市</div>
+          <div class="area-city">富士見市</div>
+          <div class="area-city">新座市</div>
+          <div class="area-city">桶川市</div>
+          <div class="area-city">久喜市</div>
+          <div class="area-city">北本市</div>
+          <div class="area-city">吉川市</div>
+          <div class="area-city">蓮田市</div>
+          <div class="area-city">行田市</div>
+          <div class="area-city">日高市</div>
+          <div class="area-city">白岡市</div>
+          <div class="area-city">鶴ヶ島市</div>
+          <div class="area-city">坂戸市</div>
+          <div class="area-city">秩父市</div>
+          <div class="area-city">深谷市</div>
+          <div class="area-city">熊谷市</div>
+          <div class="area-city">本庄市</div>
+          <div class="area-city">東松山市</div>
+          <div class="area-city">羽生市</div>
+          <div class="area-city">加須市</div>
+          <div class="area-city">鴻巣市</div>
+          <div class="area-city">伊奈町</div>
+          <div class="area-city">三芳町</div>
+          <div class="area-city">毛呂山町</div>
+          <div class="area-city">越生町</div>
+          <div class="area-city">滑川町</div>
+          <div class="area-city">嵐山町</div>
+          <div class="area-city">小川町</div>
+          <div class="area-city">ときがわ町</div>
+          <div class="area-city">横瀬町</div>
+          <div class="area-city">皆野町</div>
+          <div class="area-city">長瀞町</div>
+          <div class="area-city">上里町</div>
+          <div class="area-city">寄居町</div>
+          <div class="area-city">宮代町</div>
+          <div class="area-city">杉戸町</div>
+          <div class="area-city">松伏町</div>
+          <div class="area-city">吉見町</div>
+          <div class="area-city">川島町</div>
+          <div class="area-city">ふじみ野市</div>
+        </div>
+      </div>
+
+      <div class="area-info-row">
+        <div class="area-info-box">
+          <div class="area-info-title">各種クレジットカードがご利用いただけます</div>
+          <div class="area-logos-row">
+            <svg viewBox="0 0 60 20" width="56" height="20"><rect width="60" height="20" rx="3" fill="#1a1f71"/><text x="30" y="15" font-family="Arial" font-weight="900" font-size="12" fill="white" text-anchor="middle">VISA</text></svg>
+            <svg viewBox="0 0 44 30" width="40" height="28"><rect width="44" height="30" rx="4" fill="#003087"/><rect x="2" y="2" width="12" height="26" rx="3" fill="#003087"/><rect x="16" y="2" width="12" height="26" rx="3" fill="#e31837"/><rect x="30" y="2" width="12" height="26" rx="3" fill="#007b40"/><text x="8" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">J</text><text x="22" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">C</text><text x="36" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">B</text></svg>
+            <svg viewBox="0 0 44 28" width="40" height="26"><circle cx="16" cy="14" r="13" fill="#eb001b"/><circle cx="28" cy="14" r="13" fill="#f79e1b"/><path d="M22 5.3a13 13 0 0 1 0 17.4A13 13 0 0 1 22 5.3z" fill="#ff5f00"/></svg>
+            <svg viewBox="0 0 60 22" width="56" height="20"><rect width="60" height="22" rx="3" fill="#2e77bc"/><text x="30" y="16" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">AMERICAN EXPRESS</text></svg>
           </div>
-          <div class="svo-card-body">
-            <div class="svo-card-title">
-              <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="#1a9080" stroke-width="1.5"><path d="M3 13V6l5-3 5 3v7H3Z"/><line x1="6" y1="13" x2="6" y2="9"/><line x1="10" y1="13" x2="10" y2="9"/></svg>
-              解体工事
-            </div>
-            <p class="svo-card-text">ご自宅やお庭・建物の解体から残置物の撤去まで、丁寧な対応で誠実して、作業で対応いたします。</p>
-            <a href="#" class="svo-card-btn">詳しく見る ›</a>
+          <div class="area-paypay-row">
+            <span>スマホ決済にも対応！</span>
+            <svg viewBox="0 0 80 28" width="70" height="24"><rect width="80" height="28" rx="4" fill="#fff" stroke="#e00"/><text x="40" y="19" font-family="Arial" font-weight="900" font-size="14" fill="#e00" text-anchor="middle">PayPay</text></svg>
           </div>
         </div>
-
-        <div class="svo-card">
-          <div class="svo-card-img img-e">
-            <svg viewBox="0 0 80 60" width="70" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="2"><rect x="10" y="8" width="60" height="44" rx="3"/><rect x="20" y="18" width="16" height="12" rx="1"/><rect x="44" y="18" width="16" height="12" rx="1"/><line x1="20" y1="38" x2="60" y2="38"/><line x1="20" y1="44" x2="50" y2="44"/></svg>
-          </div>
-          <div class="svo-card-body">
-            <div class="svo-card-title">
-              <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="#1a9080" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="2"/><line x1="5" y1="7" x2="11" y2="7"/><line x1="5" y1="10" x2="9" y2="10"/></svg>
-              法人のお客様向け
-            </div>
-            <p class="svo-card-text">オフィスの処拠や空き撤の期間に伴う処拠品対応や、長続の対応要分などもお任せください。</p>
-            <a href="#" class="svo-card-btn">詳しく見る ›</a>
+        <div class="area-info-box">
+          <div class="area-info-title">万が一の際には損害賠償免責</div>
+          <div class="area-insurance">
+            <div class="area-ins-label">人身・物損に適応</div>
+            <div class="area-ins-amount">最高<span></span>5,000<span>万円まで</span></div>
+            <div class="area-ins-logo">あいおいニッセイ同期損保</div>
           </div>
         </div>
+      </div>
 
-        <div></div>
+      <div class="area-invoice">
+        <div class="area-invoice-main">
+          インボイス
+          <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#2ea84f" stroke-width="2"><rect x="4" y="2" width="24" height="28" rx="3"/><line x1="10" y1="10" x2="22" y2="10"/><line x1="10" y1="16" x2="22" y2="16"/><line x1="10" y1="22" x2="18" y2="22"/></svg>
+          登録店
+        </div>
+        <div class="area-invoice-sub">適格請求書発行事業者制度</div>
       </div>
     </div>
   </div>
+
+  
 
   <!-- CONTACT STRIP -->
   <div class="sv-contact-strip">
@@ -3541,152 +3752,10 @@
     </div>
   </div>
 
+  
 
-  <!-- SERVICE AREA SECTION -->
-  <div class="area-section">
-    <div class="area-inner">
-
-      <!-- Top: title + map -->
-      <div class="area-top">
-        <div class="area-top-left">
-          <div class="area-small-label">不用品回収クオーレ埼玉の</div>
-          <div class="area-title">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#2ea84f" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            サービス対応エリア
-          </div>
-          <div class="area-subtitle">スピード回収！<span>最短即日</span>で対応いたします！</div>
-          <p class="area-desc">不用品回収クオーレ埼玉では以前を松戸市域をお発品と不用品・粗大ゴミ対応を行っています。埼玉を始め対応エリア内などにても訪問し、無料にて無料見積査定成形をします。近場通じてのお引渡り対応も可能ですので、不用品の処分にお困りならばクオーレ埼玉にご相談ください。</p>
-        </div>
-        <div class="area-top-right">
-          <div class="area-map">
-            <svg viewBox="0 0 120 140" width="130" height="150" fill="none">
-              <!-- Simplified Saitama map shape -->
-              <path d="M30 20 L50 10 L80 15 L100 30 L110 50 L105 75 L95 90 L80 110 L65 125 L50 120 L35 105 L20 85 L15 60 L20 40 Z" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
-              <path d="M40 55 L55 45 L70 50 L80 65 L75 80 L60 85 L45 78 L38 65 Z" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-              <circle cx="58" cy="65" r="5" fill="rgba(255,255,255,0.8)"/>
-              <circle cx="58" cy="65" r="2" fill="#fff"/>
-            </svg>
-            <div class="area-badge-yellow">最短即日で<br>駆けつけ！</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- エリア table -->
-      <div class="area-table-wrap">
-        <div class="area-table-header">埼玉県のサービス対応エリア</div>
-        <div class="area-table-body">
-          <div class="area-city">さいたま市西区</div>
-        <div class="area-city">さいたま市北区</div>
-        <div class="area-city">さいたま市大宮区</div>
-        <div class="area-city">さいたま市見沼区</div>
-        <div class="area-city">さいたま市中央区</div>
-        <div class="area-city">さいたま市桜区</div>
-        <div class="area-city">さいたま市浦和区</div>
-        <div class="area-city">さいたま市南区</div>
-        <div class="area-city">さいたま市緑区</div>
-        <div class="area-city">さいたま市岩槻区</div>
-        <div class="area-city">川口市</div>
-        <div class="area-city">所沢市</div>
-        <div class="area-city">川越市</div>
-        <div class="area-city">越谷市</div>
-        <div class="area-city">草加市</div>
-        <div class="area-city">上尾市</div>
-        <div class="area-city">春日部市</div>
-        <div class="area-city">入間市</div>
-        <div class="area-city">志木市</div>
-        <div class="area-city">朝霞市</div>
-        <div class="area-city">蕨市</div>
-        <div class="area-city">狭山市</div>
-        <div class="area-city">八潮市</div>
-        <div class="area-city">富士見市</div>
-        <div class="area-city">新座市</div>
-        <div class="area-city">桶川市</div>
-        <div class="area-city">久喜市</div>
-        <div class="area-city">北本市</div>
-        <div class="area-city">吉川市</div>
-        <div class="area-city">蓮田市</div>
-        <div class="area-city">行田市</div>
-        <div class="area-city">日高市</div>
-        <div class="area-city">白岡市</div>
-        <div class="area-city">鶴ヶ島市</div>
-        <div class="area-city">坂戸市</div>
-        <div class="area-city">秩父市</div>
-        <div class="area-city">深谷市</div>
-        <div class="area-city">熊谷市</div>
-        <div class="area-city">本庄市</div>
-        <div class="area-city">東松山市</div>
-        <div class="area-city">羽生市</div>
-        <div class="area-city">加須市</div>
-        <div class="area-city">鴻巣市</div>
-        <div class="area-city">上尾市</div>
-        <div class="area-city">伊奈町</div>
-        <div class="area-city">三芳町</div>
-        <div class="area-city">毛呂山町</div>
-        <div class="area-city">越生町</div>
-        <div class="area-city">滑川町</div>
-        <div class="area-city">嵐山町</div>
-        <div class="area-city">小川町</div>
-        <div class="area-city">ときがわ町</div>
-        <div class="area-city">横瀬町</div>
-        <div class="area-city">皆野町</div>
-        <div class="area-city">長瀞町</div>
-        <div class="area-city">上里町</div>
-        <div class="area-city">寄居町</div>
-        <div class="area-city">宮代町</div>
-        <div class="area-city">杉戸町</div>
-        <div class="area-city">松伏町</div>
-        <div class="area-city">吉見町</div>
-        <div class="area-city">川島町</div>
-        <div class="area-city">ふじみ野市</div>
-        <div class="area-city">富士見市</div>
-        <div class="area-city">長瀞町</div>
-        </div>
-      </div>
-
-      <!-- Info boxes -->
-      <div class="area-info-row">
-        <div class="area-info-box">
-          <div class="area-info-title">各種クレジットカードがご利用いただけます</div>
-          <div class="area-logos-row">
-            <!-- VISA -->
-            <svg viewBox="0 0 60 20" width="56" height="20"><rect width="60" height="20" rx="3" fill="#1a1f71"/><text x="30" y="15" font-family="Arial" font-weight="900" font-size="12" fill="white" text-anchor="middle">VISA</text></svg>
-            <!-- JCB -->
-            <svg viewBox="0 0 44 30" width="40" height="28"><rect width="44" height="30" rx="4" fill="#003087"/><rect x="2" y="2" width="12" height="26" rx="3" fill="#003087"/><rect x="16" y="2" width="12" height="26" rx="3" fill="#e31837"/><rect x="30" y="2" width="12" height="26" rx="3" fill="#007b40"/><text x="8" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">J</text><text x="22" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">C</text><text x="36" y="20" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">B</text></svg>
-            <!-- Mastercard -->
-            <svg viewBox="0 0 44 28" width="40" height="26"><circle cx="16" cy="14" r="13" fill="#eb001b"/><circle cx="28" cy="14" r="13" fill="#f79e1b"/><path d="M22 5.3a13 13 0 0 1 0 17.4A13 13 0 0 1 22 5.3z" fill="#ff5f00"/></svg>
-            <!-- AMEX -->
-            <svg viewBox="0 0 60 22" width="56" height="20"><rect width="60" height="22" rx="3" fill="#2e77bc"/><text x="30" y="16" font-family="Arial" font-weight="900" font-size="9" fill="white" text-anchor="middle">AMERICAN EXPRESS</text></svg>
-          </div>
-          <div class="area-paypay-row">
-            <span>スマホ決済にも対応！</span>
-            <svg viewBox="0 0 80 28" width="70" height="24"><rect width="80" height="28" rx="4" fill="#fff" stroke="#e00"/><text x="40" y="19" font-family="Arial" font-weight="900" font-size="14" fill="#e00" text-anchor="middle">PayPay</text></svg>
-          </div>
-        </div>
-        <div class="area-info-box">
-          <div class="area-info-title">万が一の際には損害賠償免責</div>
-          <div class="area-insurance">
-            <div class="area-ins-label">人身・物損に適応</div>
-            <div class="area-ins-amount">最高<span></span>5,000<span>万円まで</span></div>
-            <div class="area-ins-logo">あいおいニッセイ同期損保</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Invoice banner -->
-      <div class="area-invoice">
-        <div class="area-invoice-main">
-          インボイス
-          <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#2ea84f" stroke-width="2"><rect x="4" y="2" width="24" height="28" rx="3"/><line x1="10" y1="10" x2="22" y2="10"/><line x1="10" y1="16" x2="22" y2="16"/><line x1="10" y1="22" x2="18" y2="22"/></svg>
-          登録店
-        </div>
-        <div class="area-invoice-sub">適格請求書発行事業者制度</div>
-      </div>
-
-    </div>
-    <div class="area-cityscape"></div>
-  </div>
-
-<footer class="site-footer">
+  <!-- FOOTER -->
+  <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-cols">
 
@@ -3755,6 +3824,9 @@
     </div>
   </div>
 </footer>
+
+</div>
+
 
 </div>
 </body>
