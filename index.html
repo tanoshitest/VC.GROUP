@@ -297,7 +297,7 @@
 
     .banner {
       height: calc(100vh - 185px);
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/banner_hero.png');
+      background: url('assets/banner_hero.png');
       background-size: cover;
       background-position: center;
       position: relative;
@@ -308,37 +308,7 @@
     }
 
     /* Diagonal gold stripes decoration */
-    .banner::before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0;
-      width: 35%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        -55deg,
-        transparent,
-        transparent 12px,
-        rgba(212,175,55,0.15) 12px,
-        rgba(212,175,55,0.15) 24px
-      );
-      clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
 
-    .banner::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 25%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        -55deg,
-        transparent,
-        transparent 12px,
-        rgba(212,175,55,0.1) 12px,
-        rgba(212,175,55,0.1) 24px
-      );
-      clip-path: polygon(0% 0%, 80% 100%, 0% 100%);
-    }
 
     .banner-inner {
       position: relative;
@@ -350,16 +320,49 @@
       height: 100%;
     }
 
-    .banner-logo-center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .banner-content {
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+      z-index: 10;
     }
 
-    .banner-logo-center img {
-      height: clamp(80px, 15vh, 160px);
-      width: auto;
-      filter: brightness(0) saturate(100%) invert(75%) sepia(60%) saturate(500%) hue-rotate(5deg) brightness(110%);
+    .banner-title {
+      font-size: 64px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .banner-slogan {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .banner-contact {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .banner-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 50px;
+    }
+
+    .banner-contact-item svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    .banner-contact-item span {
+      font-size: 18px;
+      font-weight: bold;
     }
 
 
